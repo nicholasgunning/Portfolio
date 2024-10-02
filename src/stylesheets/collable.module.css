@@ -1,0 +1,12 @@
+.background {
+    background-color: rgb(239, 228, 216);
+    height: 90%;
+    width: 100%;
+    position: fixed;
+}
+
+canvas {
+    padding-top: 10%; 
+    height: 100% !important; 
+}
+
