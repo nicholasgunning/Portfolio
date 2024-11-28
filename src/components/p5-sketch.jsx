@@ -1,65 +1,88 @@
-import Sketch from "react-p5"
+import Sketch from "react-p5";
 
 function Bg() {
-    
-    var canvas;
-    var stars = [];
-    var sensitivityX = 30; 
-    var sensitivityY = 30;
-    const setup = (p5) => {
-        canvas = p5.createCanvas(p5.windowWidth, p5.windowHeight, p5.WEBGL);
-        canvas.position(0, 0);
-        canvas.style('z-index', '-1');
- 
-        for (let i = 0; i < 600; i++) {
-            let x = p5.random(-p5.width,p5.width);
-            let y = p5.random(-p5.height,p5.height);
-            let r = p5.random(1,10);
-            let z = p5.width;
-            stars[i] = new Star(p5);    
-        }
+  let stars = [];
+  let sensitivityX = 60;
+  let sensitivityY = 60;
+
+  const setup = (p5) => {
+    const canvas = p5.createCanvas(p5.windowWidth, p5.windowHeight, p5.WEBGL);
+    canvas.position(0, 0);
+    canvas.style("z-index", "-1");
+
+    // Reduce number of stars
+    const starCount = 200;
+    for (let i = 0; i < starCount; i++) {
+      stars[i] = new Star(p5);
     }
 
-    const draw = (p5) => {
-        p5.background(239, 228, 216);  
+    // Set frameRate to reduce CPU usage
+    p5.frameRate(60);
+  };
 
-   
-        const camX = p5.map(p5.mouseX, 0, p5.width, sensitivityX, -sensitivityX);
-        const camY = p5.map(p5.mouseY, 0, p5.height, sensitivityY, -sensitivityY);
-        p5.camera(camX, camY, (p5.height/2), 0, 0, 0, 0, 1, 0);
+  const draw = (p5) => {
+    p5.background(255, 252, 247);
 
+    // Optimize camera movement by reducing calculation frequency
+    const camX = p5.map(p5.mouseX, 0, p5.width, sensitivityX, -sensitivityX);
+    const camY = p5.map(p5.mouseY, 0, p5.height, sensitivityY, -sensitivityY);
+    p5.camera(camX, camY, p5.height / 2, 0, 0, 0, 0, 1, 0);
 
-        for (let i = 0; i < stars.length; i++) {
-            stars[i].update();
-            stars[i].show();
-        }
-    };
+    p5.push();
+    p5.fill(0);
+    p5.noStroke();
 
-    function Star(p5) {
-        this.p5 = p5;
-        this.x = p5.random(-p5.width, p5.width);
-        this.y = p5.random(-p5.height, p5.height);
-        this.z = p5.random(p5.width);
-        this.lineDistance = p5.random(1, 10)
- 
-        this.show = function () { 
-            this.p5.fill(0, 0, 0)         
-            this.sx = p5.map(this.x / this.z, 0, 1, 0, p5.width);
-            this.sy = p5.map(this.y / this.z, 0, 1, 0, p5.height);
-            this.r = p5.map(this.z, 0, p5.width, 18, 0);
-            this.p5.ellipse(this.sx, this.sy, this.r, this.r);
-        }
-
-
-        this.update = function () {
-            this.z = this.z - 1;
-            if (this.z < 1) {
-                this.z = p5.width;
-                this.x = p5.random(-p5.width,p5.width);
-                this.y = p5.random(-p5.height,p5.height);
-            }
-        }
+    for (let star of stars) {
+      star.update();
+      star.show();
     }
-    return <Sketch setup={setup} draw={draw} />
+    p5.pop();
+  };
+
+  class Star {
+    constructor(p5) {
+      this.p5 = p5;
+      this.lineDistance = p5.random(1, 1.2);
+      this.reset();
+    }
+
+    reset() {
+      this.x = this.p5.random(-this.p5.width / 2, this.p5.width / 2);
+      this.y = this.p5.random(-this.p5.height / 2, this.p5.height / 2);
+      this.z = this.p5.random(this.p5.width);
+    }
+
+    show() {
+      this.sx = this.p5.map(this.x / this.z, 0, 1, 0, this.p5.width / 2);
+      this.sy = this.p5.map(this.y / this.z, 0, 1, 0, this.p5.height / 2);
+      this.r = this.p5.map(this.z, 0, this.p5.width, 12, 0);
+
+      if (this.r > 0.5) {
+        this.p5.strokeWeight(1.5);
+        this.p5.stroke(0, this.p5.alpha);
+        this.p5.line(
+          this.sx,
+          this.sy,
+          this.sx * this.lineDistance,
+          this.sy * this.lineDistance
+        );
+      }
+    }
+
+    update() {
+      this.z = this.z - 2;
+      if (this.z < 1) {
+        this.reset();
+      }
+    }
+  }
+
+  const windowResized = (p5) => {
+    p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
+    stars = stars.map(() => new Star(p5));
+  };
+
+  return <Sketch setup={setup} draw={draw} windowResized={windowResized} />;
 }
+
 export default Bg;

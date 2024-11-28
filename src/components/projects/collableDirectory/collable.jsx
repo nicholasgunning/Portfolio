@@ -1,29 +1,38 @@
 import React from "react";
 import styles from "../../../stylesheets/collable.module.css";
-// import CollableModel from "../../../../public/collableModel";
-// import { Suspense } from "react";
-// import { Canvas } from "@react-three/fiber";
-// import { Environment, OrbitControls } from "@react-three/drei";
+import { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
+import { Environment, OrbitControls } from "@react-three/drei";
+import Glasses from "../../../../public/Glasses";
 
 function Collable() {
   return (
     <div className={styles.background}>
-      <h1>Collable</h1>
-      <p>
-        Collable is a web application that allows users to create and share
-        collaborative playlists. Users can create a playlist, add songs to it,
-        and share it with others. Users can also collaborate on playlists by
-        adding songs to playlists created by others. Collable is built using
-        React, Node.js, Express, and MongoDB.
-      </p>
-      {/* <Canvas>
-      <ambientLight/>
-      <OrbitControls />
-        <Suspense fallback={null}>
-          <CollableModel />
-        </Suspense>
-        <Environment preset="sunset" />
-      </Canvas> */}
+      <h1 className={styles.title}>Collable</h1>
+      <div className={styles.collable}>
+        <div className={styles.modelContainer}>
+          <Canvas>
+            <ambientLight />
+            <OrbitControls
+              enableZoom={false}
+              rotateSpeed={0.2} // Lower number = less sensitive rotation
+              dampingFactor={0.1} // Adds smoothing to the movement
+            />
+            <Suspense fallback={null}>
+              <Glasses />
+            </Suspense>
+            <Environment preset="apartment" />
+          </Canvas>
+        </div>
+        <div className={styles.description}>
+          <h2 className={styles.subtitle}>Snapshot</h2>
+          <p className={styles.paragraph}>
+            Collable enhances collaborative efforts among workers by providing
+            visual and tangible stimulation. It employees create a more focused
+            work environment by minimizing external distractions.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
