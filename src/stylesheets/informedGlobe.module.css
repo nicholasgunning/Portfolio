@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.background {
+    background-color: rgb(255, 252, 247);
+    height: 100vh;
+    width: 100vw;
+}
+
+.title {
+    font-family: 'Work Sans', sans-serif;
+    font-size: clamp(4rem, 8vw, 6rem);
+    font-weight: 700;
+    color: rgba(233, 139, 139, 1);
+    margin: clamp(0.5rem, 1vw, 1rem);
+    margin-left: 5vw;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
