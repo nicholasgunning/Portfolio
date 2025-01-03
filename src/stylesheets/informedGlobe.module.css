@@ -1,9 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 .background {
-    background-color: rgb(255, 252, 247);
-    height: 100vh;
+    background-color: rgb(255, 249, 240);
+    height: 140vh;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#titleContainer {
+    background-color: rgb(255, 249, 240);
+    margin-bottom: 5%;
+    z-index: 1;
+}
+
+#imageContainer {
+    display: flex;
 }
 
 .title {
@@ -14,4 +27,33 @@
     margin: clamp(0.5rem, 1vw, 1rem);
     margin-left: 5vw;
     border-bottom: 2px solid rgb(0, 0, 0);
+    text-align: left;
+    align-self: flex-start;
 }
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 170vh; 
+    
+  }
+  
+.image {
+    width: 70%; 
+    height: 70%;
+    transform-origin: center;
+    padding: 5vw;
+    z-index: 2;
+}
+
+.textUnderImage {
+    position: absolute;
+    top: 80%; 
+    right: 12vw;
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+    z-index: -1;
+}
+  

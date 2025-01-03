@@ -50,12 +50,12 @@ function Collable() {
       </h2>
       <div id={styles.TeamMembers}>
         <TeamMember
-          image="../../../../src/assets/nickPhoto1.jpeg"
+          image="../../../../src/assets/collable/nickPhoto1.jpeg"
           name="Zoe Jansen"
           description="Lorem ipsum dolor sit amet..."
         />
         <TeamMember
-          image="../../../../src/assets/nickPhoto1.jpeg"
+          image="../../../../src/assets/collable/nickPhoto1.jpeg"
           name="Nick Gunning (Myself)"
           description="Lorem ipsum dolor sit amet..."
         />
@@ -101,7 +101,7 @@ function Collable() {
           </p>
           <img
             className={styles.problemFrame}
-            src="../../../../src/assets/problemFrame.png"
+            src="../../../../src/assets/collable/problemFrame.png"
           />
         </div>
       </div>
