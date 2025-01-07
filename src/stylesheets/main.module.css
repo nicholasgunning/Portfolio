@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+h1 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: clamp(4rem, 8vw, 6rem);
+    font-weight: 700;
+    color: rgba(233, 139, 139, 1);
+    margin: clamp(0.5rem, 1vw, 1rem);
+    margin-left: 5vw;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: clamp(1.2rem, 1.7vw, 1.7rem);
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+}
+
+h2 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 5vw;
+    color: rgba(233, 139, 139, 1);
+    font-weight: 400;
+}
+
+.name {
+    font-family: 'Work Sans', sans-serif;
+    font-size: clamp(0.5rem, 3vw, 2rem);
+    font-weight: 400;
+}
+
+.circleImage {
+    width: 100%;
+}
+
+#teamMembers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.newSubtitle {
+    padding-left: 10vw;
+}
+
+.circleFrame {
+    width: 25%; 
+    height: 25%; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}

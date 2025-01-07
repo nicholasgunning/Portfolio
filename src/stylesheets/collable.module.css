@@ -1,39 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "main.module.css";
 
 .background {
     background-color: rgb(255, 252, 247);
     height: 100%;
     width: 100%;
-}
- 
-.title {
-    font-family: 'Work Sans', sans-serif;
-    font-size: clamp(4rem, 8vw, 6rem);
-    font-weight: 700;
-    color: rgba(233, 139, 139, 1);
-    margin: clamp(0.5rem, 1vw, 1rem);
-    margin-left: 5vw;
-    border-bottom: 2px solid rgb(0, 0, 0);
-}
-
-.subtitle {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 5vw;
-    color: rgba(233, 139, 139, 1);
-    font-weight: 400;
-}
-
-.name {
-    font-family: 'Work Sans', sans-serif;
-    font-size: clamp(0.5rem, 3vw, 2rem);
-    font-weight: 400;
-}
-
-.paragraph {
-    font-family: 'Work Sans', sans-serif;
-    font-size: clamp(1.2rem, 1.7vw, 1.7rem);
-    color: rgb(0, 0, 0);
-    font-weight: 400;
 }
 
 .collable {
@@ -50,32 +20,9 @@
     min-height: 300px;
     max-height: 400px;
 }
-
+ 
 .description {
     padding: clamp(0.5rem, 1vw, 1rem);
-}
-
-#teamText {
-    padding-left: 10vw;
-}
-
-.circleFrame {
-    width: 200px; 
-    height: 200px; 
-    border-radius: 50%; 
-    overflow: hidden; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-}
-
-.circleImage {
-    width: 100%;
-}
-
-#TeamMembers {
-    display: flex;
-    justify-content: space-around;
 }
 
 .problemContainer {
@@ -94,5 +41,10 @@
     padding-left: 10%;
 }
 
+#teamMembers {
+    padding-left: 10%;
+}
 
-
+.circleFrame {
+    height: 50%;
+}

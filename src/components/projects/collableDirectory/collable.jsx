@@ -7,7 +7,7 @@ import Glasses from "../../../../public/Glasses";
 
 function TeamMember({ image, name, description }) {
   return (
-    <div className={styles.memberCard}>
+    <div>
       <h2 className={styles.name}>{name}</h2>
       <div className={styles.circleFrame}>
         <img className={styles.circleImage} src={image} alt={name} />
@@ -20,15 +20,15 @@ function TeamMember({ image, name, description }) {
 function Collable() {
   return (
     <div className={styles.background}>
-      <h1 className={styles.title}>Collable</h1>
+      <h1>Collable</h1>
       <div className={styles.collable}>
         <div className={styles.modelContainer}>
           <Canvas className={styles.canvas}>
             <ambientLight />
             <OrbitControls
               enableZoom={false}
-              rotateSpeed={0.2} // Lower number = less sensitive rotation
-              dampingFactor={0.1} // Adds smoothing to the movement
+              rotateSpeed={0.2}
+              dampingFactor={0.1}
             />
             <Suspense fallback={null}>
               <Glasses />
@@ -37,7 +37,7 @@ function Collable() {
           </Canvas>
         </div>
         <div className={styles.description}>
-          <h2 className={styles.subtitle}>Snapshot</h2>
+          <h2>Snapshot</h2>
           <p className={styles.paragraph}>
             Collable enhances collaborative efforts among workers by providing
             visual and tangible stimulation. It employees create a more focused
@@ -45,10 +45,8 @@ function Collable() {
           </p>
         </div>
       </div>
-      <h2 id={styles.teamText} className={styles.subtitle}>
-        Team:
-      </h2>
-      <div id={styles.TeamMembers}>
+      <h2 className={styles.newSubtitle}>Team:</h2>
+      <div id={styles.teamMembers}>
         <TeamMember
           image="../../../../src/assets/collable/nickPhoto1.jpeg"
           name="Zoe Jansen"
@@ -61,9 +59,7 @@ function Collable() {
         />
       </div>
 
-      <h2 className={styles.subtitle} id={styles.teamText}>
-        Problem
-      </h2>
+      <h2 className={styles.newSubtitle}>Problem</h2>
       <div className={styles.problemText}>
         <p className={styles.paragraph}>
           Due to the pandemic where there was a global shift to remote and
@@ -78,10 +74,8 @@ function Collable() {
           all, regardless of their financial status, device, or location.
         </p>
       </div>
-      <h2 className={styles.subtitle} id={styles.teamText}>
-        INSERT VIDEO
-      </h2>
-      <h2 className={styles.subtitle} id={styles.teamText}>
+      <h2 className={styles.newSubtitle}>INSERT VIDEO</h2>
+      <h2 className={styles.newSubtitle}>
         Challenges and how we overcame them:
       </h2>
       <div className={styles.problemText}>

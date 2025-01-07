@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "main.module.css";
+
 
 .background {
     background-color: rgb(255, 249, 240);
-    height: 140vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -16,30 +17,19 @@
 }
 
 #imageContainer {
+    height: 100%;
+    width: 80%;
     display: flex;
 }
 
-.title {
-    font-family: 'Work Sans', sans-serif;
-    font-size: clamp(4rem, 8vw, 6rem);
-    font-weight: 700;
-    color: rgba(233, 139, 139, 1);
-    margin: clamp(0.5rem, 1vw, 1rem);
-    margin-left: 5vw;
-    border-bottom: 2px solid rgb(0, 0, 0);
-    text-align: left;
-    align-self: flex-start;
-}
 
 .imageContainer {
     display: flex;
-    justify-content: center;
+    justify-content: ce nter;
     align-items: center;
-    height: 170vh; 
-    
-  }
+}
   
-.image {
+.phones {
     width: 70%; 
     height: 70%;
     transform-origin: center;
@@ -47,13 +37,33 @@
     z-index: 2;
 }
 
-.textUnderImage {
+.textUnderPhone {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 10%;
+    color: rgb(52, 52, 52);
+    font-weight: 400;
     position: absolute;
     top: 80%; 
-    right: 12vw;
-    font-size: 16px;
-    color: #000000;
+    right: 8vw;
     text-align: center;
-    z-index: -1;
 }
+
+#teamMembers {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10% 10%;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Person1 Person2"
+      "Person3 .";
+    padding-left: 10%;
+}
+  
+#person1 { grid-area: Person1; }
+
+#person2 { grid-area: Person2; }
+
+#person3 { grid-area: Person3; }
+  
   
