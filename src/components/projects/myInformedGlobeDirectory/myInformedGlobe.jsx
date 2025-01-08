@@ -5,8 +5,8 @@ import { useState, useEffect } from "react";
 
 import ScrollText from "./scrollText";
 import TeamMember from "./teamMember";
-import { fill } from "three/src/extras/TextureUtils.js";
-import Background from "three/src/renderers/common/Background.js";
+
+import Journey from "./journey";
 
 function InformedGlobe() {
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
@@ -64,13 +64,25 @@ function InformedGlobe() {
             <ScrollText />
           </div>
         </Parallax>
-
-
-      <h3>Hello</h3>
+        <div id={styles.blurb}>
+          <p id={styles.blurbText}>
+            <span className={styles.boldText}>Informed Globe</span> is a news
+            app tailored for
+            <span className={styles.boldText}> younger generations</span>,
+            delivering relevant political information in a format that resonates
+            with their preferences. It
+            <span className={styles.boldText}>
+              {" "}
+              simplifies complex topics{" "}
+            </span>{" "}
+            and highlights
+            <span className={styles.boldText}> direct impacts</span>, making
+            staying informed
+            <span className={styles.boldText}> accessible and engaging</span>.
+          </p>
+        </div>
       </div>
-
       <h2 className={styles.newSubtitle}>Team:</h2>
-
       <div id={styles.teamMembers}>
         <div id={styles.person1}>
           <TeamMember
@@ -94,6 +106,33 @@ function InformedGlobe() {
           />
         </div>
       </div>
+
+      <h2 className={styles.newSubtitle}>Problem: </h2>
+      <div id={styles.problemContainer}>
+        <p className={styles.problemText}>
+          Survey and Interview data revealed that young adults consume less news
+          than older generations and often find it overwhelming or confusing.
+          This can lead to{" "}
+          <span className={styles.boldText}>uninformed voting</span> and
+          disinterest in current events. While they have more access to
+          political information than ever,{" "}
+          <span className={styles.boldText}>misinformation </span>
+          and biased portrayals make it{" "}
+          <span className={styles.boldText}>
+            challenging to make informed decisions
+          </span>
+          .
+        </p>
+        <img
+          src="../../../../src/assets/myInformedGlobe/graph/donutGraph.png"
+          id={styles.donutGraph}
+        />
+      </div>
+
+      <h2 className={styles.newSubtitle}>Journey:</h2>
+      
+      <Journey />
+      
     </div>
   );
 }

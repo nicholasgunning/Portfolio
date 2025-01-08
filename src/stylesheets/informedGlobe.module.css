@@ -16,12 +16,24 @@
     z-index: 1;
 }
 
-#imageContainer {
-    height: 100%;
-    width: 80%;
-    display: flex;
+#blurb {
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
+#blurbText {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.3vw;
+    text-align: center;
+    font-weight: 400;
+}
+
+#imageContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
 
 .imageContainer {
     display: flex;
@@ -44,7 +56,7 @@
     font-weight: 400;
     position: absolute;
     top: 80%; 
-    right: 8vw;
+    right: 7vw;
     text-align: center;
 }
 
@@ -58,6 +70,7 @@
       "Person1 Person2"
       "Person3 .";
     padding-left: 10%;
+    margin-bottom: 2%;
 }
   
 #person1 { grid-area: Person1; }
@@ -65,5 +78,24 @@
 #person2 { grid-area: Person2; }
 
 #person3 { grid-area: Person3; }
+
+#problemContainer {
+    display: flex;
+    align-self: center;
+    column-gap: 1fr;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#problemText {
+    font-size: 30%;
+}
+
+#donutGraph {
+    width: 30%;
+    height: 30%;
+    padding-left: 10%;
+    margin-top: -5%;
+}
   
   
