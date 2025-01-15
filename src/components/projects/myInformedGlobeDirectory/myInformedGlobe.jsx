@@ -7,7 +7,7 @@ import ScrollText from "./scrollText";
 import TeamMember from "./teamMember";
 
 import Journey from "./journey";
-
+ 
 function InformedGlobe() {
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 
@@ -59,7 +59,7 @@ function InformedGlobe() {
           />
         </Parallax>
 
-        <Parallax translateY={getTranslateY(-25, -40)}>
+        <Parallax translateY={getTranslateY(-40, -20)}>
           <div className={styles.textUnderPhone}>
             <ScrollText />
           </div>
@@ -130,9 +130,7 @@ function InformedGlobe() {
       </div>
 
       <h2 className={styles.newSubtitle}>Journey:</h2>
-      
       <Journey />
-      
     </div>
   );
 }

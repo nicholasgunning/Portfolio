@@ -27,6 +27,10 @@ h2 {
     margin-bottom: -0.3%;
 }
 
+.background {
+    background-color: rgb(255, 249, 240);
+}
+
 .boldText {
     font-weight: 600;
 }

@@ -1,26 +1,63 @@
 import React from "react";
 import styles from "../../../stylesheets/informedGlobeJourney.module.css";
+import FadeInOnScroll from "./fadeInOnScroll";
 
 function Journey() {
-  return (
-    <div className={styles.container}>
-      <div className={styles.discoverIcon}>
-        <img src="../../../../src/assets/myInformedGlobe/journey/discoverIcon.png" />
-      </div>
-      <div className={styles.defineIcon}>
-        <img src="../../../../src/assets/myInformedGlobe/journey/defineIcon.png" />
-      </div>
-      <div className={styles.ideateIcon}>
-        <img src="../../../../src/assets/myInformedGlobe/journey/ideateIcon.png" />
-      </div>
-      <div className={styles.designIcon}>
-        <img src="../../../../src/assets/myInformedGlobe/journey/designIcon.png" />
-      </div>
-      <div className={styles.testIcon}>
-        <img src="../../../../src/assets/myInformedGlobe/journey/testIcon.png" />
-      </div>
+  const icons = [
+    { id: "discoverIcon", src: "discoverIcon.png" },
+    { id: "defineIcon", src: "defineIcon.png" },
+    { id: "ideateIcon", src: "ideateIcon.png" },
+    { id: "designIcon", src: "designIcon.png" },
+    { id: "testIcon", src: "testIcon.png" },
+  ];
 
-      <div className={styles.discoverBlurb}>
+  const secondaryIcons = [
+    {
+      id: "onlineEthnographyIcon",
+      src: "onlineEthnographyIcon.png",
+    },
+    {
+      id: "interviewIcon",
+      src: "interviewIcon.png",
+    },
+    {
+      id: "questionnaireIcon",
+      src: "questionnaireIcon.png",
+    },
+  ];
+
+  return (
+    <div id={styles.container}>
+      {icons.map((icon, index) => {
+        console.log(icon.id); // Log the ID
+        return (
+          <FadeInOnScroll key={`${icon.id}-${index}`} delay={index * 200}>
+            <div id={styles[icon.id]}>
+              <img
+                className={styles.icon}
+                src={`../../../../src/assets/myInformedGlobe/journey/${icon.src}`}
+                alt={icon.id}
+              />
+            </div>
+          </FadeInOnScroll>
+        );
+      })}
+
+      {secondaryIcons.map((icon, index) => {
+        console.log(icon.id); // Log the ID
+        return (
+          // <FadeInOnScroll delay={index * 200}>
+          <div key={`${icon.id}-${index}`} id={styles[icon.id]}>
+            <img
+              src={`../../../../src/assets/myInformedGlobe/journey/${icon.src}`}
+              alt={icon.id}
+            />
+          </div>
+          // </FadeInOnScroll>
+        );
+      })}
+
+      <div id={styles.discoverBlurb}>
         <h3>Discover</h3>
         <h4>
           User Interviews
@@ -34,7 +71,7 @@ function Journey() {
           Online Ethnography
         </h4>
       </div>
-      <div className={styles.defineBlurb}>
+      <div id={styles.defineBlurb}>
         <h3>Define</h3>
         <h4>
           Affinity Diagram
@@ -44,7 +81,7 @@ function Journey() {
           Storyboards
         </h4>
       </div>
-      <div className={styles.ideateBlurb}>
+      <div id={styles.ideateBlurb}>
         <h3>Ideate</h3>
         <h4>
           Crazy 8s
@@ -56,7 +93,7 @@ function Journey() {
           Sketches
         </h4>
       </div>
-      <div className={styles.designBlurb}>
+      <div id={styles.designBlurb}>
         <h3>Design</h3>
         <h4>
           Wireframes
@@ -68,7 +105,7 @@ function Journey() {
           Visual Design
         </h4>
       </div>
-      <div className={styles.testBlurb}>
+      <div id={styles.testBlurb}>
         <h3>Test</h3>
         <h4>
           Heuristic Evaluation
@@ -79,26 +116,15 @@ function Journey() {
         </h4>
       </div>
 
-      <div className={styles.mainArrow}>
-        <img src="../../../../src/assets/myInformedGlobe/journey/mainArrow.png" />
-      </div>
-      <div className={styles.onlineEthnographyIcon}>
-        <img src="../../../../src/assets/myInformedGlobe/journey/onlineEthnographyIcon.png" />
-      </div>
-      <div className={styles.interviewsIcon}>
-        <img src="../../../../src/assets/myInformedGlobe/journey/interviewIcon.png" />
-      </div>
-      <div className={styles.questionnaireIcon}>
-        <img src="../../../../src/assets/myInformedGlobe/journey/questionnaireIcon.png" />
-      </div>
-
-      <div className={styles.onlineEthnographyBlurb}>
+      <div id={styles.onlineEthnographyBlurb}>
         <h3>Online Ethnography</h3>
       </div>
-      <div className={styles.interviewsBlurb}>
+
+      <div id={styles.interviewBlurb}>
         <h3>Interviews</h3>
       </div>
-      <div className={styles.questionnaireBlurb}>
+
+      <div id={styles.questionnaireBlurb}>
         <h3>Questionnaires</h3>
       </div>
     </div>

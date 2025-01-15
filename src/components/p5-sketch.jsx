@@ -21,7 +21,7 @@ function Bg() {
   };
 
   const draw = (p5) => {
-    p5.background(255, 252, 247);
+    p5.background(255, 249, 240);
 
     // Optimize camera movement by reducing calculation frequency
     const camX = p5.map(p5.mouseX, 0, p5.width, sensitivityX, -sensitivityX);

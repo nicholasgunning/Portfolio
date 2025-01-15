@@ -11,7 +11,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function ProjectCards() {
   return (
     <>
-      <div className={homePage.container}>
+      <div id={homePage.container}>
         <Routes>
           <Route
             path="/"

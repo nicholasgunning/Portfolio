@@ -1,10 +1,6 @@
 @import "main.module.css";
 
-.background {
-    background-color: rgb(255, 252, 247);
-    height: 100%;
-    width: 100%;
-}
+
 
 .collable {
     display: grid;

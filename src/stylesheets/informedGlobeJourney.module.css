@@ -1,18 +1,16 @@
-
-.container {  
+#container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-auto-columns: 1fr;
-    grid-auto-flow: row;
+    grid-template-rows: 30% 30% 30% 30% 30%;
     grid-template-areas:
-    "discoverIcon defineIcon ideateIcon designIcon testIcon"
-    "discoverBlurb defineBlurb ideateBlurb designBlurb testBlurb"
-    ". mainArrow mainArrow mainArrow ."
-    ". onlineEthnographyIcon interviewsIcon questionnaireIcon ."
-    ". onlineEthnographyBlurb interviewsBlurb questionnaireBlurb .";
+      "discoverIcon defineIcon ideateIcon designIcon testIcon"
+      "discoverBlurb defineBlurb ideateBlurb designBlurb testBlurb"
+      ". mainArrow mainArrow mainArrow ."
+      ". onlineEthnographyIcon interviewIcon questionnaireIcon ."
+      ". onlineEthnographyBlurb interviewBlurb questionnaireBlurb .";
     padding-top: 5%;
-}
+  }
+
 
 img {
     width: 60%; 
@@ -21,6 +19,7 @@ img {
 }
 
 h3 {
+    font-family: 'Work Sans', sans-serif;
     font-size: 1.5em;
     font-weight: 400;
     color: #333;
@@ -28,43 +27,46 @@ h3 {
 }
 
 h4 {
+    font-family: 'Work Sans', sans-serif;
     font-size: 1.3em;
     font-weight: 300;
     color: #333;
     text-align: center;
 }
-  
-  .discoverIcon { grid-area: discoverIcon; }
-  
-  .defineIcon { grid-area: defineIcon; }
-  
-  .ideateIcon { grid-area: ideateIcon; }
-  
-  .designIcon { grid-area: designIcon; }
-  
-  .testIcon { grid-area: testIcon; }
-  
-  .discoverBlurb { grid-area: discoverBlurb; }
-  
-  .defineBlurb { grid-area: defineBlurb; }
-  
-  .ideateBlurb { grid-area: ideateBlurb; }
-  
-  .designBlurb { grid-area: designBlurb; }
-  
-  .testBlurb { grid-area: testBlurb; }
-  
-  .mainArrow { grid-area: mainArrow; }
-  
-  .onlineEthnographyIcon { grid-area: onlineEthnographyIcon; }
-  
-  .interviewsIcon { grid-area: interviewsIcon; }
-  
-  .questionnaireIcon { grid-area: questionnaireIcon; }
 
-  .onlineEthnographyBlurb { grid-area: onlineEthnographyBlurb; }
 
-.interviewsBlurb { grid-area: interviewsBlurb; }
+#discoverIcon { 
+    grid-area: discoverIcon; 
+}
 
-.questionnaireBlurb { grid-area: questionnaireBlurb; }
-  
+#defineIcon { grid-area: defineIcon; }
+
+#ideateIcon { grid-area: ideateIcon; }
+
+#designIcon { grid-area: designIcon; }
+
+#testIcon { grid-area: testIcon; }
+
+#discoverBlurb { grid-area: discoverBlurb; }
+
+#defineBlurb { grid-area: defineBlurb; }
+
+#ideateBlurb { grid-area: ideateBlurb; }
+
+#designBlurb { grid-area: designBlurb; }
+
+#testBlurb { grid-area: testBlurb; }
+
+#mainArrow { grid-area: mainArrow; }
+
+#onlineEthnographyIcon { grid-area: onlineEthnographyIcon; }
+
+#interviewIcon { grid-area: interviewIcon; }
+
+#questionnaireIcon { grid-area: questionnaireIcon; }
+
+#onlineEthnographyBlurb { grid-area: onlineEthnographyBlurb; }
+
+#interviewBlurb { grid-area: interviewBlurb; }
+
+#questionnaireBlurb { grid-area: questionnaireBlurb; }
