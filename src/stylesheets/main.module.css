@@ -9,7 +9,6 @@ h1 {
     margin: clamp(0.5rem, 1vw, 1rem);
     margin-left: 5vw;
     border-bottom: 2px solid rgb(0, 0, 0);
-    
 }
 
 p {

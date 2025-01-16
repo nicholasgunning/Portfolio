@@ -1,16 +1,25 @@
 #container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 30% 30% 30% 30% 30%;
+    grid-template-columns: 20% 20% 20% 20% 20%;  
+    grid-template-rows: auto auto auto auto auto; 
+    grid-auto-columns: 1fr;
+    gap: 20px 0px; 
+    grid-auto-flow: row;
     grid-template-areas:
       "discoverIcon defineIcon ideateIcon designIcon testIcon"
       "discoverBlurb defineBlurb ideateBlurb designBlurb testBlurb"
       ". mainArrow mainArrow mainArrow ."
       ". onlineEthnographyIcon interviewIcon questionnaireIcon ."
       ". onlineEthnographyBlurb interviewBlurb questionnaireBlurb .";
-    padding-top: 5%;
-  }
-
+    padding: 50px 10% 50px 10%; 
+    width: 80%;
+    min-height: 800px; 
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+}
+ 
 
 img {
     width: 60%; 
@@ -20,7 +29,7 @@ img {
 
 h3 {
     font-family: 'Work Sans', sans-serif;
-    font-size: 1.5em;
+    font-size: 3vh;
     font-weight: 400;
     color: #333;
     text-align: center;
@@ -28,7 +37,7 @@ h3 {
 
 h4 {
     font-family: 'Work Sans', sans-serif;
-    font-size: 1.3em;
+    font-size: 2vh;
     font-weight: 300;
     color: #333;
     text-align: center;
@@ -38,6 +47,8 @@ h4 {
 #discoverIcon { 
     grid-area: discoverIcon; 
 }
+
+#discoverIcon { grid-area: discoverIcon; }
 
 #defineIcon { grid-area: defineIcon; }
 
@@ -57,16 +68,27 @@ h4 {
 
 #testBlurb { grid-area: testBlurb; }
 
-#mainArrow { grid-area: mainArrow; }
+#mainArrow { 
+    grid-area: mainArrow; 
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
 
-#onlineEthnographyIcon { grid-area: onlineEthnographyIcon; }
+#onlineEthnographyIcon { 
+    grid-area: onlineEthnographyIcon; 
+    padding-top: 5%;
+}
 
-#interviewIcon { grid-area: interviewIcon; }
+#questionnaireIcon { grid-area: questionnaireIcon; 
+    padding-top: 5%;}
 
-#questionnaireIcon { grid-area: questionnaireIcon; }
-
-#onlineEthnographyBlurb { grid-area: onlineEthnographyBlurb; }
-
-#interviewBlurb { grid-area: interviewBlurb; }
+#onlineEthnographyBlurb { grid-area: onlineEthnographyBlurb; 
+    }
 
 #questionnaireBlurb { grid-area: questionnaireBlurb; }
+
+#interviewIcon { grid-area: interviewIcon; 
+    padding-top: 5%;
+}
+
+#interviewBlurb { grid-area: interviewBlurb; }

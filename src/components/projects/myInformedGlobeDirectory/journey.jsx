@@ -116,6 +116,13 @@ function Journey() {
         </h4>
       </div>
 
+      <div id={styles.mainArrow}>
+        <img
+          src="../../../../src/assets/myInformedGlobe/journey/mainArrow.png"
+          alt="mainArrow"
+        />
+      </div>
+
       <div id={styles.onlineEthnographyBlurb}>
         <h3>Online Ethnography</h3>
       </div>
