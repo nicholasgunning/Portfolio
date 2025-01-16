@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../../stylesheets/collable.module.css";
-import { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
+import { Suspense, useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
 import Glasses from "../../../../public/Glasses";
 
@@ -17,13 +17,30 @@ function TeamMember({ image, name, description }) {
   );
 }
 
+function RotatingGlasses() {
+  const groupRef = useRef();
+
+  useFrame((state, delta) => {
+    if (groupRef.current) {
+      groupRef.current.rotation.x += delta * 0.3;
+      groupRef.current.rotation.y += delta * 0.2;
+    }
+  });
+
+  return (
+    <group ref={groupRef}>
+      <Glasses />
+    </group>
+  );
+}
+
 function Collable() {
   return (
     <div className={styles.background}>
       <h1>Collable</h1>
       <div className={styles.collable}>
         <div className={styles.modelContainer}>
-          <Canvas className={styles.canvas}>
+          <Canvas className={styles.model}>
             <ambientLight />
             <OrbitControls
               enableZoom={false}
@@ -31,7 +48,7 @@ function Collable() {
               dampingFactor={0.1}
             />
             <Suspense fallback={null}>
-              <Glasses />
+              <RotatingGlasses />
             </Suspense>
             <Environment preset="apartment" />
           </Canvas>

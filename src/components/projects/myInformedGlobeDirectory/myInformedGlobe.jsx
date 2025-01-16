@@ -42,7 +42,7 @@ function InformedGlobe() {
           />
         </Parallax>
 
-        <Parallax translateY={getTranslateY(-40, 20)}>
+        <Parallax translateY={getTranslateY(-65, 50)}>
           <img
             src="../../../../src/assets/myInformedGlobe/coverPhones/mainIphone2.png"
             alt="Placeholder globe"
@@ -80,28 +80,30 @@ function InformedGlobe() {
           </p>
         </div>
       </div>
-      <h2 className={styles.newSubtitle}>Team:</h2>
-      <div id={styles.teamMembers}>
-        <div id={styles.person1}>
-          <TeamMember
-            image="../../../../src/assets/collable/nickPhoto1.jpeg"
-            name="Zoe Jansen"
-            description="Lorem ipsum dolor sit amet..."
-          />
-        </div>
-        <div id={styles.person2}>
-          <TeamMember
-            image="../../../../src/assets/collable/nickPhoto1.jpeg"
-            name="Nick Gunning (Myself)"
-            description="Lorem ipsum dolor sit amet..."
-          />
-        </div>
-        <div id={styles.person3}>
-          <TeamMember
-            image="../../../../src/assets/collable/nickPhoto1.jpeg"
-            name="Nick Gunning (Myself)"
-            description="Lorem ipsum dolor sit amet..."
-          />
+      <div id={styles.teamContainer2}>
+        <h2 className={styles.newSubtitle}>Team:</h2>
+        <div id={styles.teamMembers}>
+          <div id={styles.person1}>
+            <TeamMember
+              image="../../../../src/assets/collable/nickPhoto1.jpeg"
+              name="Zoe Jansen"
+              description="Lorem ipsum dolor sit amet..."
+            />
+          </div>
+          <div id={styles.person2}>
+            <TeamMember
+              image="../../../../src/assets/collable/nickPhoto1.jpeg"
+              name="Nick Gunning (Myself)"
+              description="Lorem ipsum dolor sit amet..."
+            />
+          </div>
+          <div id={styles.person3}>
+            <TeamMember
+              image="../../../../src/assets/collable/nickPhoto1.jpeg"
+              name="Nick Gunning (Myself)"
+              description="Lorem ipsum dolor sit amet..."
+            />
+          </div>
         </div>
       </div>
 

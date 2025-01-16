@@ -10,6 +10,19 @@
     margin-top: clamp(1rem, 2vw, 2rem);
 }
 
+.model {
+    cursor: grab;
+    transition: transform 0.2s;
+}
+
+.model:active {
+    cursor: grabbing;
+}
+
+.model:hover {
+    transform: scale(1.05);
+}
+
 .modelContainer {
     width: 100%;
     height: 40vh;
