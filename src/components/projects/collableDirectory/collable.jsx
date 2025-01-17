@@ -5,6 +5,11 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
 import Glasses from "../../../../public/Glasses";
 
+import nickPhoto from "@/assets/collable/nickPhoto1.jpeg";
+import collableProblemStat from "@/assets/collable/collableProblemStat.png";
+import productFrame from "@/assets/collable/productFrame.png";
+import challengesImg from "@/assets/collable/challengesFrame.png";
+
 function TeamMember({ image, name, description }) {
   return (
     <div>
@@ -66,12 +71,12 @@ function Collable() {
       <h2 className={styles.newSubtitle}>Team:</h2>
       <div id={styles.teamMembers}>
         <TeamMember
-          image="../../../../src/assets/collable/nickPhoto1.jpeg"
+          image={nickPhoto}
           name="Zoe Jansen"
           description="Lorem ipsum dolor sit amet..."
         />
         <TeamMember
-          image="../../../../src/assets/collable/nickPhoto1.jpeg"
+          image={nickPhoto}
           name="Nick Gunning (Myself)"
           description="Lorem ipsum dolor sit amet..."
         />
@@ -99,10 +104,7 @@ function Collable() {
           <span className={styles.boldText}>contribute equally</span>,{" "}
           regardless of their financial status, available devices, or location.
         </p>
-        <img
-          src={"../../../../src/assets/collable/collableProblemStat.png"}
-          id={styles.problemStatImg}
-        />
+        <img src={collableProblemStat} id={styles.problemStatImg} />
       </div>
       <h2 className={styles.newSubtitle}>Product</h2>
       <div className={styles.textContainer}>
@@ -125,10 +127,7 @@ function Collable() {
           </span>{" "}
           in today's evolving workplace.
         </p>
-        <img
-          src={"../../../../src/assets/collable/productFrame.png"}
-          id={styles.productFrameImg}
-        />
+        <img src={productFrame} id={styles.productFrameImg} />
       </div>
       <h2 className={styles.newSubtitle}>
         Challenges and how we overcame them:
@@ -150,10 +149,8 @@ function Collable() {
           based on user feedback, allowing us to document and showcase how
           features evolved throughout the development cycle.
         </p>
-        <img
-          className={styles.challengesImg}
-          src="../../../../src/assets/collable/problemFrame.png"
-        />
+
+        <img className={styles.challengesImg} src={challengesImg} />
       </div>
     </div>
   );
