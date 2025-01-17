@@ -247,7 +247,7 @@ function InformedGlobe() {
               .
               <br />
               <br />
-              At conclusion of article, circle diagram visualised economic
+              At conclusion of article a circle diagram visualised economic
               factors and how they impact your home country.
             </p>
           </div>

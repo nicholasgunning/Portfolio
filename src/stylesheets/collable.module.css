@@ -29,25 +29,35 @@
     min-height: 300px;
     max-height: 400px;
 }
- 
-.description {
-    padding: clamp(0.5rem, 1vw, 1rem);
+
+.mainBlurb {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
-.problemContainer {
-    display: flex;
-}
-
-.problemText {
+.textContainer {
+    padding-top: 1%;
     padding-right: 5%;
     padding-left: 10%;
     padding-bottom: 2%;
+    display: flex;
 }
 
-.problemFrame {
-    height: 40%;
-    width: 40%;
-    padding-left: 10%;
+
+#problemStatImg {
+    width: 30%;
+    height: 30%;
+    padding-right: 5%;
+    margin-left: -10%;
+}
+
+#productFrameImg {
+    width: 38%;
+    height: 38%;
+    padding-right: 5%;
+    margin-left: -10%;
 }
 
 #teamMembers {
@@ -56,4 +66,11 @@
 
 .circleFrame {
     height: 50%;
+}
+
+.challengesImg {
+    width: 40%;
+    height: 40%;
+    padding-right: 5%;
+    margin-left: -10%;
 }

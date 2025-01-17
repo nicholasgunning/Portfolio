@@ -55,10 +55,11 @@ function Collable() {
         </div>
         <div className={styles.description}>
           <h2>Snapshot</h2>
-          <p className={styles.paragraph}>
-            Collable enhances collaborative efforts among workers by providing
-            visual and tangible stimulation. It employees create a more focused
-            work environment by minimizing external distractions.
+          <p className={styles.paragraph} id={styles.mainBlurb}>
+            Collable uses AR technology to enhance collaborative efforts among
+            workers by providing visual and tangible stimulation. It employees
+            create a more focused work environment by minimizing external
+            distractions.
           </p>
         </div>
       </div>
@@ -77,44 +78,82 @@ function Collable() {
       </div>
 
       <h2 className={styles.newSubtitle}>Problem</h2>
-      <div className={styles.problemText}>
+      <div className={styles.textContainer}>
         <p className={styles.paragraph}>
-          Due to the pandemic where there was a global shift to remote and
-          hybrid work, causing the way we communicate and collaborate to change
-          indefinitely.
+          The <span className={styles.boldText}>pandemic</span> triggered a
+          global shift to{" "}
+          <span className={styles.boldText}>remote and hybrid work</span>,
+          fundamentally changing how we{" "}
+          <span className={styles.boldText}>communicate and collaborate</span>.
           <br />
           <br />
-          Therefore, the gap of hybrid and equitable collaboration was exposed.
+          This transition exposed significant gaps in{" "}
+          <span className={styles.boldText}>
+            hybrid and equitable collaboration
+          </span>
+          .
           <br />
           <br />
-          Equitable collaboration calls for the equal contribution of work from
-          all, regardless of their financial status, device, or location.
+          <span className={styles.boldText}>Equitable collaboration</span> means
+          ensuring everyone can{" "}
+          <span className={styles.boldText}>contribute equally</span>,{" "}
+          regardless of their financial status, available devices, or location.
         </p>
+        <img
+          src={"../../../../src/assets/collable/collableProblemStat.png"}
+          id={styles.problemStatImg}
+        />
       </div>
-      <h2 className={styles.newSubtitle}>INSERT VIDEO</h2>
+      <h2 className={styles.newSubtitle}>Product</h2>
+      <div className={styles.textContainer}>
+        <p>
+          <span className={styles.boldText}>Collabble</span> leverages{" "}
+          <span className={styles.boldText}>Augmented Reality (AR)</span> to
+          transform hybrid team collaboration. Through AR glasses, team members
+          connect via{" "}
+          <span className={styles.boldText}>interactive virtual avatars</span>,
+          enabling seamless communication across locations.
+          <br />
+          <br />
+          The platform features{" "}
+          <span className={styles.boldText}>real-time collaborative tools</span>
+          , including virtual sticky notes that facilitate instant ideation and
+          feedback among all team members. Developed through comprehensive
+          research, Collabble addresses the growing need for{" "}
+          <span className={styles.boldText}>
+            effective hybrid collaboration solutions
+          </span>{" "}
+          in today's evolving workplace.
+        </p>
+        <img
+          src={"../../../../src/assets/collable/productFrame.png"}
+          id={styles.productFrameImg}
+        />
+      </div>
       <h2 className={styles.newSubtitle}>
         Challenges and how we overcame them:
       </h2>
-      <div className={styles.problemText}>
-        <div className={styles.problemContainer}>
-          <p className={styles.paragraph}>
-            Collable was an early project that highlighted some introductory
-            design skills. During the project, we were unable to effectively
-            capture an effective demonstration of user interaction with the
-            design, the high tech and futuristic nature of the design itself
-            made it particularly difficult to simulate even with the assistance
-            of CGI.
-            <br />
-            <br />
-            During the project we also struggled to ideate and refine it based
-            on user feedback, a more comprehensive project would of highlighted
-            how the feature evolved overtime.
-          </p>
-          <img
-            className={styles.problemFrame}
-            src="../../../../src/assets/collable/problemFrame.png"
-          />
-        </div>
+      <div className={styles.textContainer}>
+        <p className={styles.paragraph}>
+          <span className={styles.boldText}>Collable</span> served as an initial
+          project to develop{" "}
+          <span className={styles.boldText}>foundational design skills</span>.
+          One significant challenge we encountered was effectively demonstrating
+          user interactions with the design - even with CGI, the advanced
+          technological nature of the concept made it difficult to create
+          realistic simulations.
+          <br />
+          <br />
+          Additionally, we recognized opportunities to strengthen our{" "}
+          <span className={styles.boldText}>user-centered design process</span>.
+          A more comprehensive approach would have included multiple iterations
+          based on user feedback, allowing us to document and showcase how
+          features evolved throughout the development cycle.
+        </p>
+        <img
+          className={styles.challengesImg}
+          src="../../../../src/assets/collable/problemFrame.png"
+        />
       </div>
     </div>
   );

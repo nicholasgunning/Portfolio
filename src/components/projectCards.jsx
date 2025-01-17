@@ -3,8 +3,8 @@ import Project from "./projectUtility";
 import homePage from "../stylesheets/homepage.module.css";
 import Collable from "./projects/collableDirectory/collable";
 import MyInformedGlobe from "./projects/myInformedGlobeDirectory/myInformedGlobe";
-import Chemtable from "./projects/chemtable";
-import Travelbud from "./projects/travelbud";
+import Chemtable from "./projects/chemTable/chemtable";
+import SoftwareProjects from "./projects/softwareProjectsDirectory/softwareProjects";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -19,16 +19,16 @@ function ProjectCards() {
               <>
                 <Bg />
                 <Project name="COLLABLE" link="/collable" />
-                <Project name="MY INFORMED GLOBE" link="/myinformedglobe" />
+                <Project name="MY INFORMED GLOBE" link="/myInformedGlobe" />
                 <Project name="CHEMTABLE" link="/chemtable" />
-                <Project name="TRAVELBUD" link="/travelbud" />
+                <Project name="SOFTWARE PROJECTS" link="/softwareProjects" />
               </>
             }
           />
           <Route path="/collable" element={<Collable />} />
-          <Route path="/myinformedglobe" element={<MyInformedGlobe />} />
+          <Route path="/myInformedGlobe" element={<MyInformedGlobe />} />
           <Route path="/chemtable" element={<Chemtable />} />
-          <Route path="/travelbud" element={<Travelbud />} />
+          <Route path="/softwareprojects" element={<SoftwareProjects />} />
         </Routes>
       </div>
     </>

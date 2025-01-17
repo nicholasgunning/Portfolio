@@ -4,7 +4,7 @@ import styles from "../stylesheets/homepage.module.css";
 
 function Project({ name, link }) {
   const handleClick = (e) => {
-    if (link === "/myinformedglobe") {
+    if (link === "/myInformedGlobe") {
       e.preventDefault();
       window.location.reload();
       window.location.href = link;
