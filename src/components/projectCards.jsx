@@ -3,7 +3,7 @@ import Project from "./projectUtility";
 import homePage from "../stylesheets/homepage.module.css";
 import Collable from "./projects/collableDirectory/collable";
 import MyInformedGlobe from "./projects/myInformedGlobeDirectory/myInformedGlobe";
-import Chemtable from "./projects/chemTable/chemtable";
+import Chemtable from "./projects/chemTableDirectory/chemtable";
 import SoftwareProjects from "./projects/softwareProjectsDirectory/softwareProjects";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";

@@ -3,7 +3,8 @@ import styles from "../../../stylesheets/collable.module.css";
 import { Suspense, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
-import Glasses from "../../../../public/Glasses";
+
+import Glasses from "./glasses";
 
 import nickPhoto from "@/assets/collable/nickPhoto1.jpeg";
 import collableProblemStat from "@/assets/collable/collableProblemStat.png";

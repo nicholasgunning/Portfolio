@@ -25,7 +25,7 @@ h2 {
     font-weight: 400;
     margin-bottom: -0.3%;
 }
-
+ 
 .background {
     background-color: rgb(255, 249, 240);
 }
@@ -63,4 +63,30 @@ h2 {
     display: flex; 
     align-items: center; 
     justify-content: center; 
+}
+
+.viewPDFButton {
+    background-color: rgb(255, 249, 240);
+    color: rgba(233, 139, 139, 1);
+    border: 2px solid rgba(233, 139, 139, 1);
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.viewPDFButton span {
+    color: rgba(233, 139, 139, 1);
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.viewPDFButton a {
+    text-decoration: none;
+   
+}
+
+.viewPDFButton:hover {
+    transform: scale(1.03);
 }
