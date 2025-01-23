@@ -68,23 +68,34 @@ h2 {
 .viewPDFButton {
     background-color: rgb(255, 249, 240);
     color: rgba(233, 139, 139, 1);
-    border: 2px solid rgba(233, 139, 139, 1);
-    border-radius: 20px;
+    border: 0.2vmin solid rgba(233, 139, 139, 1);
+    font-size: 2.5vmin; 
+    border-radius: 2vmin; 
     cursor: pointer;
-    font-weight: bold;
-    padding: 10px 20px;
+    font-weight: 200;
+    
+    min-width: 15vw;
+    min-height: 5vh;
+    
+    padding: 1.5vh 2.5vw;
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
     transition: all 0.3s ease;
 }
 
 .viewPDFButton span {
     color: rgba(233, 139, 139, 1);
-    margin-left: 10px;
-    font-size: 18px;
+    margin-left: 1vw; 
+    font-size: 2.5vmin; 
 }
 
 .viewPDFButton a {
     text-decoration: none;
-   
+    display: flex;
+    align-items: center;
 }
 
 .viewPDFButton:hover {

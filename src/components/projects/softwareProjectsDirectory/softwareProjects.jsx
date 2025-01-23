@@ -3,10 +3,14 @@ import video1 from "@/assets/softwareProjects/project1/video1.mp4";
 import sprintBacklog from "@/assets/softwareProjects/project1/sprintBacklog.png";
 import project1ImageBoard from "@/assets/softwareProjects/project1/project1ImageBoard.png";
 import groupPhoto from "@/assets/softwareProjects/project1/groupPhoto.png";
+import report1 from "@/assets/softwareProjects/project1/project1Report.pdf";
 import video2 from "@/assets/softwareProjects/project2/video2.mp4";
 import video3 from "@/assets/softwareProjects/project3/video3.mp4";
-import report1 from "@/assets/softwareProjects/project3/towerDefenceReport.pdf";
+import report2 from "@/assets/softwareProjects/project3/project3Report.pdf";
 import video4 from "@/assets/softwareProjects/project4/video4.mp4";
+import umlClassDiagram from "@/assets/softwareProjects/project4/umlClassDiagram.png";
+import sequenceDiagram from "@/assets/softwareProjects/project4/sequenceDiagram.png";
+import report3 from "@/assets/softwareProjects/project4/project4Report.pdf";
 
 function softwareProjects() {
   return (
@@ -23,8 +27,8 @@ function softwareProjects() {
             This project focused on creating a virtual txt file access system in
             Java Swing. Over 3 Sprints my group and I developed a portal where
             users would login and upload documents to a portal. Based on the
-            users credentials they could read view, download, search and preview
-            txt files.
+            users credentials they could read, view, download, search and
+            preview txt files.
             <br />
             <br />
             The project was set over 4 weeks and included bi-weekly meetings
@@ -56,8 +60,11 @@ function softwareProjects() {
           This project saw me take the role as a Scrum Master. This mainly
           involved reviewing the code, making any changes as per the
           requirements and working on the feedback given by the product manager.
-          Practically, this involved me resolving conflicts on Github between
-          conflicting commits.
+          In a more practical sense, this involved me resolving conflicts on
+          Github between conflicting commits and ensuring the group was on the
+          same page about incoming features and responsibilities. I was also
+          tasked with leading the group in the daily standups and ensuring the
+          group was on track to meet the sprint goals.
           <br />
           <br />
           Additionally, my role as a Software Developer also involved me working
@@ -85,7 +92,8 @@ function softwareProjects() {
             <br />
             Despite this, this project gave me a great understanding of real
             world working conditions. it taught me how to manage group conflicts
-            and work around a difficult group.
+            and work around a difficult group. The final assignment scored
+            21/25.
           </p>
           <img
             src={groupPhoto}
@@ -97,6 +105,13 @@ function softwareProjects() {
             }}
           />
         </div>
+
+        <a href={report1} target="_blank">
+          <button style={{ marginLeft: "5%" }} className={styles.viewPDFButton}>
+            View Report
+            <span>→</span>
+          </button>
+        </a>
       </div>
       <h2 className={styles.projectTitle} style={{ paddingTop: "7%" }}>
         Crypto Info
@@ -159,7 +174,7 @@ function softwareProjects() {
             GRASP and SOLID principles through abstract classes, interfaces etc.
             This project scored a 16.25/17.
           </p>
-          <a href={report1} target="_blank">
+          <a href={report2} target="_blank">
             <button
               style={{ marginLeft: "10%" }}
               className={styles.viewPDFButton}
@@ -211,14 +226,50 @@ function softwareProjects() {
             construction patterns to build the game.
             <br />
             <br />
-            The assignment required us to construct this game using patterns
-            such as Decorator, Factory, Command and Observer etc.
+            The project was constructed over 3 assignments and required me to
             <br />
             <br />
             This project conceptualised the importance of utilising these
             patterns for more readable, reusable and extendable code.
           </p>
         </div>
+      </div>
+      <div className={styles.blockContent} style={{ paddingBottom: "10%" }}>
+        <h3 style={{ paddingLeft: "5%" }}>UML Diagrams</h3>
+        <div className={styles.flexContent}>
+          <img
+            src={umlClassDiagram}
+            style={{
+              width: "35%",
+              height: "auto",
+              padding: "0 5% 0 5%",
+              marginTop: "-3%",
+            }}
+          />
+          <img
+            src={sequenceDiagram}
+            style={{
+              width: "35%",
+              height: "auto",
+              padding: "0 5% 0 5%",
+              marginTop: "-3%",
+            }}
+          />
+        </div>
+        <p style={{ paddingLeft: "5%", width: "80%" }}>
+          The subject also taught me the importance of different UML diagrams
+          required to help express and conceptualise code. These UML diagrams
+          are much more developed then previous projects and helped me
+          understand the importance of planning before coding. The feature
+          correct relationships between classes and helped me understand the
+          flow of the game. The final assignment scored 18/20.
+        </p>
+        <a href={report3} target="_blank">
+          <button style={{ marginLeft: "5%" }} className={styles.viewPDFButton}>
+            View Report
+            <span>→</span>
+          </button>
+        </a>
       </div>
     </div>
   );
