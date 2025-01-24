@@ -65,6 +65,14 @@ h2 {
     justify-content: center; 
 }
 
+.blockContent {
+    display: block;
+}
+
+.flexContent {
+    display: flex;
+}
+
 .viewPDFButton {
     background-color: rgb(255, 249, 240);
     color: rgba(233, 139, 139, 1);

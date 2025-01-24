@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../../stylesheets/informedGlobeJourney.module.css";
-import FadeInOnScroll from "./fadeInOnScroll";
+import FadeInOnScroll from "./../fadeInOnScroll";
 
 function Journey() {
   const icons = [

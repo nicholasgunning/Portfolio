@@ -51,6 +51,12 @@
     margin-left: -10%;
 }
 
+.keyUserInsights {
+   width: 20%;
+   margin-left: -10%;
+
+}
+
 #productFrameImg {
     width: 38%;
     height: 38%;
@@ -59,6 +65,7 @@
 }
 
 #teamMembers {
+    display: flex;
     padding-left: 10%;
 }
 

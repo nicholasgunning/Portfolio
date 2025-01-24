@@ -105,13 +105,29 @@ function softwareProjects() {
             }}
           />
         </div>
-
-        <a href={report1} target="_blank">
-          <button style={{ marginLeft: "5%" }} className={styles.viewPDFButton}>
-            View Report
-            <span>→</span>
-          </button>
-        </a>
+        <div className="styles.flexContent">
+          <a href={report1} target="_blank">
+            <button
+              style={{ marginLeft: "5%" }}
+              className={styles.viewPDFButton}
+            >
+              View Report
+              <span>→</span>
+            </button>
+          </a>
+          <a
+            href={"https://github.com/nicholasgunning/TextFileAcessSystem.git"}
+            target="_blank"
+          >
+            <button
+              style={{ marginLeft: "5%" }}
+              className={styles.viewPDFButton}
+            >
+              View Code
+              <span>→</span>
+            </button>
+          </a>
+        </div>
       </div>
       <h2 className={styles.projectTitle} style={{ paddingTop: "7%" }}>
         Crypto Info
@@ -264,12 +280,42 @@ function softwareProjects() {
           correct relationships between classes and helped me understand the
           flow of the game. The final assignment scored 18/20.
         </p>
-        <a href={report3} target="_blank">
-          <button style={{ marginLeft: "5%" }} className={styles.viewPDFButton}>
-            View Report
-            <span>→</span>
-          </button>
-        </a>
+        <div className="styles.flexContent">
+          <a href={report3} target="_blank">
+            <button
+              style={{ marginLeft: "5%" }}
+              className={styles.viewPDFButton}
+            >
+              View Report
+              <span>→</span>
+            </button>
+          </a>
+          <a
+            href="https://github.com/nicholasgunning/PacmanP1.git"
+            target="_blank"
+          >
+            <button
+              style={{ marginLeft: "5%" }}
+              className={styles.viewPDFButton}
+            >
+              View Part 1 Code
+              <span>→</span>
+            </button>
+          </a>
+
+          <a
+            href="https://github.com/nicholasgunning/PacmanP2.git"
+            target="_blank"
+          >
+            <button
+              style={{ marginLeft: "5%" }}
+              className={styles.viewPDFButton}
+            >
+              View Part 2 Code
+              <span>→</span>
+            </button>
+          </a>
+        </div>
       </div>
     </div>
   );

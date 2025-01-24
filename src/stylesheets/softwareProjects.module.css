@@ -17,16 +17,8 @@ h3 {
     text-align: left;
 }
 
-.flexContent {
-    display: flex;
-}
-
 .projectTitle {
     padding-left: 5%;
-}
-
-.blockContent {
-    display: block;
 }
 
 #video2 {

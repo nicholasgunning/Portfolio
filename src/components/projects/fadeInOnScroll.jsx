@@ -1,4 +1,4 @@
-import styles from "../../../stylesheets/fadeInOnScroll.module.css";
+import styles from "../../stylesheets/fadeInOnScroll.module.css";
 
 import { useState, useEffect, useRef } from "react";
 

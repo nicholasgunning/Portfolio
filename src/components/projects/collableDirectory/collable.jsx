@@ -10,6 +10,9 @@ import nickPhoto from "@/assets/collable/nickPhoto1.jpeg";
 import collableProblemStat from "@/assets/collable/collableProblemStat.png";
 import productFrame from "@/assets/collable/productFrame.png";
 import challengesImg from "@/assets/collable/challengesFrame.png";
+import keyUserInsights1 from "@/assets/collable/keyUserInsights1.png";
+import keyUserInsights2 from "@/assets/collable/keyUserInsights2.png";
+import keyUserInsights3 from "@/assets/collable/keyUserInsights3.png";
 
 function TeamMember({ image, name, description }) {
   return (
@@ -71,16 +74,38 @@ function Collable() {
       </div>
       <h2 className={styles.newSubtitle}>Team:</h2>
       <div id={styles.teamMembers}>
-        <TeamMember
-          image={nickPhoto}
-          name="Zoe Jansen"
-          description="Lorem ipsum dolor sit amet..."
-        />
-        <TeamMember
-          image={nickPhoto}
-          name="Nick Gunning (Myself)"
-          description="Lorem ipsum dolor sit amet..."
-        />
+        <div className={styles.flexContent}>
+          <TeamMember
+            image={nickPhoto}
+            name="Zoe Jansen"
+            description="Lorem ipsum dolor sit amet..."
+          />
+          <TeamMember
+            image={nickPhoto}
+            name="Nick Gunning (Myself)"
+            description="Lorem ipsum dolor sit amet..."
+          />
+        </div>
+      </div>
+
+      <h2 className={styles.newSubtitle}>User Insights: </h2>
+      <p style={{ paddingLeft: "10%", paddingRight: "10%" }}>
+        Through interviews and surveys our group found compelling insights into
+        the struggles of working at home.
+        <br />
+        <br />
+        We found that naturally employees produce more insightful outcomes when
+        motivated by visual and tangible stimulation. By doing this, employees
+        promote a more focused environment by reducing external distractions
+        when working.
+      </p>
+      <h3 className={styles.newSubtitle} style={{ textAlign: "center", paddingRight: "10%"}}>
+        Key User Insights:
+      </h3>
+      <div className={styles.flexContent} >
+        <img className={styles.keyUserInsights} src={keyUserInsights1} />
+        <img className={styles.keyUserInsights} src={keyUserInsights2} />
+        <img className={styles.keyUserInsights} src={keyUserInsights3} />
       </div>
 
       <h2 className={styles.newSubtitle}>Problem</h2>
