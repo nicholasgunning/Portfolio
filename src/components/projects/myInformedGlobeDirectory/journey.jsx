@@ -124,15 +124,15 @@ function Journey() {
       </div>
 
       <div id={styles.onlineEthnographyBlurb}>
-        <h3>Online Ethnography</h3>
+        <h4>Online Ethnography</h4>
       </div>
 
       <div id={styles.interviewBlurb}>
-        <h3>Interviews</h3>
+        <h4>Interviews</h4>
       </div>
 
       <div id={styles.questionnaireBlurb}>
-        <h3>Questionnaires</h3>
+        <h4>Questionnaires</h4>
       </div>
     </div>
   );

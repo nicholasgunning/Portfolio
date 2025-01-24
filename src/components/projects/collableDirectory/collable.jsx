@@ -3,6 +3,7 @@ import styles from "../../../stylesheets/collable.module.css";
 import { Suspense, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
+import FadeInOnScroll from "../fadeInOnScroll";
 
 import Glasses from "./glasses";
 
@@ -99,13 +100,24 @@ function Collable() {
         promote a more focused environment by reducing external distractions
         when working.
       </p>
-      <h3 className={styles.newSubtitle} style={{ textAlign: "center", paddingRight: "10%"}}>
+      <h3
+        className={styles.newSubtitle}
+        style={{ textAlign: "center", paddingRight: "10%" }}
+      >
         Key User Insights:
       </h3>
-      <div className={styles.flexContent} >
-        <img className={styles.keyUserInsights} src={keyUserInsights1} />
-        <img className={styles.keyUserInsights} src={keyUserInsights2} />
-        <img className={styles.keyUserInsights} src={keyUserInsights3} />
+      <div className={styles.flexContent}>
+        <FadeInOnScroll delay={0}>
+          <img className={styles.keyUserInsights} src={keyUserInsights1} />
+        </FadeInOnScroll>
+
+        <FadeInOnScroll delay={200}>
+          <img className={styles.keyUserInsights} src={keyUserInsights2} />
+        </FadeInOnScroll>
+
+        <FadeInOnScroll delay={400}>
+          <img className={styles.keyUserInsights} src={keyUserInsights3} />
+        </FadeInOnScroll>
       </div>
 
       <h2 className={styles.newSubtitle}>Problem</h2>
