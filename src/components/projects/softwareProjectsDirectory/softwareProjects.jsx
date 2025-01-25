@@ -11,15 +11,25 @@ import video4 from "@/assets/softwareProjects/project4/video4.mp4";
 import umlClassDiagram from "@/assets/softwareProjects/project4/umlClassDiagram.png";
 import sequenceDiagram from "@/assets/softwareProjects/project4/sequenceDiagram.png";
 import report3 from "@/assets/softwareProjects/project4/project4Report.pdf";
+import React, { useState } from "react";
 
-function softwareProjects() {
+function SoftwareProjects() {
+  const [isLoading, setIsLoading] = useState(true);
   return (
     <div className={styles.background}>
       <h1>Software Projects</h1>
       <h2 className={styles.projectTitle}>Virtual Scroll Access System</h2>
       <div className={styles.blockContent}>
         <div className={styles.flexContent}>
-          <video width="60%" controls={false} autoPlay muted>
+          {isLoading && <p id={styles.loadingText}>Loading video...</p>}
+          <video
+            width="60%"
+            controls={false}
+            autoPlay
+            muted
+            onLoadedData={() => setIsLoading(false)}
+            style={{ display: isLoading ? "none" : "block" }}
+          >
             <source src={video1} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -158,10 +168,9 @@ function softwareProjects() {
               height="260"
               src="https://www.youtube.com/embed/f150eqMuVoM?si=_HkRWop1HOt7PwBU"
               title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
+              frameBorder="0"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
             ></iframe>
           </div>
         </div>
@@ -321,4 +330,4 @@ function softwareProjects() {
   );
 }
 
-export default softwareProjects;
+export default SoftwareProjects;

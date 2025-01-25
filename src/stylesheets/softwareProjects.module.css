@@ -21,6 +21,16 @@ h3 {
     padding-left: 5%;
 }
 
+#loadingText {
+    font-family: 'Work Sans', sans-serif;
+    font-size: calc(2.5vw + 2.5vh);
+    color: rgb(70, 70, 70);
+    font-weight: 400;
+    padding-left: 20%;
+    padding-top: 15%;
+    padding-right: 5%;
+}
+
 #video2 {
     padding-left: 5%;
     padding-right: 5%;

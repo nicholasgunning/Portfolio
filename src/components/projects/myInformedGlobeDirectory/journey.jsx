@@ -60,7 +60,7 @@ function Journey() {
         );
       })}
 
-      <div id={styles.discoverBlurb}>
+      <div id={styles.discoverText}>
         <h3>Discover</h3>
         <h4>
           User Interviews
@@ -74,7 +74,7 @@ function Journey() {
           Online Ethnography
         </h4>
       </div>
-      <div id={styles.defineBlurb}>
+      <div id={styles.defineText}>
         <h3>Define</h3>
         <h4>
           Affinity Diagram
@@ -84,7 +84,7 @@ function Journey() {
           Storyboards
         </h4>
       </div>
-      <div id={styles.ideateBlurb}>
+      <div id={styles.ideateText}>
         <h3>Ideate</h3>
         <h4>
           Crazy 8s
@@ -96,7 +96,7 @@ function Journey() {
           Sketches
         </h4>
       </div>
-      <div id={styles.designBlurb}>
+      <div id={styles.designText}>
         <h3>Design</h3>
         <h4>
           Wireframes
@@ -108,7 +108,7 @@ function Journey() {
           Visual Design
         </h4>
       </div>
-      <div id={styles.testBlurb}>
+      <div id={styles.testText}>
         <h3>Test</h3>
         <h4>
           Heuristic Evaluation

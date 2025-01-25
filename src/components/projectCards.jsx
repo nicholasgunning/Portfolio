@@ -1,4 +1,5 @@
-import Bg from "./p5-sketch";
+import LoadPage from "./loadPage";
+import Bg from "./background";
 import Project from "./projectUtility";
 import homePage from "../stylesheets/homepage.module.css";
 import Collable from "./projects/collableDirectory/collable";
@@ -7,8 +8,32 @@ import Chemtable from "./projects/chemTableDirectory/chemtable";
 import SoftwareProjects from "./projects/softwareProjectsDirectory/softwareProjects";
 import styles from "../stylesheets/homepage.module.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 
 function ProjectCards() {
+  const [showLoading, setShowLoading] = useState(true);
+
+  useEffect(() => {
+    // Check if the loading screen has been shown before
+    const hasSeenLoading = localStorage.getItem("hasSeenLoading");
+
+    if (hasSeenLoading) {
+      setShowLoading(false); // Skip the loading screen
+    } else {
+      // Show the loading screen and set a timeout to hide it
+      const timer = setTimeout(() => {
+        setShowLoading(false);
+        localStorage.setItem("hasSeenLoading", "true"); // Mark as shown
+      }, 5000); // 5 seconds
+
+      return () => clearTimeout(timer); // Cleanup the timer on unmount
+    }
+  }, []);
+
+  return <div>{showLoading ? <LoadPage /> : <MainContent />}</div>;
+}
+
+function MainContent() {
   return (
     <>
       <div id={homePage.container}>
