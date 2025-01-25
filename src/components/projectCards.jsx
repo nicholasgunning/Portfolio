@@ -5,7 +5,7 @@ import Collable from "./projects/collableDirectory/collable";
 import MyInformedGlobe from "./projects/myInformedGlobeDirectory/myInformedGlobe";
 import Chemtable from "./projects/chemTableDirectory/chemtable";
 import SoftwareProjects from "./projects/softwareProjectsDirectory/softwareProjects";
-
+import styles from "../stylesheets/homepage.module.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function ProjectCards() {
@@ -18,8 +18,10 @@ function ProjectCards() {
             element={
               <>
                 <Bg />
-                <Project name="COLLABLE1" link="/collable" />
-                <Project name="MY INFORMED GLOBE" link="/myInformedGlobe" />
+                <Project name="COLLABLE" link="/collable" />
+                <a href="/myInformedGlobe" style={{ textDecoration: "none" }}>
+                  <h1 className={styles.title}>MY INFORMED GLOBE</h1>
+                </a>
                 <Project name="CHEMTABLE" link="/chemtable" />
                 <Project name="SOFTWARE PROJECTS" link="/softwareProjects" />
               </>
