@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import styles from "../stylesheets/homepage.module.css";
 
 function Project({ name, link }) {
-  // const handleClick = (e) => {
-  //   if (link === "/myInformedGlobe") {
-  //     navigate(link, { replace: true });
-  //   }
-  // };
+  const handleClick = (e) => {
+    if (link === "/myInformedGlobe") {
+      navigate(link, { replace: true });
+    }
+  };
 
   return (
     <div className={styles.section}>

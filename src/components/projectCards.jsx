@@ -18,7 +18,7 @@ function ProjectCards() {
             element={
               <>
                 <Bg />
-                <Project name="COLLABLER" link="/collable" />
+                <Project name="COLLABLE1" link="/collable" />
                 <Project name="MY INFORMED GLOBE" link="/myInformedGlobe" />
                 <Project name="CHEMTABLE" link="/chemtable" />
                 <Project name="SOFTWARE PROJECTS" link="/softwareProjects" />
