@@ -8,6 +8,20 @@ import TeamMember from "./teamMember";
 
 import Journey from "./journey";
 
+// Phone images
+import mainIphone1 from "@/assets/myInformedGlobe/coverPhones/mainIphone1.png";
+import mainIphone2 from "@/assets/myInformedGlobe/coverPhones/mainIphone2.png";
+import mainIphone3 from "@/assets/myInformedGlobe/coverPhones/mainIphone3.png";
+
+// Team member images
+import nickPhoto1 from "@/assets/collable/nickPhoto1.jpeg";
+
+// Graph and design decision images
+import donutGraph from "@/assets/myInformedGlobe/graph/donutGraph.png";
+import designD1 from "@/assets/myInformedGlobe/designD/designD1.png";
+import designD2 from "@/assets/myInformedGlobe/designD/designD2.png";
+import designD3 from "@/assets/myInformedGlobe/designD/designD3.png";
+
 function InformedGlobe() {
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 
@@ -35,35 +49,26 @@ function InformedGlobe() {
 
       <div id={styles.imageContainer}>
         <Parallax translateY={getTranslateY(7, -50)}>
-          <img
-            src="../../../../src/assets/myInformedGlobe/coverPhones/mainIphone1.png"
-            alt="Placeholder globe"
-            className={styles.phones}
-          />
+          <img src={mainIphone1} className={styles.phones} />
         </Parallax>
 
         <Parallax translateY={getTranslateY(-65, 50)}>
-          <img
-            src="../../../../src/assets/myInformedGlobe/coverPhones/mainIphone2.png"
-            alt="Placeholder globe"
-            className={styles.phones}
-          />
+          <img src={mainIphone2} className={styles.phones} />
         </Parallax>
 
         <Parallax translateY={getTranslateY(35, -100)}>
           <img
-            src="../../../../src/assets/myInformedGlobe/coverPhones/mainIphone3.png"
-            alt="Placeholder globe"
+            src={mainIphone3}
             className={styles.phones}
             id={styles.thirdImage}
           />
         </Parallax>
-
         <Parallax translateY={getTranslateY(-40, -20)}>
           <div className={styles.textUnderPhone}>
             <ScrollText />
           </div>
         </Parallax>
+
         <div id={styles.blurb}>
           <p id={styles.blurbText}>
             <span className={styles.boldText}>Informed Globe</span> is a news
@@ -85,21 +90,21 @@ function InformedGlobe() {
         <div id={styles.teamMembers}>
           <div id={styles.person1}>
             <TeamMember
-              image="../../../../src/assets/collable/nickPhoto1.jpeg"
+              image={nickPhoto1}
               name="Zoe Jansen"
               description="Lorem ipsum dolor sit amet..."
             />
           </div>
           <div id={styles.person2}>
             <TeamMember
-              image="../../../../src/assets/collable/nickPhoto1.jpeg"
+              image={nickPhoto1}
               name="Nick Gunning (Myself)"
               description="Lorem ipsum dolor sit amet..."
             />
           </div>
           <div id={styles.person3}>
             <TeamMember
-              image="../../../../src/assets/collable/nickPhoto1.jpeg"
+              image={nickPhoto1}
               name="Nick Gunning (Myself)"
               description="Lorem ipsum dolor sit amet..."
             />
@@ -123,10 +128,7 @@ function InformedGlobe() {
           </span>
           .
         </p>
-        <img
-          src="../../../../src/assets/myInformedGlobe/graph/donutGraph.png"
-          id={styles.donutGraph}
-        />
+        <img src={donutGraph} id={styles.donutGraph} />
       </div>
 
       <h2 className={styles.newSubtitle}>Journey:</h2>
@@ -135,10 +137,7 @@ function InformedGlobe() {
       <div>
         <h2 className={styles.newSubtitle}>Design Decision's</h2>
         <div className={styles.designDecisions}>
-          <img
-            src="../../../../src/assets/myInformedGlobe/designD/designD1.png"
-            className={styles.ddImage}
-          />
+          <img src={designD1} className={styles.ddImage} />
           <div className={styles.ddTextContainer}>
             <p id={styles.dd1Text1}>
               Initial Sketches saw an{" "}
@@ -170,10 +169,7 @@ function InformedGlobe() {
               . <i>(Visibility of system status)</i>
             </p>
           </div>
-          <img
-            src="../../../../src/assets/myInformedGlobe/designD/designD2.png"
-            className={styles.ddImage}
-          />
+          <img src={designD2} className={styles.ddImage} />
           <div className={styles.ddTextContainer}>
             <p id={styles.dd2Text1}>
               A grid like layout was first sketched to show{" "}
@@ -209,10 +205,7 @@ function InformedGlobe() {
               .
             </p>
           </div>
-          <img
-            src="../../../../src/assets/myInformedGlobe/designD/designD3.png"
-            className={styles.ddImage}
-          />
+          <img src={designD3} className={styles.ddImage} />
           <div className={styles.ddTextContainer}>
             <p id={styles.dd2Text1}>
               Highlighted article page that showed information based on the

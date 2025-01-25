@@ -2,27 +2,39 @@ import React from "react";
 import styles from "../../../stylesheets/informedGlobeJourney.module.css";
 import FadeInOnScroll from "./../fadeInOnScroll";
 
+import discoverIcon from "@/assets/myInformedGlobe/journey/discoverIcon.png";
+import defineIcon from "@/assets/myInformedGlobe/journey/defineIcon.png";
+import ideateIcon from "@/assets/myInformedGlobe/journey/ideateIcon.png";
+import designIcon from "@/assets/myInformedGlobe/journey/designIcon.png";
+import testIcon from "@/assets/myInformedGlobe/journey/testIcon.png";
+
+import onlineEthnographyIcon from "@/assets/myInformedGlobe/journey/onlineEthnographyIcon.png";
+import interviewIcon from "@/assets/myInformedGlobe/journey/interviewIcon.png";
+import questionnaireIcon from "@/assets/myInformedGlobe/journey/questionnaireIcon.png";
+
+import mainArrow from "@/assets/myInformedGlobe/journey/mainArrow.png";
+
 function Journey() {
   const icons = [
-    { id: "discoverIcon", src: "discoverIcon.png" },
-    { id: "defineIcon", src: "defineIcon.png" },
-    { id: "ideateIcon", src: "ideateIcon.png" },
-    { id: "designIcon", src: "designIcon.png" },
-    { id: "testIcon", src: "testIcon.png" },
+    { id: "discoverIcon", src: discoverIcon },
+    { id: "defineIcon", src: defineIcon },
+    { id: "ideateIcon", src: ideateIcon },
+    { id: "designIcon", src: designIcon },
+    { id: "testIcon", src: testIcon },
   ];
 
   const secondaryIcons = [
     {
       id: "onlineEthnographyIcon",
-      src: "onlineEthnographyIcon.png",
+      src: onlineEthnographyIcon,
     },
     {
       id: "interviewIcon",
-      src: "interviewIcon.png",
+      src: interviewIcon,
     },
     {
       id: "questionnaireIcon",
-      src: "questionnaireIcon.png",
+      src: questionnaireIcon,
     },
   ];
 
@@ -33,11 +45,7 @@ function Journey() {
         return (
           <FadeInOnScroll key={`${icon.id}-${index}`} delay={index * 200}>
             <div id={styles[icon.id]}>
-              <img
-                className={styles.icon}
-                src={`../../../../src/assets/myInformedGlobe/journey/${icon.src}`}
-                alt={icon.id}
-              />
+              <img className={styles.icon} src={icon.src} alt={icon.id} />
             </div>
           </FadeInOnScroll>
         );
@@ -46,14 +54,9 @@ function Journey() {
       {secondaryIcons.map((icon, index) => {
         console.log(icon.id); // Log the ID
         return (
-          // <FadeInOnScroll delay={index * 200}>
           <div key={`${icon.id}-${index}`} id={styles[icon.id]}>
-            <img
-              src={`../../../../src/assets/myInformedGlobe/journey/${icon.src}`}
-              alt={icon.id}
-            />
+            <img src={icon.src} alt={icon.id} />
           </div>
-          // </FadeInOnScroll>
         );
       })}
 
@@ -117,10 +120,7 @@ function Journey() {
       </div>
 
       <div id={styles.mainArrow}>
-        <img
-          src="../../../../src/assets/myInformedGlobe/journey/mainArrow.png"
-          alt="mainArrow"
-        />
+        <img src={mainArrow} alt="mainArrow" />
       </div>
 
       <div id={styles.onlineEthnographyBlurb}>
