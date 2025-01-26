@@ -1,5 +1,8 @@
 @import "main.module.css";
 
+.background {
+    margin-bottom: -100%;
+}
 
 p {
     padding-right: 5%;
@@ -8,12 +11,12 @@ p {
     color: rgb(70, 70, 70);
     font-weight: 400;
 }
+
 h3 {
     font-family: 'Work Sans', sans-serif;
     font-size: calc(1.7vw + 1.7vh);
     color: rgba(233, 139, 139, 1);
     font-weight: 400;
-    
     text-align: left;
 }
 

@@ -1,5 +1,4 @@
 import LoadPage from "./loadPage";
-import Bg from "./background";
 import Project from "./projectUtility";
 import homePage from "../stylesheets/homepage.module.css";
 import Collable from "./projects/collableDirectory/collable";
@@ -14,35 +13,32 @@ function ProjectCards() {
   const [showLoading, setShowLoading] = useState(true);
 
   useEffect(() => {
-    // Check if the loading screen has been shown before
     const hasSeenLoading = localStorage.getItem("hasSeenLoading");
 
     if (hasSeenLoading) {
-      setShowLoading(false); // Skip the loading screen
+      setShowLoading(false);
     } else {
-      // Show the loading screen and set a timeout to hide it
       const timer = setTimeout(() => {
         setShowLoading(false);
-        localStorage.setItem("hasSeenLoading", "true"); // Mark as shown
-      }, 5000); // 5 seconds
+        localStorage.setItem("hasSeenLoading", "true");
+      }, 5000);
 
-      return () => clearTimeout(timer); // Cleanup the timer on unmount
+      return () => clearTimeout(timer);
     }
   }, []);
 
-  return <div>{showLoading ? <LoadPage /> : <MainContent />}</div>;
+  return showLoading ? <LoadPage /> : <MainContent />;
 }
 
 function MainContent() {
   return (
-    <>
-      <div id={homePage.container}>
+    <div id={homePage.container}>
+      <div id={homePage.background}>
         <Routes>
           <Route
             path="/"
             element={
               <>
-                <Bg />
                 <Project name="COLLABLE" link="/collable" />
                 <a href="/myInformedGlobe" style={{ textDecoration: "none" }}>
                   <h1 className={styles.title}>MY INFORMED GLOBE</h1>
@@ -58,7 +54,7 @@ function MainContent() {
           <Route path="/softwareprojects" element={<SoftwareProjects />} />
         </Routes>
       </div>
-    </>
+    </div>
   );
 }
 
