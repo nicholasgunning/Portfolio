@@ -39,11 +39,13 @@ function MainContent() {
             path="/"
             element={
               <>
-                <Project name="COLLABLE" link="/collable" />
+                <Project name="PROJECT #1 - COLLABLE" link="/collable" />
                 <a href="/myInformedGlobe" style={{ textDecoration: "none" }}>
-                  <h1 className={styles.title}>MY INFORMED GLOBE</h1>
+                  <h1 className={styles.title}>
+                    PROJECT #2 - MY INFORMED GLOBE
+                  </h1>
                 </a>
-                <Project name="CHEMTABLE" link="/chemtable" />
+                <Project name="PROJECT #3 - CHEMTABLE" link="/chemtable" />
                 <Project name="SOFTWARE PROJECTS" link="/softwareProjects" />
               </>
             }
