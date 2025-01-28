@@ -4,6 +4,7 @@ import { Suspense, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
 import FadeInOnScroll from "../fadeInOnScroll";
+import backArrow from "@/assets/backArrow.png";
 
 import Glasses from "./glasses";
 
@@ -47,7 +48,15 @@ function RotatingGlasses() {
 function Collable() {
   return (
     <div className={styles.background}>
-      <h1>Collable</h1>
+      <h1>
+        <span>
+          <a href="/">
+            {" "}
+            <img id={styles.backArrow} src={backArrow} alt="" />
+          </a>
+        </span>
+        Collable
+      </h1>
       <div className={styles.collable}>
         <div className={styles.modelContainer}>
           <Canvas className={styles.model}>

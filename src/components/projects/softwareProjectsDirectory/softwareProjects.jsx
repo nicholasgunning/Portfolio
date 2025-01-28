@@ -13,11 +13,22 @@ import sequenceDiagram from "@/assets/softwareProjects/project4/sequenceDiagram.
 import report3 from "@/assets/softwareProjects/project4/project4Report.pdf";
 import React, { useState } from "react";
 
+import backArrow from "@/assets/backArrow.png";
+
 function SoftwareProjects() {
   const [isLoading, setIsLoading] = useState(true);
   return (
     <div className={styles.background}>
-      <h1>Software Projects</h1>
+      <h1>
+        {" "}
+        <span>
+          <a href="/">
+            {" "}
+            <img id={styles.backArrow} src={backArrow} alt="" />
+          </a>
+        </span>
+        Software Projects
+      </h1>
       <h2 className={styles.projectTitle}>Virtual Scroll Access System</h2>
       <div className={styles.blockContent}>
         <div className={styles.flexContent}>

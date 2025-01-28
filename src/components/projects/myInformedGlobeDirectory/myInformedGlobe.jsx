@@ -8,6 +8,9 @@ import TeamMember from "./teamMember";
 
 import Journey from "./journey";
 
+import backArrow from "@/assets/backArrow.png";
+import globe from "@/assets/myInformedGlobe/globe.png";
+
 // Phone images
 import mainIphone1 from "@/assets/myInformedGlobe/coverPhones/mainIphone1.png";
 import mainIphone2 from "@/assets/myInformedGlobe/coverPhones/mainIphone2.png";
@@ -44,7 +47,19 @@ function InformedGlobe() {
   return (
     <div className={styles.background}>
       <div id={styles.titleContainer}>
-        <h1>Informed Globe</h1>
+        <h1>
+          <span>
+            <a href="/">
+              {" "}
+              <img id={styles.backArrow} src={backArrow} alt="" />
+            </a>
+          </span>
+          <span className={styles.blackTitleText}>My Informed</span> Gl
+          <span>
+            <img id={styles.globe} src={globe} alt="" />
+          </span>
+          be
+        </h1>
       </div>
 
       <div id={styles.imageContainer}>
