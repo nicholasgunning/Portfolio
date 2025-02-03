@@ -78,7 +78,11 @@ function MainContent() {
                 Resume <span className="arrow">↗</span>
               </a>
 
-              <a href="/linkedin" target="_blank" className={homePage.modalButton}>
+              <a
+                href="https://www.linkedin.com/in/nick-gunning-7189371b9/"
+                target="_blank"
+                className={homePage.modalButton}
+              >
                 LinkedIn <span className="arrow">↗</span>
               </a>
             </div>
