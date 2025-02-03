@@ -8,7 +8,10 @@ import backArrow from "@/assets/backArrow.png";
 
 import Glasses from "./glasses";
 
-import nickPhoto from "@/assets/collable/nickPhoto1.jpeg";
+import TeamMember from "../teamMember";
+
+import nickPhoto from "@/assets/photos/nickGunning.png";
+import zoePhoto from "@/assets/photos/zoeJansen.jpeg";
 import collableProblemStat from "@/assets/collable/collableProblemStat.png";
 import productFrame from "@/assets/collable/productFrame.png";
 import challengesImg from "@/assets/collable/challengesFrame.png";
@@ -16,17 +19,7 @@ import keyUserInsights1 from "@/assets/collable/keyUserInsights1.png";
 import keyUserInsights2 from "@/assets/collable/keyUserInsights2.png";
 import keyUserInsights3 from "@/assets/collable/keyUserInsights3.png";
 
-function TeamMember({ image, name, description }) {
-  return (
-    <div>
-      <h2 className={styles.name}>{name}</h2>
-      <div className={styles.circleFrame}>
-        <img className={styles.circleImage} src={image} alt={name} />
-      </div>
-      <p className={styles.description}>{description}</p>
-    </div>
-  );
-}
+
 
 function RotatingGlasses() {
   const groupRef = useRef();
@@ -87,13 +80,13 @@ function Collable() {
         <div className={styles.flexContent}>
           <TeamMember
             image={nickPhoto}
-            name="Zoe Jansen"
-            description="Lorem ipsum dolor sit amet..."
+            name="Nick Gunning (Myself)"
+            description="I assisted on the research of the problem area and worked on developing feature based feedback through methods like interviews and surveys."
           />
           <TeamMember
-            image={nickPhoto}
-            name="Nick Gunning (Myself)"
-            description="Lorem ipsum dolor sit amet..."
+            image={zoePhoto}
+            name="Zoe Janssen"
+            description="Zoe worked on the design and development of the Glasses. She assisted in building the report and also forming features based on user feedback."
           />
         </div>
       </div>

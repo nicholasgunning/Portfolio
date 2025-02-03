@@ -4,7 +4,7 @@ import { Parallax } from "react-scroll-parallax";
 import { useState, useEffect } from "react";
 
 import ScrollText from "./scrollText";
-import TeamMember from "./teamMember";
+import TeamMember from "../teamMember";
 
 import Journey from "./journey";
 
@@ -17,7 +17,9 @@ import mainIphone2 from "@/assets/myInformedGlobe/coverPhones/mainIphone2.png";
 import mainIphone3 from "@/assets/myInformedGlobe/coverPhones/mainIphone3.png";
 
 // Team member images
-import nickPhoto1 from "@/assets/collable/nickPhoto1.jpeg";
+import nickPhoto from "@/assets/photos/nickGunning.png";
+import zoePhoto from "@/assets/photos/zoeJansen.jpeg";
+import oliverPhoto from "@/assets/photos/oliverWaterhouse.jpeg";
 
 // Graph and design decision images
 import donutGraph from "@/assets/myInformedGlobe/graph/donutGraph.png";
@@ -105,23 +107,23 @@ function InformedGlobe() {
         <div id={styles.teamMembers}>
           <div id={styles.person1}>
             <TeamMember
-              image={nickPhoto1}
-              name="Zoe Jansen"
-              description="Lorem ipsum dolor sit amet..."
+              image={nickPhoto}
+              name="Nick Gunning (Myself)"
+              description="Focused on creating an intuitive and engaging user experience. Conducted user interviews and research to ensure our content remains relevant. Also helped develop the Figma prototype."
             />
           </div>
           <div id={styles.person2}>
             <TeamMember
-              image={nickPhoto1}
-              name="Nick Gunning (Myself)"
-              description="Lorem ipsum dolor sit amet..."
+              image={zoePhoto}
+              name="Zoe Jansen"
+              description="Led the development of the interactive features based on user feedback. Helped design the information structure."
             />
           </div>
           <div id={styles.person3}>
             <TeamMember
-              image={nickPhoto1}
-              name="Nick Gunning (Myself)"
-              description="Lorem ipsum dolor sit amet..."
+              image={oliverPhoto}
+              name="Oliver Waterhouse"
+              description="Developed the Heuristic Evaluation and Usability testing. Also assisted in the Affinity Mapping and User Journey Mapping."
             />
           </div>
         </div>

@@ -111,14 +111,14 @@ function MainContent() {
                       PROJECT #2 - MY INFORMED GLOBE
                     </h1>
                   </a>
-                  <Project name="PROJECT #3 - CHEMTABLE" link="/chemtable" />
+                  {/* <Project name="PROJECT #3 - CHEMTABLE" link="/chemtable" /> */}
                   <Project name="SOFTWARE PROJECTS" link="/softwareProjects" />
                 </>
               }
             />
             <Route path="/collable" element={<Collable />} />
             <Route path="/myInformedGlobe" element={<MyInformedGlobe />} />
-            <Route path="/chemtable" element={<Chemtable />} />
+            {/* <Route path="/chemtable" element={<Chemtable />} /> */}
             <Route path="/softwareprojects" element={<SoftwareProjects />} />
           </Routes>
         </div>
