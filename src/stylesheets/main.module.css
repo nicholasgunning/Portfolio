@@ -28,10 +28,11 @@ h2 {
  
 .background {
     background-color: rgb(255, 249, 240);
+    margin-top: -10%;
 }
 
 .boldText {
-    color: rgb(132, 131, 128);
+    color: rgb(135, 135, 135);
     font-weight: 600;
 }
 
@@ -95,16 +96,12 @@ h2 {
     border-radius: 2vmin; 
     cursor: pointer;
     font-weight: 200;
-    
     min-width: 15vw;
     min-height: 5vh;
-    
     padding: 1.5vh 2.5vw;
-    
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    
     transition: all 0.3s ease;
 }
 

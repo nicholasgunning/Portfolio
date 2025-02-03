@@ -7,22 +7,18 @@ html, body {
     text-decoration: none;
 }
 
-#background {
-    background-color: rgb(255, 249, 240);
-    min-height: 100vh; /* Use viewport height */
-    width: 100vw; /* Use viewport width */
+#container {
+    padding-top: 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#container {
-    flex-direction: center;
-    justify-content: flex-end;
-    min-height: 57rem;
-    box-sizing: border-box;
-    margin-bottom: 10rem
+#background {
+    background-color: rgb(255, 249, 240);
+    min-height: 100vh; /* Use viewport height */
+    width: 100vw; /* Use viewport width */
 }
 
 
@@ -42,6 +38,115 @@ html, body {
 .link {
     text-decoration: none;
 }
+
+#profileButton {
+    background-color: rgb(233, 139, 139);
+    color: rgb(0, 0, 0);
+    border: 0.15vmin solid rgb(0, 0, 0);
+    font-size: 2.5vmin; 
+    border-radius: 1.5vmin; 
+    cursor: pointer;
+    font-weight: 700;
+    min-width: 6vw;
+    min-height: 5vh;
+    margin: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#profileIcon {
+    width: 2vmin;
+    height: 2vmin;
+    margin-left: -10%;
+}
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49,49,49,0.8);
+}
+
+.modalContent {
+    margin-top: 5%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000000;
+    padding: 14px 28px;
+    border-radius: 3px;
+    min-width: 70%;
+    border-radius: 25px;
+    border: 2px solid #ffffff;
+    
+}
+
+#modalTitle {
+    font-family: 'Work Sans', sans-serif;
+    font-size: calc(4vw + 4vh);
+    font-weight: 600;
+    color: #ffffff;
+    text-align: left;
+    
+}
+
+#modalText {
+    font-family: 'Work Sans', sans-serif;
+    font-size: calc(1vw + 1vh);
+    color: #ffffff;
+    font-weight: 400;
+    text-align: left;
+}
+
+#modalButtons {
+    margin-top: 5%;
+    display: flex;
+    gap: 5%;
+    margin-bottom: 5%;
+}
+
+.modalButton {
+    font-family: 'Work Sans', sans-serif;
+    font-size: calc(0.9vw + 0.9vh);
+    align-items: center;
+    gap: 8px;
+    background-color: rgb(219, 144, 144);
+    color: white;
+    padding: calc(0.5vw + 0.5vh) calc(1.2vw + 1.2vh);
+    border-radius: 50px;
+    text-decoration: none;
+    border: 1px solid #ffffff; ;
+    transition: all 0.3s ease;
+}
+
+.modalButton:hover {
+    background-color: rgba(219, 144, 144, 0.9);
+    transform: translateY(-2px);
+}
+
+.closeModal {
+    cursor: pointer;
+    position: absolute;
+    border: none;
+    background: none;
+    color: #ffffff;
+    font-size: calc(2.2vw + 2.2vh);
+    top: calc(0.5vw + 0.5vh);
+    right: calc(0.5vw + 0.5vh);
+    padding: 5px 7px;
+    margin-top: -1.5%;
+}
+
 
 
 
