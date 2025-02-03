@@ -41,7 +41,6 @@ function Journey() {
   return (
     <div id={styles.container}>
       {icons.map((icon, index) => {
-        console.log(icon.id); // Log the ID
         return (
           <FadeInOnScroll key={`${icon.id}-${index}`} delay={index * 200}>
             <div id={styles[icon.id]}>
@@ -52,7 +51,6 @@ function Journey() {
       })}
 
       {secondaryIcons.map((icon, index) => {
-        console.log(icon.id); // Log the ID
         return (
           <div key={`${icon.id}-${index}`} id={styles[icon.id]}>
             <img src={icon.src} alt={icon.id} />

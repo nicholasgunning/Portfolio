@@ -109,14 +109,14 @@ function InformedGlobe() {
             <TeamMember
               image={nickPhoto}
               name="Nick Gunning (Myself)"
-              description="Focused on creating an intuitive and engaging user experience. Conducted user interviews and research to ensure our content remains relevant. Also helped develop the Figma prototype."
+              description="Focused on creating an intuitive user experience through the Figma Prototype. Conducted user interviews and research to ensure our content remains relevant."
             />
           </div>
           <div id={styles.person2}>
             <TeamMember
               image={zoePhoto}
               name="Zoe Jansen"
-              description="Led the development of the interactive features based on user feedback. Helped design the information structure."
+              description="Led the development of the interactive features based on user feedback. Helped build upon the Design iterations."
             />
           </div>
           <div id={styles.person3}>
