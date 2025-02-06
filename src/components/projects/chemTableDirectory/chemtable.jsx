@@ -18,7 +18,7 @@ function VideoPlay() {
     for (let i = 1; i <= 198; i++) {
       const img = new Image();
       const paddedNumber = i.toString().padStart(4, "0");
-      img.src = `../../../../src/assets/chemtable/mainImages/${paddedNumber}.png`;
+      img.src = `/src/assets/chemtable/mainImages/${paddedNumber}.png`;
 
       img.onload = () => {
         loadedCount++;
@@ -75,8 +75,6 @@ function ChemTable() {
   return (
     <div className={styles.background} style={{ position: "relative" }}>
       <h1>CHEM TABLE</h1>
-      <p>Testing</p>
-
       <VideoPlay />
     </div>
   );
