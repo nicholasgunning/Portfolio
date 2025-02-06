@@ -65,6 +65,7 @@ function ChemTable() {
 
           <img
             className={styles.statisticImg}
+            loading="lazy"
             src={statistic}
             alt="statistic"
           />
@@ -89,6 +90,7 @@ function ChemTable() {
           <img
             className={styles.surveyPhoto}
             src={surveyPhoto}
+            loading="lazy"
             alt="surveyPhoto"
           />
         </div>
@@ -98,6 +100,7 @@ function ChemTable() {
           className={styles.initialSolutionImg}
           src={initialSolution1}
           alt="initialSolution1"
+          loading="lazy"
         />
         <p className={styles.solutionDescription}>
           An early solution we storyboarded was a digital based platform used to
@@ -124,6 +127,7 @@ function ChemTable() {
           className={styles.initialSolutionImg}
           src={initialSolution2}
           alt="initialSolution2"
+          loading="lazy"
         />
 
         <p className={styles.solutionDescription}>
@@ -176,9 +180,9 @@ function ChemTable() {
         <img className={styles.tokensImg} src={tokens} alt="oldModel" />
       </div>
 
-      <h3 className={styles.prototypeTitle} >Prototype Video</h3>
+      <h3 className={styles.prototypeTitle}>Prototype Video</h3>
       <video className={styles.prototypeVideo} controls>
-        <source src={prototypeVideo} type="video/mp4" />
+        <source src={prototypeVideo} type="video/mp4" loading="lazy" />
         Your browser does not support the video tag.
       </video>
     </div>
