@@ -83,7 +83,13 @@
     height: auto;
     margin-left: 10%;
     margin-right: 5%;
-    margin-top: -5%;
+    margin-top: 2%;
     padding-bottom: 5%;
+}
+
+.prototypeTitle {
+    margin-top: -5%;
+    margin-left: 10%;
+    margin-right: 5%;
 }
 

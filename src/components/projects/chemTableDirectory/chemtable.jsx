@@ -9,6 +9,7 @@ import surveyPhoto from "@/assets/chemtable/surveyPhoto.png";
 import oldModel from "@/assets/chemtable/oldModel.png";
 import tokens from "@/assets/chemtable/tokens.png";
 import prototypeVideo from "@/assets/chemtable/prototypeVideo.mp4";
+import backArrow from "@/assets/backArrow.png";
 
 function ChemTable() {
   const [opacity, setOpacity] = useState(1);
@@ -28,8 +29,20 @@ function ChemTable() {
   }, []);
 
   return (
-    <div className={styles.background} style={{ position: "relative" }}>
-      <h1>CHEM TABLE</h1>
+    <div
+      className={styles.background}
+      style={{ position: "relative", paddingBottom: "5%" }}
+    >
+      <h1>
+        {" "}
+        <span style={{ paddingBottom: "5%" }}>
+          <a href="/">
+            {" "}
+            <img id={styles.backArrow} src={backArrow} alt="" />
+          </a>
+        </span>{" "}
+        CHEMTABLE
+      </h1>
       <div className={styles.headerContainer}>
         <VideoPlay />
         <div className={styles.headerTextContainer}>
@@ -157,13 +170,13 @@ function ChemTable() {
           triangulation of touch points to identify and track physical objects
           placed on its surface. To demonstrate its educational potential, we
           implemented a chemistry lesson module featuring real laboratory
-          equipment - specifically a Bunsen burner and beaker. When these items
-          are placed on the table's surface, the system recognizes them through
-          their unique touch point patterns.
+          equipment - specifically are placed on the table's surface, the system
+          recognizes them through their unique touch point patterns.
         </p>
         <img className={styles.tokensImg} src={tokens} alt="oldModel" />
       </div>
 
+      <h3 className={styles.prototypeTitle} >Prototype Video</h3>
       <video className={styles.prototypeVideo} controls>
         <source src={prototypeVideo} type="video/mp4" />
         Your browser does not support the video tag.
