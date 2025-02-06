@@ -111,7 +111,7 @@ function MainContent() {
                       PROJECT #2 - MY INFORMED GLOBE
                     </h1>
                   </a>
-                  <Project name="PROJECT #3 - CHEMTABLE" link="/chemtable" />
+                  {/* <Project name="PROJECT #3 - CHEMTABLE" link="/chemtable" /> */}
                   <Project name="SOFTWARE PROJECTS" link="/softwareProjects" />
                 </>
               }
