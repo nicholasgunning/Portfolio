@@ -18,14 +18,7 @@ function VideoPlay() {
     for (let i = 1; i <= 198; i++) {
       const img = new Image();
       const paddedNumber = i.toString().padStart(4, "0");
-      const getImageUrl = (number) => {
-        return new URL(
-          `../../../../src/assets/chemtable/mainImages/${number}.png`,
-          import.meta.url
-        ).href;
-      };
-
-      img.src = getImageUrl(paddedNumber);
+      img.src = `/chemtable/mainImages/${paddedNumber}.png`;
 
       img.onload = () => {
         loadedCount++;
