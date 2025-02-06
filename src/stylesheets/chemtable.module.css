@@ -1,0 +1,13 @@
+@import "main.module.css";
+
+.animatedVideo {
+	height: 100%;
+    width: 100%;
+	justify-content: center;
+	align-items: center;
+    padding-bottom: 50%;
+}
+
+.test {
+    background-color: black;
+}
