@@ -75,9 +75,9 @@ function ChemTable() {
   return (
     <div className={styles.background} style={{ position: "relative" }}>
       <h1>CHEM TABLE</h1>
+      <p>Testing</p>
 
       <VideoPlay />
-      
     </div>
   );
 }
