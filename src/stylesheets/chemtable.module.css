@@ -1,13 +1,89 @@
 @import "main.module.css";
 
-.animatedVideo {
+.animatedModelContainer {
+    margin-top: 5%;
+    height: 100%;
+    width: 100%;
+}
+
+.animatedModel {
 	height: 100%;
     width: 100%;
 	justify-content: center;
 	align-items: center;
-    padding-bottom: 50%;
+    padding-bottom: 40%;
 }
 
-.test {
-    background-color: black;
+.headerTextContainer {
+    justify-content: top;
+    width: 15%;
+    margin-top: -50%;
+    margin-left: -20%;
 }
+
+.headerContainer {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contentContainer {
+    margin-top: -30%;
+    width: 100%;
+}
+
+.statisticImg {
+    width: 13%;
+    height: auto;   
+    
+    margin-left: -5%;
+    margin-top: -8%;
+}
+
+.surveyPhoto {
+    width: 20%;
+    height: auto;
+    margin-top: -5%;
+    margin-right: 5%;
+    margin-left: -10%;
+}
+
+.initialSolutionImg {
+    padding-top: 5%;
+    width: 80%;
+    height: auto;   
+    margin-left: -10%;
+    
+}
+
+.solutionDescription {
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.oldModel {
+    width: 30%;
+    height: 25%;
+    margin-top: -2%;
+    margin-left: -10%;
+    margin-right: 5%;
+}
+
+.tokensImg {
+    width: 20%;
+    height: auto;
+    margin-right: 5%;
+    margin-left: -10%;
+}
+
+.prototypeVideo {
+    width: 70%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 5%;
+    margin-top: -5%;
+    padding-bottom: 5%;
+}
+

@@ -1,81 +1,173 @@
 import styles from "../../../stylesheets/chemtable.module.css";
-import { useMotionValueEvent, useScroll, useTransform } from "framer-motion";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import VideoPlay from "./videoPlay";
+import { useEffect, useState } from "react";
 
-function VideoPlay() {
-  const canvasRef = useRef(null);
-  const [imagesLoaded, setImagesLoaded] = useState(false);
-
-  const { scrollYProgress } = useScroll({
-    target: canvasRef,
-    offset: ["center end", "start start"],
-  });
-
-  const images = useMemo(() => {
-    const loadedImages = [];
-    let loadedCount = 0;
-
-    for (let i = 1; i <= 198; i++) {
-      const img = new Image();
-      const paddedNumber = i.toString().padStart(4, "0");
-      img.src = `/chemtable/mainImages/${paddedNumber}.png`; //wtf
-
-      img.onload = () => {
-        loadedCount++;
-        if (loadedCount === 198) {
-          setImagesLoaded(true);
-        }
-      };
-
-      img.onerror = (e) => {
-        console.error(`Failed to load image ${paddedNumber}:`, e);
-      };
-
-      loadedImages.push(img);
-    }
-    return loadedImages;
-  }, []);
-
-  const render = useCallback(
-    (index) => {
-      if (!imagesLoaded) return;
-
-      const context = canvasRef.current?.getContext("2d");
-      if (context && images[index - 1]) {
-        if (images[index - 1].width) {
-          canvasRef.current.width = images[index - 1].width;
-          canvasRef.current.height = images[index - 1].height;
-        }
-        context.drawImage(images[index - 1], 0, 0);
-      }
-    },
-    [images, imagesLoaded]
-  );
-
-  const currentIndex = useTransform(scrollYProgress, [0, 1], [1, 86]);
-
-  useMotionValueEvent(currentIndex, "change", (latest) => {
-    render(Number(latest.toFixed()));
-  });
-
-  useEffect(() => {
-    if (imagesLoaded) {
-      render(1);
-    }
-  }, [render, imagesLoaded]);
-
-  return (
-    <div style={{ position: "relative" }}>
-      <canvas ref={canvasRef} className={styles.animatedVideo} />
-    </div>
-  );
-}
+import statistic from "@/assets/chemtable/statistic.png";
+import initialSolution1 from "@/assets/chemtable/initialSolutions/initialSolution1.png";
+import initialSolution2 from "@/assets/chemtable/initialSolutions/initialSolution2.png";
+import surveyPhoto from "@/assets/chemtable/surveyPhoto.png";
+import oldModel from "@/assets/chemtable/oldModel.png";
+import tokens from "@/assets/chemtable/tokens.png";
+import prototypeVideo from "@/assets/chemtable/prototypeVideo.mp4";
 
 function ChemTable() {
+  const [opacity, setOpacity] = useState(1);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const fadeOutPoint = 100;
+      const newOpacity = Math.max(1 - scrollY / fadeOutPoint, 0);
+      setOpacity(newOpacity);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className={styles.background} style={{ position: "relative" }}>
       <h1>CHEM TABLE</h1>
-      <VideoPlay />
+      <div className={styles.headerContainer}>
+        <VideoPlay />
+        <div className={styles.headerTextContainer}>
+          <p className={styles.headerText} style={{ opacity }}>
+            Touchscreen table providing digital lessons for teachers, who
+            struggle with lesson planning.{" "}
+          </p>
+        </div>
+      </div>
+      <div className={styles.contentContainer}>
+        <h2 className={styles.newSubtitle}>Problem</h2>
+        <div className={styles.flexContent}>
+          <p className={styles.description}>
+            The Chemtable is designed to provide effective digital lessons to
+            students that don’t compromise on quality. Teachers in Australia see
+            workload as a pressing issue. The Chemtable provides digital lesson
+            plans alleviating an increasing teacher workload that’s resulted
+            from growing teacher shortages around Australia.
+          </p>
+
+          <img
+            className={styles.statisticImg}
+            src={statistic}
+            alt="statistic"
+          />
+        </div>
+
+        <h2 className={styles.newSubtitle}>User Research</h2>
+        <div className={styles.flexContent}>
+          <p className={styles.description}>
+            Our user research on Australian teachers revealed significant
+            challenges with workload and lesson planning. Teachers spend an
+            average of{" "}
+            <span className={styles.boldText}>10 hours per week</span> on lesson
+            planning and an additional{" "}
+            <span className={styles.boldText}>5 hours each</span> on resource
+            gathering, marking, and providing feedback. Through Questionnaires
+            and Online Ethnography, we found that time constraints make it
+            difficult for teachers to{" "}
+            <span className={styles.boldText}>
+              efficiently plan and execute their lessons.
+            </span>
+          </p>
+          <img
+            className={styles.surveyPhoto}
+            src={surveyPhoto}
+            alt="surveyPhoto"
+          />
+        </div>
+        <h2 className={styles.newSubtitle}>Initial Solutions</h2>
+
+        <img
+          className={styles.initialSolutionImg}
+          src={initialSolution1}
+          alt="initialSolution1"
+        />
+        <p className={styles.solutionDescription}>
+          An early solution we storyboarded was a digital based platform used to
+          connect current teachers to university students studying teachers
+          looking to increase there placement hours.
+          <br />
+          <br />
+          The platform connected remote teachers to these students and allowed
+          the teachers with excessive workloads to offload monotonous and
+          administrative work to these students to free up more time for them.
+          This work was designed for students to get a feel for there placements
+          and what type of work they would be doing before they committed to a
+          full placement. This work is also designed to increase placement hours
+          for students.
+          <br />
+          <br />
+          We decided not to further iterate through with this method because it
+          would require significant change in university systems to motivate
+          these placement students to support these rural teachers for
+          additional placement hours.
+        </p>
+
+        <img
+          className={styles.initialSolutionImg}
+          src={initialSolution2}
+          alt="initialSolution2"
+        />
+
+        <p className={styles.solutionDescription}>
+          Another potential solution we storyboarded was something called “The
+          Resource Box”. It was a another digital platform used for resource
+          sharing between schools in Australia who lacked resources. By
+          connecting these schools, it allows these under privileged schools to
+          share resources that help them and can free up time for other schools.{" "}
+          <br />
+          <br />
+          The solution also aims to gamify this on its digital platform by
+          rewarding schools who donate both digital and physical resources. The
+          app aims to facilitate a wide sharing web for schools to all
+          contribute together through its intrinsic motivation.
+          <br />
+          <br />
+          However, we did not decide to move forward with this due to the
+          establishment of other digital platforms used for schools to share
+          resources. We also found that finding intrinisic motivation for this
+          to work properly would be difficult without excessive funding.
+        </p>
+      </div>
+      <h2 className={styles.newSubtitle}>Initial Prototype</h2>
+      <div className={styles.flexContent}>
+        <p className={styles.description}>
+          We evaluated both projector and touchscreen options for our final
+          prototype. While projectors were more cost-effective, they presented
+          significant technical challenges, particularly in implementing
+          reliable object recognition (Yuan et al., 2022). Through collaboration
+          with ADP faculty, we secured a ten-point touchscreen display, which
+          aligned with our original vision. The touchscreen solution offers
+          superior interactivity and provides a more engaging STEM learning
+          experience for students compared to a projected interface.
+        </p>
+        <img className={styles.oldModel} src={oldModel} alt="oldModel" />
+      </div>
+
+      <h2 className={styles.newSubtitle}>Final Prototype</h2>
+
+      <div className={styles.flexContent}>
+        <p className={styles.description}>
+          The final prototype consists of an interactive touchscreen table with
+          advanced object recognition capabilities. The system uses
+          triangulation of touch points to identify and track physical objects
+          placed on its surface. To demonstrate its educational potential, we
+          implemented a chemistry lesson module featuring real laboratory
+          equipment - specifically a Bunsen burner and beaker. When these items
+          are placed on the table's surface, the system recognizes them through
+          their unique touch point patterns.
+        </p>
+        <img className={styles.tokensImg} src={tokens} alt="oldModel" />
+      </div>
+
+      <video className={styles.prototypeVideo} controls>
+        <source src={prototypeVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
   );
 }
