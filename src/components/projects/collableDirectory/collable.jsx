@@ -19,8 +19,6 @@ import keyUserInsights1 from "@/assets/collable/keyUserInsights1.png";
 import keyUserInsights2 from "@/assets/collable/keyUserInsights2.png";
 import keyUserInsights3 from "@/assets/collable/keyUserInsights3.png";
 
-
-
 function RotatingGlasses() {
   const groupRef = useRef();
 
@@ -50,6 +48,7 @@ function Collable() {
         </span>
         Collable
       </h1>
+      <h2 className={styles.newSubtitle}>Snapshot</h2>
       <div className={styles.collable}>
         <div className={styles.modelContainer}>
           <Canvas className={styles.model}>
@@ -65,16 +64,17 @@ function Collable() {
             <Environment preset="apartment" />
           </Canvas>
         </div>
-        <div className={styles.description}>
-          <h2>Snapshot</h2>
+        <div className={styles.mainDescription}>
           <p className={styles.paragraph} id={styles.mainBlurb}>
-            Collable uses AR technology to enhance collaborative efforts among
-            workers by providing visual and tangible stimulation. It employees
-            create a more focused work environment by minimizing external
-            distractions.
+            Collable is an AR solution that enhances equity and engagement in
+            remote work. It transforms physical spaces—like walls and desks—into
+            interactive tools such as virtual whiteboards and shared creative
+            surfaces. With AR glasses, team members can co-create and
+            communicate in real-time, replicating the energy of in-office
+            collaboration from home.
           </p>
         </div>
-      </div> 
+      </div>
       <h2 className={styles.newSubtitle}>Team:</h2>
       <div id={styles.teamMembers}>
         <div className={styles.flexContent}>
