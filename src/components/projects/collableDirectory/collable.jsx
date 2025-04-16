@@ -74,7 +74,7 @@ function Collable() {
             distractions.
           </p>
         </div>
-      </div>
+      </div> 
       <h2 className={styles.newSubtitle}>Team:</h2>
       <div id={styles.teamMembers}>
         <div className={styles.flexContent}>

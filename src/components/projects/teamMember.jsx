@@ -10,7 +10,7 @@ function TeamMember({ image, name, description }) {
         </div>
         <p className={styles.description}>{description}</p>
       </div>
-    </div>
+    </div>  
   );
 }
 

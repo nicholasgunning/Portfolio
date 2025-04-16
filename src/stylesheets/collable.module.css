@@ -51,7 +51,7 @@
     margin-left: -10%;
 }
 
-.keyUserInsights {
+.keyUserInsights { 
    width: 60%;
    margin-left: 0%;
 }
@@ -66,6 +66,10 @@
 #teamMembers {
     display: flex;
     padding-left: 10%;
+}
+
+.description {
+    padding-top: 10%;
 }
 
 .circleFrame {
