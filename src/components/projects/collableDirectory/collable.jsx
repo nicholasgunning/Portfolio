@@ -19,6 +19,8 @@ import keyUserInsights1 from "@/assets/collable/keyUserInsights1.png";
 import keyUserInsights2 from "@/assets/collable/keyUserInsights2.png";
 import keyUserInsights3 from "@/assets/collable/keyUserInsights3.png";
 
+import collableVideo from "@/assets/collable/collableVideo.mov";
+
 function RotatingGlasses() {
   const groupRef = useRef();
 
@@ -169,6 +171,12 @@ function Collable() {
         </p>
         <img src={productFrame} id={styles.productFrameImg} />
       </div>
+      <h2 className={styles.newSubtitle}>Product Video</h2>
+
+      <video className={styles.prototypeVideo} controls muted>
+        <source src={collableVideo} type="video/mp4" loading="lazy" />
+        Your browser does not support the video tag.
+      </video>
       <h2 className={styles.newSubtitle}>
         Challenges and how we overcame them:
       </h2>

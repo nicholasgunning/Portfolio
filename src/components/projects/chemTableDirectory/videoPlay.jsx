@@ -2,9 +2,10 @@ import { useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import styles from "../../../stylesheets/chemtable.module.css";
 
-function VideoPlay() {
+function PrototypeModel() {
   const canvasRef = useRef(null);
   const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [loadingProgress, setLoadingProgress] = useState(0);
 
   const { scrollYProgress } = useScroll({
     target: canvasRef,
@@ -22,6 +23,7 @@ function VideoPlay() {
 
       img.onload = () => {
         loadedCount++;
+        setLoadingProgress(Math.floor((loadedCount / 198) * 100));
         if (loadedCount === 198) {
           setImagesLoaded(true);
         }
@@ -29,6 +31,8 @@ function VideoPlay() {
 
       img.onerror = (e) => {
         console.error(`Failed to load image ${paddedNumber}:`, e);
+        loadedCount++;
+        setLoadingProgress(Math.floor((loadedCount / 198) * 100));
       };
 
       loadedImages.push(img);
@@ -69,9 +73,22 @@ function VideoPlay() {
       className={styles.animatedModelContainer}
       style={{ position: "relative" }}
     >
+      {!imagesLoaded && (
+        <div className={styles.loadingOverlay}>
+          <p className={styles.loadingText}>
+            Loading model images: {loadingProgress}%
+          </p>
+          <div className={styles.progressBar}>
+            <div
+              className={styles.progressFill}
+              style={{ width: `${loadingProgress}%` }}
+            ></div>
+          </div>
+        </div>
+      )}
       <canvas ref={canvasRef} className={styles.animatedModel} />
     </div>
   );
 }
 
-export default VideoPlay;
+export default PrototypeModel;
