@@ -74,15 +74,11 @@ function MainContent() {
               and <span className={homePage.boldText}>solutions</span>.
             </p>
             <div id={homePage.modalButtons}>
-              <a href={Resume} target="_blank" className={homePage.modalButton}>
+              <a target="_blank" className={homePage.modalButton}>
                 Resume <span className="arrow">↗</span>
               </a>
 
-              <a
-                href="https://www.linkedin.com/in/nick-gunning-7189371b9/"
-                target="_blank"
-                className={homePage.modalButton}
-              >
+              <a href="" target="_blank" className={homePage.modalButton}>
                 LinkedIn <span className="arrow">↗</span>
               </a>
             </div>
