@@ -56,22 +56,20 @@ function MainContent() {
           <div className={homePage.modalContent}>
             <h2 id={homePage.modalTitle}>NICK GUNNING</h2>
             <p id={homePage.modalText}>
-              I'm a{" "}
-              <span className={homePage.boldText}>Software Developer</span> and{" "}
-              <span className={homePage.boldText}>Human-Centered Designer</span>{" "}
-              with a strong interest in Fintech, I aspire to create{" "}
+              As a <span className={homePage.boldText}>Software Developer</span>{" "}
+              and{" "}
+              <span className={homePage.boldText}>Human-Centered Designer</span>
+              , I aspire to create{" "}
               <span className={homePage.boldText}>
                 functional digital solutions
               </span>{" "}
-              that bring meaningful impact to{" "}
-              <span className={homePage.boldText}>users' lives</span>. My{" "}
+              that can have a meaningful impact on the{" "}
+              <span className={homePage.boldText}>user experience</span>. My
               approach involves transforming{" "}
               <span className={homePage.boldText}>conceptualised ideas</span> or
-              problem spaces into fully realised,{" "}
-              <span className={homePage.boldText}>
-                feasible Fintech-based prototypes
-              </span>{" "}
-              and <span className={homePage.boldText}>solutions</span>.
+              problem spaces into fully realised, feasible{" "}
+              <span className={homePage.boldText}>prototypes</span> and{" "}
+              <span className={homePage.boldText}>solutions</span>.
             </p>
             <div id={homePage.modalButtons}>
               <a href={Resume} target="_blank" className={homePage.modalButton}>
