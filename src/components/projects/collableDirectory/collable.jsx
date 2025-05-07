@@ -69,10 +69,10 @@ function Collable() {
         <div className={styles.mainDescription}>
           <p className={styles.paragraph} id={styles.mainBlurb}>
             Collable is an AR solution that enhances equity and engagement in
-            remote work. It transforms physical spaces—like walls and desks—into
+            remote work. It transforms physical spaces like walls and desks into
             interactive tools such as virtual whiteboards and shared creative
             surfaces. With AR glasses, team members can co-create and
-            communicate in real-time, replicating the energy of in-office
+            communicate in real time, replicating the energy of in office
             collaboration from home.
           </p>
         </div>
@@ -186,13 +186,13 @@ function Collable() {
           project to develop{" "}
           <span className={styles.boldText}>foundational design skills</span>.
           One significant challenge we encountered was effectively demonstrating
-          user interactions with the design - even with CGI, the advanced
+          user interactions with the design even with CGI, the advanced
           technological nature of the concept made it difficult to create
           realistic simulations.
           <br />
           <br />
           Additionally, we recognized opportunities to strengthen our{" "}
-          <span className={styles.boldText}>user-centered design process</span>.
+          <span className={styles.boldText}>user centered design process</span>.
           A more comprehensive approach would have included multiple iterations
           based on user feedback, allowing us to document and showcase how
           features evolved throughout the development cycle.

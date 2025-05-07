@@ -16,6 +16,7 @@ p {
     font-size: clamp(1.2rem, 1.7vw, 1.7rem);
     color: rgb(70, 70, 70);
     font-weight: 400;
+    
 }
 
 h2 {

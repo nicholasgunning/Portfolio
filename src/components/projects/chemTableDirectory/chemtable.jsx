@@ -154,10 +154,10 @@ function ChemTable() {
       <div className={styles.flexContent}>
         <p className={styles.description}>
           We evaluated both projector and touchscreen options for our final
-          prototype. While projectors were more cost-effective, they presented
+          prototype. While projectors were more cost effective, they presented
           significant technical challenges, particularly in implementing
           reliable object recognition (Yuan et al., 2022). Through collaboration
-          with ADP faculty, we secured a ten-point touchscreen display, which
+          with ADP faculty, we secured a ten point touchscreen display, which
           aligned with our original vision. The touchscreen solution offers
           superior interactivity and provides a more engaging STEM learning
           experience for students compared to a projected interface.
@@ -174,7 +174,7 @@ function ChemTable() {
           triangulation of touch points to identify and track physical objects
           placed on its surface. To demonstrate its educational potential, we
           implemented a chemistry lesson module featuring real laboratory
-          equipment - specifically are placed on the table's surface, the system
+          equipment specifically are placed on the table's surface, the system
           recognizes them through their unique touch point patterns.
         </p>
         <img className={styles.tokensImg} src={tokens} alt="oldModel" />
