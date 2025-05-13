@@ -47,8 +47,9 @@ function ChemTable() {
         <VideoPlay />
         <div className={styles.headerTextContainer}>
           <p className={styles.headerText} style={{ opacity }}>
-            Touchscreen table providing digital lessons for teachers, who
-            struggle with lesson planning.{" "}
+            Easing teacher workload with interactive digital lessons,
+            maintaining quality education despite Australia's growing teacher
+            shortage.{" "}
           </p>
         </div>
       </div>
@@ -150,7 +151,7 @@ function ChemTable() {
           to work properly would be difficult without excessive funding.
         </p>
       </div>
-      <h2>Initial Prototype</h2>
+      <h2 style={{ paddingTop: "5%" }}>Initial Prototype</h2>
       <div className={styles.flexContent}>
         <p className={styles.description}>
           We evaluated both projector and touchscreen options for our final
@@ -165,7 +166,7 @@ function ChemTable() {
         <img className={styles.oldModel} src={oldModel} alt="oldModel" />
       </div>
 
-      <h2>Final Prototype</h2>
+      <h2 style={{ paddingTop: "5%" }}>Final Prototype</h2>
 
       <div className={styles.flexContent}>
         <p className={styles.description}>

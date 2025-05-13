@@ -23,17 +23,15 @@
 .headerTextContainer {
     position: fixed;
     top: 50%;
-    right: 0;
+    right: 5%;
     transform: translateY(-50%);
-    width: 20%;
-    /* Optional: add some padding or background */
+    width: 15%;
     padding: 1rem;
 }
 
 .adjustedHeader {
     margin-left: -5%;
 }
-
 
 .contentContainer {
     margin-top: 0%;

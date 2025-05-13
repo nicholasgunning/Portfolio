@@ -75,13 +75,18 @@ function MainContent() {
               <a href={Resume} target="_blank" className={homePage.modalButton}>
                 Resume <span className="arrow">↗</span>
               </a>
-
               <a
                 href="https://www.linkedin.com/in/nick-gunning-7189371b9/"
                 target="_blank"
                 className={homePage.modalButton}
               >
                 LinkedIn <span className="arrow">↗</span>
+              </a>
+              <a
+                href="mailto:nickgunning7@gmail.com"
+                className={homePage.modalButton}
+              >
+                Contact Me <span className="arrow">↗</span>
               </a>
             </div>
             <button className={homePage.closeModal} onClick={toggleModal}>

@@ -19,7 +19,7 @@ function SoftwareProjects() {
   const [isLoading, setIsLoading] = useState(true);
   return (
     <div className={styles.background}>
-      <h1>
+      <h1> 
         {" "}
         <span>
           <a href="/">
