@@ -1,59 +1,66 @@
 @import "main.module.css";
 
-.animatedModelContainer {
-    margin-top: 5%;
-    height: 100%;
-    width: 100%;
-}
-
-.animatedModel {
-	height: 100%;
-    width: 100%;
-	justify-content: center;
-	align-items: center;
-    padding-bottom: 40%;
-}
-
-.headerTextContainer {
-    justify-content: top;
-    width: 15%;
-    margin-top: -50%;
-    margin-left: -20%;
-}
-
 .headerContainer {
-    display: flex;
     position: relative;
     flex-direction: row;
     align-items: center;
 }
+.animatedModelContainer {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    margin-left: -12.5%;
+}
+
+.animatedModel {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+.headerTextContainer {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 20%;
+    /* Optional: add some padding or background */
+    padding: 1rem;
+}
+
+.adjustedHeader {
+    margin-left: -5%;
+}
+
 
 .contentContainer {
-    margin-top: -30%;
+    margin-top: 0%;
     width: 100%;
 }
 
 .statisticImg {
-    width: 13%;
+    width: 15%;
     height: auto;   
-    
-    margin-left: -5%;
-    margin-top: -8%;
+    margin-left: -15%;
+    margin-right: 10%;
+    margin-top: -10%; 
 }
 
 .surveyPhoto {
-    width: 20%;
+    width: 15%;
     height: auto;
-    margin-top: -5%;
-    margin-right: 5%;
+    margin-top: 0%;
+    margin-right: 10%;
     margin-left: -10%;
 }
 
 .initialSolutionImg {
     padding-top: 5%;
-    width: 80%;
+    width: 90%;
     height: auto;   
-    margin-left: -10%;
+    margin-left: -20%;
     
 }
 
@@ -81,7 +88,7 @@
 .prototypeVideo {
     width: 80%;
     height: auto;
-    margin-left: 10%;
+    margin-left: 0%;
     margin-right: 5%;
     margin-top: 2%;
     padding-bottom: 5%;
@@ -95,6 +102,6 @@
 
 .loadingText {
     font-size: 1.5rem;
-    margin-top: 5%;
-    margin-left: 2%;
+    margin-top: 20%;
+    margin-left: 20%;
 }

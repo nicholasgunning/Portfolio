@@ -7,10 +7,7 @@ function PrototypeModel() {
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const [loadingProgress, setLoadingProgress] = useState(0);
 
-  const { scrollYProgress } = useScroll({
-    target: canvasRef,
-    offset: ["center end", "start start"],
-  });
+  const { scrollYProgress } = useScroll();
 
   const images = useMemo(() => {
     const loadedImages = [];
@@ -46,17 +43,25 @@ function PrototypeModel() {
 
       const context = canvasRef.current?.getContext("2d");
       if (context && images[index - 1]) {
-        if (images[index - 1].width) {
-          canvasRef.current.width = images[index - 1].width;
-          canvasRef.current.height = images[index - 1].height;
-        }
-        context.drawImage(images[index - 1], 0, 0);
+        const image = images[index - 1];
+
+        const fixedWidth = 1920;
+        const fixedHeight = 1080;
+        canvasRef.current.width = fixedWidth;
+        canvasRef.current.height = fixedHeight;
+
+        context.clearRect(0, 0, fixedWidth, fixedHeight);
+
+        const x = (fixedWidth - image.width) / 2;
+        const y = (fixedHeight - image.height) / 2;
+
+        context.drawImage(image, x, y);
       }
     },
     [images, imagesLoaded]
   );
 
-  const currentIndex = useTransform(scrollYProgress, [0, 1], [1, 198]);
+  const currentIndex = useTransform(scrollYProgress, [0, 0.1], [1, 198]);
 
   useMotionValueEvent(currentIndex, "change", (latest) => {
     render(Number(latest.toFixed()));
@@ -78,12 +83,6 @@ function PrototypeModel() {
           <p className={styles.loadingText}>
             Loading model images: {loadingProgress}%
           </p>
-          <div className={styles.progressBar}>
-            <div
-              className={styles.progressFill}
-              style={{ width: `${loadingProgress}%` }}
-            ></div>
-          </div>
         </div>
       )}
       <canvas ref={canvasRef} className={styles.animatedModel} />

@@ -53,7 +53,7 @@ function ChemTable() {
         </div>
       </div>
       <div className={styles.contentContainer}>
-        <h2 className={styles.newSubtitle}>Problem</h2>
+        <h2>Problem</h2>
         <div className={styles.flexContent}>
           <p className={styles.description}>
             The Chemtable is designed to provide effective digital lessons to
@@ -71,7 +71,7 @@ function ChemTable() {
           />
         </div>
 
-        <h2 className={styles.newSubtitle}>User Research</h2>
+        <h2>User Research</h2>
         <div className={styles.flexContent}>
           <p className={styles.description}>
             Our user research on Australian teachers revealed significant
@@ -94,7 +94,7 @@ function ChemTable() {
             alt="surveyPhoto"
           />
         </div>
-        <h2 className={styles.newSubtitle}>Initial Solutions</h2>
+        <h2>Initial Solutions</h2>
 
         <img
           className={styles.initialSolutionImg}
@@ -102,7 +102,7 @@ function ChemTable() {
           alt="initialSolution1"
           loading="lazy"
         />
-        <p className={styles.solutionDescription}>
+        <p>
           An early solution we storyboarded was a digital based platform used to
           connect current teachers to university students studying teachers
           looking to increase there placement hours.
@@ -130,7 +130,7 @@ function ChemTable() {
           loading="lazy"
         />
 
-        <p className={styles.solutionDescription}>
+        <p>
           Another potential solution we storyboarded was something called “The
           Resource Box”. It was a another digital platform used for resource
           sharing between schools in Australia who lacked resources. By
@@ -150,7 +150,7 @@ function ChemTable() {
           to work properly would be difficult without excessive funding.
         </p>
       </div>
-      <h2 className={styles.newSubtitle}>Initial Prototype</h2>
+      <h2>Initial Prototype</h2>
       <div className={styles.flexContent}>
         <p className={styles.description}>
           We evaluated both projector and touchscreen options for our final
@@ -165,7 +165,7 @@ function ChemTable() {
         <img className={styles.oldModel} src={oldModel} alt="oldModel" />
       </div>
 
-      <h2 className={styles.newSubtitle}>Final Prototype</h2>
+      <h2>Final Prototype</h2>
 
       <div className={styles.flexContent}>
         <p className={styles.description}>
@@ -180,7 +180,7 @@ function ChemTable() {
         <img className={styles.tokensImg} src={tokens} alt="oldModel" />
       </div>
 
-      <h3 className={styles.prototypeTitle}>Prototype Video</h3>
+      <h2>Prototype Video</h2>
       <video className={styles.prototypeVideo} controls>
         <source src={prototypeVideo} type="video/mp4" loading="lazy" />
         Your browser does not support the video tag.

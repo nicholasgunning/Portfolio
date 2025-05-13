@@ -4,14 +4,6 @@
     margin-bottom: -100%;
 }
 
-p {
-    padding-right: 5%;
-    font-family: 'Work Sans', sans-serif;
-    font-size: calc(1vw + 1vh);
-    color: rgb(70, 70, 70);
-    font-weight: 400;
-}
-
 h3 {
     font-family: 'Work Sans', sans-serif;
     font-size: calc(1.7vw + 1.7vh);

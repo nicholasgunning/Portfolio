@@ -59,7 +59,9 @@ function Journey() {
       })}
 
       <div id={styles.discoverText}>
-        <h3>Discover</h3>
+        <div className={styles.centreText}>
+          <h3>Discover</h3>
+        </div>
         <h4>
           User Interviews
           <br />
@@ -73,7 +75,9 @@ function Journey() {
         </h4>
       </div>
       <div id={styles.defineText}>
-        <h3>Define</h3>
+        <div className={styles.centreText}>
+          <h3>Define</h3>
+        </div>
         <h4>
           Affinity Diagram
           <br />
@@ -83,7 +87,9 @@ function Journey() {
         </h4>
       </div>
       <div id={styles.ideateText}>
-        <h3>Ideate</h3>
+        <div className={styles.centreText}>
+          <h3>Ideate</h3>
+        </div>
         <h4>
           Crazy 8s
           <br />
@@ -95,7 +101,9 @@ function Journey() {
         </h4>
       </div>
       <div id={styles.designText}>
-        <h3>Design</h3>
+        <div className={styles.centreText}>
+          <h3>Design</h3>
+        </div>
         <h4>
           Wireframes
           <br />
@@ -107,7 +115,9 @@ function Journey() {
         </h4>
       </div>
       <div id={styles.testText}>
-        <h3>Test</h3>
+        <div className={styles.centreText}>
+          <h3>Test</h3>
+        </div>
         <h4>
           Heuristic Evaluation
           <br />

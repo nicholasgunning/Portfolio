@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 
+.background {
+    background-color: rgb(255, 249, 240);
+    margin-top: -10%;
+    max-width: 80%;
+}
+
 h1 {
     font-family: 'Work Sans', sans-serif;
     font-size: clamp(4rem, 8vw, 6rem);
@@ -12,24 +18,39 @@ h1 {
 }
  
 p {
+    padding-right: 5%;
     font-family: 'Work Sans', sans-serif;
-    font-size: clamp(1.2rem, 1.7vw, 1.7rem);
+    font-size: calc(0.8vw + 0.8vh);
     color: rgb(70, 70, 70);
     font-weight: 400;
-    
 }
 
 h2 {
     font-family: 'Work Sans', sans-serif;
-    font-size: 5vw;
+    font-size: 3vw;
     color: rgba(233, 139, 139, 1);
     font-weight: 400;
     margin-bottom: -0.3%;
 }
- 
-.background {
-    background-color: rgb(255, 249, 240);
-    margin-top: -10%;
+
+.newSubtitle {
+    padding-left: 5%;
+}
+
+.paragraph {
+    padding-top: 1%;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-bottom: 2%;
+    
+}
+
+.blockContent {
+    display: block;
+}
+
+.flexContent {
+    display: flex;
 }
 
 .boldText {
@@ -61,25 +82,9 @@ h2 {
     padding-right: 20%;
 }
 
-#teamMembers {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.description {
-    width: 50%;
-    padding-left: 10%;
-}
-
-
-.newSubtitle {
-    padding-left: 10vw;
-}
-
 .circleFrame {
-    width: 25%; 
-    height: 25%; 
+    width: 90%; 
+    height: 90%;
     margin-top: 5%;
     border-radius: 50%; 
     overflow: hidden; 
@@ -88,13 +93,15 @@ h2 {
     justify-content: center; 
 }
 
-.blockContent {
-    display: block;
+#teamMembers {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.flexContent {
-    display: flex;
+.teamMemberDescription {
+    padding-left: 5%;
 }
+
 
 .viewPDFButton {
     background-color: rgb(255, 249, 240);
@@ -128,3 +135,4 @@ h2 {
 .viewPDFButton:hover {
     transform: scale(1.03);
 }
+

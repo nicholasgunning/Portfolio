@@ -67,7 +67,7 @@ function Collable() {
           </Canvas>
         </div>
         <div className={styles.mainDescription}>
-          <p className={styles.paragraph} id={styles.mainBlurb}>
+          <p id={styles.mainBlurb}>
             Collable is an AR solution that enhances equity and engagement in
             remote work. It transforms physical spaces like walls and desks into
             interactive tools such as virtual whiteboards and shared creative
@@ -94,7 +94,7 @@ function Collable() {
       </div>
 
       <h2 className={styles.newSubtitle}>User Insights: </h2>
-      <p style={{ paddingLeft: "10%", paddingRight: "10%" }}>
+      <p style={{ paddingLeft: "5%", paddingRight: "10%" }}>
         Through interviews and surveys our group found compelling insights into
         the struggles of working at home.
         <br />
@@ -125,7 +125,7 @@ function Collable() {
       </div>
 
       <h2 className={styles.newSubtitle}>Problem</h2>
-      <div className={styles.textContainer}>
+      <div className={styles.flexContent}>
         <p className={styles.paragraph}>
           The <span className={styles.boldText}>pandemic</span> triggered a
           global shift to{" "}
@@ -149,8 +149,8 @@ function Collable() {
         <img src={collableProblemStat} id={styles.problemStatImg} />
       </div>
       <h2 className={styles.newSubtitle}>Product</h2>
-      <div className={styles.textContainer}>
-        <p>
+      <div className={styles.flexContent}>
+        <p className={styles.paragraph}>
           <span className={styles.boldText}>Collabble</span> leverages{" "}
           <span className={styles.boldText}>Augmented Reality (AR)</span> to
           transform hybrid team collaboration. Through AR glasses, team members
@@ -180,7 +180,7 @@ function Collable() {
       <h2 className={styles.newSubtitle}>
         Challenges and how we overcame them:
       </h2>
-      <div className={styles.textContainer}>
+      <div className={styles.flexContent}>
         <p className={styles.paragraph}>
           <span className={styles.boldText}>Collable</span> served as an initial
           project to develop{" "}

@@ -102,24 +102,29 @@ function InformedGlobe() {
           </p>
         </div>
       </div>
-      <div id={styles.teamContainer2}>
+      <div
+        style={{
+          backgroundColor: "rgb(255, 249, 240)",
+          zIndex: 1,
+          maxWidth: "80%",
+        }}
+      >
         <h2 className={styles.newSubtitle}>Team:</h2>
-        <div id={styles.teamMembers}>
-          <div id={styles.person1}>
+        <div id={styles.teamMembers} style={{ paddingLeft: "5%" }}>
+          <div className={styles.flexContent}>
             <TeamMember
               image={nickPhoto}
               name="Nick Gunning (Myself)"
               description="Focused on creating an intuitive user experience through the Figma Prototype. Conducted user interviews and research to ensure our content remains relevant."
             />
-          </div>
-          <div id={styles.person2}>
+
             <TeamMember
               image={zoePhoto}
               name="Zoe Jansen"
               description="Led the development of the interactive features based on user feedback. Helped build upon the Design iterations."
             />
           </div>
-          <div id={styles.person3}>
+          <div style={{ maxWidth: "50%" }}>
             <TeamMember
               image={oliverPhoto}
               name="Oliver Waterhouse"
@@ -130,8 +135,8 @@ function InformedGlobe() {
       </div>
 
       <h2 className={styles.newSubtitle}>Problem: </h2>
-      <div id={styles.problemContainer}>
-        <p className={styles.problemText}>
+      <div className={styles.flexContent}>
+        <p className={styles.paragraph}>
           Survey and Interview data revealed that young adults consume less news
           than older generations and often find it overwhelming or confusing.
           This can lead to{" "}
@@ -151,7 +156,7 @@ function InformedGlobe() {
       <h2 className={styles.newSubtitle}>Journey:</h2>
       <Journey />
 
-      <div>
+      
         <h2 className={styles.newSubtitle}>Design Decision's</h2>
         <div className={styles.designDecisions}>
           <img src={designD1} className={styles.ddImage} />
@@ -263,7 +268,7 @@ function InformedGlobe() {
           </div>
         </div>
       </div>
-    </div>
+    
   );
 }
 

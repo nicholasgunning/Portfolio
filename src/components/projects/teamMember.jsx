@@ -8,7 +8,7 @@ function TeamMember({ image, name, description }) {
         <div className={styles.circleFrame}>
           <img className={styles.circleImage} src={image} alt={name} />
         </div>
-        <p className={styles.description}>{description}</p>
+        <p className={styles.teamMemberDescription}>{description}</p>
       </div>
     </div>  
   );
