@@ -89,13 +89,13 @@ function InformedGlobe() {
         <div id={styles.blurb}>
           <p id={styles.blurbText}>
             <span className={styles.boldText}>Informed Globe</span> is a news
-            app designed for
+            app for
             <span className={styles.boldText}> younger generations</span> that
             <span className={styles.boldText}>
               {" "}
-              simplifies complex topics{" "}
+              simplifies complex topics
             </span>{" "}
-            and highlights their
+            and shows their
             <span className={styles.boldText}> direct impacts</span>, making
             political news
             <span className={styles.boldText}> accessible and engaging</span>.
