@@ -174,7 +174,7 @@ function SoftwareProjects() {
               intuitive user interfaces.
             </p>
             <h3>Video Explaination</h3>
-            <iframe
+            <iframe 
               width="400"
               height="260"
               src="https://www.youtube.com/embed/f150eqMuVoM?si=_HkRWop1HOt7PwBU"

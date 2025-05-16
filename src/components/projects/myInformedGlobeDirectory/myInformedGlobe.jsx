@@ -156,119 +156,117 @@ function InformedGlobe() {
       <h2 className={styles.newSubtitle}>Journey:</h2>
       <Journey />
 
-      
-        <h2 className={styles.newSubtitle}>Design Decision's</h2>
-        <div className={styles.designDecisions}>
-          <img src={designD1} className={styles.ddImage} />
-          <div className={styles.ddTextContainer}>
-            <p id={styles.dd1Text1}>
-              Initial Sketches saw an{" "}
-              <span className={styles.boldText}>introduction of a globe</span>{" "}
-              for users to select the country they were interested in.
-              <br />
-              <br />
-              This was later rejected due to the{" "}
-              <span className={styles.boldText}>lack of user feedback</span> and
-              usability compared to a 2D flat map.
-            </p>
+      <h2 className={styles.newSubtitle}>Design Decision's</h2>
+      <div className={styles.designDecisions}>
+        <img src={designD1} className={styles.ddImage} />
+        <div className={styles.ddTextContainer}>
+          <p id={styles.dd1Text1}>
+            Initial Sketches saw an{" "}
+            <span className={styles.boldText}>introduction of a globe</span> for
+            users to select the country they were interested in.
+            <br />
+            <br />
+            This was later rejected due to the{" "}
+            <span className={styles.boldText}>lack of user feedback</span> and
+            usability compared to a 2D flat map.
+          </p>
 
-            <p id={styles.dd1Text2}>
-              Map includes names of countries to assist individuals who are
-              unaware of geography.
-              <br />
-              <br />
-              Implementing a search feature so that{" "}
-              <span className={styles.boldText}>
-                users have choice about which country to read about
-              </span>
-              . <i>(User control and freedom)</i>
-              <br />
-              <br />
-              Added instructions at the top of the page to{" "}
-              <span className={styles.boldText}>
-                keep users informed about what to do
-              </span>
-              . <i>(Visibility of system status)</i>
-            </p>
-          </div>
-          <img src={designD2} className={styles.ddImage} />
-          <div className={styles.ddTextContainer}>
-            <p id={styles.dd2Text1}>
-              A grid like layout was first sketched to show{" "}
-              <span className={styles.boldText}>
-                feature articles based on a country
-              </span>
-              .
-              <br />
-              <br />
-              First sketches showed the info on and about the country below the
-              article tiles, however, user refinement highlighted that{" "}
-              <span className={styles.boldText}>
-                users wanted to context on the country first
-              </span>{" "}
-              before viewing news stories.
-            </p>
+          <p id={styles.dd1Text2}>
+            Map includes names of countries to assist individuals who are
+            unaware of geography.
+            <br />
+            <br />
+            Implementing a search feature so that{" "}
+            <span className={styles.boldText}>
+              users have choice about which country to read about
+            </span>
+            . <i>(User control and freedom)</i>
+            <br />
+            <br />
+            Added instructions at the top of the page to{" "}
+            <span className={styles.boldText}>
+              keep users informed about what to do
+            </span>
+            . <i>(Visibility of system status)</i>
+          </p>
+        </div>
+        <img src={designD2} className={styles.ddImage} />
+        <div className={styles.ddTextContainer}>
+          <p id={styles.dd2Text1}>
+            A grid like layout was first sketched to show{" "}
+            <span className={styles.boldText}>
+              feature articles based on a country
+            </span>
+            .
+            <br />
+            <br />
+            First sketches showed the info on and about the country below the
+            article tiles, however, user refinement highlighted that{" "}
+            <span className={styles.boldText}>
+              users wanted to context on the country first
+            </span>{" "}
+            before viewing news stories.
+          </p>
 
-            <p id={styles.dd2Text2}>
-              Refined mockups show key information about a country before
-              showing <span className={styles.boldText}>top news stories</span>.
-              We wanted to give users{" "}
-              <span className={styles.boldText}>
-                non-bias important information
-              </span>{" "}
-              based on a country that would make articles{" "}
-              <span className={styles.boldText}>more informative</span>.
-              <br />
-              <br />
-              The addition of tags for the news articles gave{" "}
-              <span className={styles.boldText}>
-                users quick access to what they were looking for
-              </span>
-              .
-            </p>
-          </div>
-          <img src={designD3} className={styles.ddImage} />
-          <div className={styles.ddTextContainer}>
-            <p id={styles.dd2Text1}>
-              Highlighted article page that showed information based on the
-              searched country. Users revealed that they wanted to include
-              information on how it impacts their home country. This created,{" "}
-              <span className={styles.boldText}>
-                intrinsic motivation for the user
-              </span>
-              .
-              <br />
-              <br />
-              Removal of search bar was needed because{" "}
-              <span className={styles.boldText}>
-                users could simply just navigate back to the globe page
-              </span>
-              .
-            </p>
+          <p id={styles.dd2Text2}>
+            Refined mockups show key information about a country before showing{" "}
+            <span className={styles.boldText}>top news stories</span>. We wanted
+            to give users{" "}
+            <span className={styles.boldText}>
+              non-bias important information
+            </span>{" "}
+            based on a country that would make articles{" "}
+            <span className={styles.boldText}>more informative</span>.
+            <br />
+            <br />
+            The addition of tags for the news articles gave{" "}
+            <span className={styles.boldText}>
+              users quick access to what they were looking for
+            </span>
+            .
+          </p>
+        </div>
+        <img src={designD3} className={styles.ddImage} />
+        <div className={styles.ddTextContainer}>
+          <p id={styles.dd2Text1}>
+            Highlighted article page that showed information based on the
+            searched country. Users revealed that they wanted to include
+            information on how it impacts their home country. This created,{" "}
+            <span className={styles.boldText}>
+              intrinsic motivation for the user
+            </span>
+            .
+            <br />
+            <br />
+            Removal of search bar was needed because{" "}
+            <span className={styles.boldText}>
+              users could simply just navigate back to the globe page
+            </span>
+            .
+          </p>
 
-            <p id={styles.dd2Text2}>
-              Refined mockups showed a dictionary feature that provided
-              definitions of unknown words to{" "}
-              <span className={styles.boldText}>
-                give users more accessibility
-              </span>
-              .
-              <br />
-              <br />
-              Article content was further broken down to{" "}
-              <span className={styles.boldText}>
-                create more whitespace for the user
-              </span>
-              .
-              <br />
-              <br />
-              At conclusion of article a circle diagram visualised economic
-              factors and how they impact your home country.
-            </p>
-          </div>
+          <p id={styles.dd2Text2}>
+            Refined mockups showed a dictionary feature that provided
+            definitions of unknown words to{" "}
+            <span className={styles.boldText}>
+              give users more accessibility
+            </span>
+            .
+            <br />
+            <br />
+            Article content was further broken down to{" "}
+            <span className={styles.boldText}>
+              create more whitespace for the user
+            </span>
+            .
+            <br />
+            <br />
+            At conclusion of article a circle diagram visualised economic
+            factors and how they impact your home country.
+          </p>
         </div>
       </div>
-    
+    </div>
   );
 }
 

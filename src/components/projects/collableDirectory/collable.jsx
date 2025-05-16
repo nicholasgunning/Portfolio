@@ -19,8 +19,6 @@ import keyUserInsights1 from "@/assets/collable/keyUserInsights1.png";
 import keyUserInsights2 from "@/assets/collable/keyUserInsights2.png";
 import keyUserInsights3 from "@/assets/collable/keyUserInsights3.png";
 
-import collableVideo from "@/assets/collable/collableVideo.mov";
-
 function RotatingGlasses() {
   const groupRef = useRef();
 
@@ -173,10 +171,14 @@ function Collable() {
       </div>
       <h2 className={styles.newSubtitle}>Product Video</h2>
 
-      <video className={styles.prototypeVideo} controls muted>
-        <source src={collableVideo} type="video/mp4" loading="lazy" />
-        Your browser does not support the video tag.
-      </video>
+      <iframe
+        style={{ width: "50vw", height: "60vh", paddingLeft: "5%"}}
+        src="https://player.vimeo.com/video/1084847802?h=11e5d103d9&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+        title="Collable Video"
+      ></iframe>
+
       <h2 className={styles.newSubtitle}>
         Challenges and how we overcame them:
       </h2>

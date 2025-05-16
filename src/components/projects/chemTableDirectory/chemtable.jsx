@@ -8,7 +8,6 @@ import initialSolution2 from "@/assets/chemtable/initialSolutions/initialSolutio
 import surveyPhoto from "@/assets/chemtable/surveyPhoto.png";
 import oldModel from "@/assets/chemtable/oldModel.png";
 import tokens from "@/assets/chemtable/tokens.png";
-import prototypeVideo from "@/assets/chemtable/prototypeVideo.mp4";
 import backArrow from "@/assets/backArrow.png";
 
 function ChemTable() {
@@ -182,10 +181,15 @@ function ChemTable() {
       </div>
 
       <h2>Prototype Video</h2>
-      <video className={styles.prototypeVideo} controls>
-        <source src={prototypeVideo} type="video/mp4" loading="lazy" />
-        Your browser does not support the video tag.
-      </video>
+
+      <iframe
+        style={{ width: "50vw", height: "60vh" }}
+        src="https://player.vimeo.com/video/1084849019?h=d0c89aa60a&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+        title="Chemtable"
+        frameBorder="0"
+        className={styles.prototypeVideo}
+      ></iframe>
     </div>
   );
 }
