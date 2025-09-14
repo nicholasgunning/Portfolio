@@ -4,7 +4,7 @@ import "../stylesheets/Overview.scss";
 function OverviewLinks() {
   const handleDownload = () => {};
   const openLinkedIn = () => {
-    window.open("https://www.linkedin.com/in/kritikalpa-saha/");
+    window.open("www.linkedin.com/in/nick-gunning-7189371b9/");
   };
   return (
     <div className="overview-links">
