@@ -42,23 +42,26 @@ html, body {
 #profileButton {
     background-color: rgb(233, 139, 139);
     color: rgb(0, 0, 0);
-    border: 0.15vmin solid rgb(0, 0, 0);
-    font-size: 2.5vmin; 
-    border-radius: 1.5vmin; 
+    border: 1px solid rgb(0, 0, 0);
+
+    font-size: clamp(15px, 20px, 25px);
+
+    border-radius: 1rem;
+
     cursor: pointer;
     font-weight: 700;
-    min-width: 6vw;
-    min-height: 5vh;
     margin: 1rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    width: clamp(80px, 8vw, 100px);
+    height: clamp(40px, 5vh, 55px);
 }
 
 #profileIcon {
-    width: 2vmin;
-    height: 2vmin;
+    width: clamp(15px, 20px, 30px);
+    height: clamp(15px, 20px, 30px);
     margin-left: -10%;
 }
 

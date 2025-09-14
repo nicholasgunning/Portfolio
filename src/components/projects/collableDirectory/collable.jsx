@@ -172,7 +172,7 @@ function Collable() {
       <h2 className={styles.newSubtitle}>Product Video</h2>
 
       <iframe
-        style={{ width: "50vw", height: "60vh", paddingLeft: "5%"}}
+        style={{ width: "50vw", height: "60vh", paddingLeft: "5%" }}
         src="https://player.vimeo.com/video/1084847802?h=11e5d103d9&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
         frameborder="0"
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
