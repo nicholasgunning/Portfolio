@@ -9,7 +9,7 @@ import Overview from "./Overview";
 
 import Collable from "../components/projects/collableDirectory/collable";
 import InformedGlobe from "../components/projects/myInformedGlobeDirectory/myInformedGlobe";
-import SoftwareProjects from "../components/projects/softwareProjectsDirectory/SoftwareProjects";
+import SoftwareProjects from "../components/projects/softwareProjectsDirectory/softwareProjects";
 //Chemtable Missing
 
 function JourneyHome() {
