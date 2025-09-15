@@ -1,22 +1,29 @@
-import React, { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import "../stylesheets/Overview.scss";
 
 function OverviewText() {
+  const elementRef = useRef();
+
   useEffect(() => {
-    const element = document.getElementById("my-name");
-    if (element) {
-      setTimeout(() => {
-        document.getElementById("my-name").classList.add("is-mounted");
-      }, 1000 * 1);
+    if (elementRef.current) {
+      const timeoutId = setTimeout(() => {
+        if (elementRef.current) {
+          elementRef.current.classList.add("is-mounted");
+        }
+      }, 1000);
+
       return () => {
-        document.getElementById("my-name").classList.remove("is-mounted");
+        clearTimeout(timeoutId);
+        if (elementRef.current) {
+          elementRef.current.classList.remove("is-mounted");
+        }
       };
     }
   }, []);
 
   return (
     <div>
-      <div id="my-name" className="overview-name">
+      <div ref={elementRef} id="my-name" className="overview-name">
         Nick Gunning
       </div>
       <div className="overview-details">
