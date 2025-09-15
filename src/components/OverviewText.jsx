@@ -1,14 +1,17 @@
 import React, { useEffect } from "react";
-import "../stylesheets/Overview.scss"
+import "../stylesheets/Overview.scss";
 
 function OverviewText() {
   useEffect(() => {
-    setTimeout(() => {
-      document.getElementById("my-name").classList.add("is-mounted");
-    }, 1000 * 1);
-    return () => {
-      document.getElementById("my-name").classList.remove("is-mounted");
-    };
+    const element = document.getElementById("my-name");
+    if (element) {
+      setTimeout(() => {
+        document.getElementById("my-name").classList.add("is-mounted");
+      }, 1000 * 1);
+      return () => {
+        document.getElementById("my-name").classList.remove("is-mounted");
+      };
+    }
   }, []);
 
   return (

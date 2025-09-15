@@ -13,7 +13,7 @@
 .overview-name {
   font-family: v.$primary-font;
   color: v.$salmon;
-  font-weight: 500;
+  font-weight: 1000;
   font-size: 40px;
   text-transform: uppercase;
   width: 200px;
@@ -49,6 +49,8 @@
   line-height: 1.5;
   color: v.$salmon;
   margin-left: 3vw;
+  font-family: v.$secondery-font;
+  text-decoration: none;
   .overview-links-item {
     display: flex;
     font-size: 14px;

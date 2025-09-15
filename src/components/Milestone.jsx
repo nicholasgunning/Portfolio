@@ -1,13 +1,14 @@
 import React from "react";
 import "../stylesheets/Journey.scss";
+import { Link } from "react-router-dom";
 
-function Milestone({ milestone, year, index }) {
+function Milestone({ milestone, year, to }) {
   return (
-    <div className="milestone">
-      <div>{year}</div>
-      <div>/</div>
-      <div>{milestone}</div>
-    </div>
+      <Link to={to} className="milestone">
+        <div>{year}</div>
+        <div>/</div>
+        <div>{milestone}</div>
+      </Link>
   );
 }
 

@@ -7,7 +7,7 @@
   gap: 2vh;
   background-color: #FFFCF7;
   min-height: 100vh;
-  padding: 5vw 4vw;
+  // padding: 5vw 4vw;
   box-sizing: border-box;
   perspective: 2500px;
   perspective-origin: center left;
@@ -34,6 +34,8 @@
   }
 }
 .milestone {
+  text-decoration: none;
+  color: inherit;
   position: relative;
   display: flex;
   gap: 1vw;
@@ -58,9 +60,6 @@
       font-size: 1vw;
       font-weight: 800;
       font-family: v.$secondery-font;
-      // position: absolute;
-      // top: 1.7em;
-      //   left: -50px;
       letter-spacing: 0;
       line-height: 1;
       margin-top: 1.2vh;
@@ -85,3 +84,6 @@
     -webkit-text-stroke: 3px v.$black;
   }
 }
+
+
+

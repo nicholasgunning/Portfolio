@@ -10,11 +10,11 @@ function OverviewLinks() {
     <div className="overview-links">
       <div className="overview-links-item" onClick={handleDownload}>
         <div>01</div>
-        <div>resume</div>
+        <div>Resume</div>
       </div>
       <div className="overview-links-item" onClick={openLinkedIn}>
         <div>02</div>
-        <div>linkedin</div>
+        <div>LinkedIn</div>
       </div>
     </div>
   );
