@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../../../stylesheets/softwareProjects.module.scss";
+import styles from "../../../stylesheets/SoftwareProjects.module.scss";
 import backArrow from "@/assets/backArrow.png";
 import { projectData } from "./softwareProjectData.jsx";
 
@@ -75,12 +75,12 @@ function SoftwareProjects() {
 
             <h3>{virtualScroll.role.heading}</h3>
             <p className={styles.paragraph}>{virtualScroll.role.text}</p>
-            
-              <img
-                src={virtualScroll.role.image}
-                alt="Project planning board"
-                className={styles.imageP1_board}
-              />
+
+            <img
+              src={virtualScroll.role.image}
+              alt="Project planning board"
+              className={styles.imageP1_board}
+            />
 
             <h3>{virtualScroll.reflection.heading}</h3>
             <div className={styles.flexContent}>
