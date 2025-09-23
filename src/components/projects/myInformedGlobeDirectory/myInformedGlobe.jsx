@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import ScrollText from "./scrollText";
 import TeamMember from "../teamMember";
 
-import Journey from "./journey";
+import Journey from "./userJourney";
 
 import backArrow from "@/assets/backArrow.png";
 import globe from "@/assets/myInformedGlobe/globe.png";
