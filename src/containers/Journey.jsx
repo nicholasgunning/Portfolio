@@ -7,23 +7,21 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import Overview from "./Overview";
 
-import Collable from "../components/projects/collableDirectory/collable";
-import InformedGlobe from "../components/projects/myInformedGlobeDirectory/myInformedGlobe";
-import SoftwareProjects from "../components/projects/softwareProjectsDirectory/softwareProjects";
+import Collable from "../components/projects/collableDirectory/Collable";
+import InformedGlobe from "../components/projects/myInformedGlobeDirectory/MyInformedGlobe";
+import SoftwareProjects from "../components/projects/softwareProjectsDirectory/SoftwareProjects";
 //Chemtable Missing
 
 function JourneyHome() {
   const elementRef = useRef();
 
   useEffect(() => {
-    
     if (elementRef.current) {
       const timeoutId = setTimeout(() => {
         elementRef.current.classList.add("is-journey-mounted");
       }, 1000);
 
       return () => {
-        
         clearTimeout(timeoutId);
         if (elementRef.current) {
           elementRef.current.classList.remove("is-journey-mounted");
