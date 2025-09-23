@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Milestone from "../components/Milestone";
 import "../stylesheets/Journey.scss";
 
@@ -13,21 +13,27 @@ import SoftwareProjects from "../components/projects/softwareProjectsDirectory/s
 //Chemtable Missing
 
 function JourneyHome() {
+  const elementRef = useRef();
+
   useEffect(() => {
-    setTimeout(() => {
-      document
-        .getElementById("my-journey")
-        ?.classList.add("is-journey-mounted");
-    }, 1000);
-    return () => {
-      document
-        .getElementById("my-journey")
-        ?.classList.remove("is-journey-mounted");
-    };
+    
+    if (elementRef.current) {
+      const timeoutId = setTimeout(() => {
+        elementRef.current.classList.add("is-journey-mounted");
+      }, 1000);
+
+      return () => {
+        
+        clearTimeout(timeoutId);
+        if (elementRef.current) {
+          elementRef.current.classList.remove("is-journey-mounted");
+        }
+      };
+    }
   }, []);
 
   return (
-    <div id="my-journey" className="journey">
+    <div ref={elementRef} id="my-journey" className="journey">
       <Milestone milestone="Collable" year="2021-202" to="/collable" />
       <Milestone
         milestone="My Informed Globe"

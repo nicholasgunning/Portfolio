@@ -1,12 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+ 
+//colors
+$salmon: #E98B8B;
+$black: #000;
 
+// Font-face for DrukWideBold (local font)
+@font-face {
+  font-family: "DrukWideBold";
+  src: url("@/assets/fonts/DrukWideBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+//fonts
+$primary-font: "DrukWideBold", sans-serif;
+$secondery-font: "Poppins", sans-serif;
 
 .background {
     background-color: rgb(255, 249, 240);
-    position: absolute;
-    width: 100%;
     height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.backArrow {
+    width: clamp(0rem, 4vw, 1rem);
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+    margin-top: 10%;
+    margin-left: 50%;
+
+}
+ 
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; 
+}
+
+.content {
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-bottom: 4%;
 }
 
 h1 {
@@ -15,16 +54,14 @@ h1 {
     font-weight: 700;
     color: rgba(233, 139, 139, 1);
     margin: clamp(0.5rem, 1vw, 1rem);
-    margin-left: 5vw;
     border-bottom: 2px solid rgb(0, 0, 0);
 }
  
 p {
-    padding-right: 5%;
     font-family: 'Work Sans', sans-serif;
     font-size: calc(0.8vw + 0.8vh);
     color: rgb(70, 70, 70);
-    font-weight: 400;
+    font-weight: 400; 
 }
 
 h2 {
@@ -35,16 +72,10 @@ h2 {
     margin-bottom: -0.3%;
 }
 
-.newSubtitle {
-    padding-left: 5%;
-}
-
 .paragraph {
     padding-top: 1%;
     padding-right: 5%;
-    padding-left: 5%;
     padding-bottom: 2%;
-    
 }
 
 .blockContent {
@@ -64,77 +95,43 @@ h2 {
     color: rgb(0, 0, 0);
 }
 
-#backArrow {
-    width: clamp(0rem, 4vw, 2rem);
-    height: auto;
-    vertical-align: middle;
-    display: inline-block;
-    margin-left: -20%;
-    margin-right: 5%;
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
-.name {
-    font-family: 'Work Sans', sans-serif;
-    font-size: clamp(0.5rem, 3vw, 2rem);
-    font-weight: 400;
-}
-
-.circleImage {
-    width: 100%;
-    padding-right: 20%;
-}
-
-.circleFrame {
-    width: 90%; 
-    height: 90%;
-    margin-top: 5%;
-    border-radius: 50%; 
-    overflow: hidden; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-}
-
-#teamMembers {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.teamMemberDescription {
-    padding-left: 5%;
-}
-
-
-.viewPDFButton {
+.viewButton {
     background-color: rgb(255, 249, 240);
     color: rgba(233, 139, 139, 1);
     border: 0.2vmin solid rgba(233, 139, 139, 1);
-    font-size: 2.5vmin; 
+    font-size: 1.7vmin; 
     border-radius: 2vmin; 
     cursor: pointer;
     font-weight: 200;
-    min-width: 15vw;
-    min-height: 5vh;
-    padding: 1.5vh 2.5vw;
+    min-width: 14vw;
+    min-height: 4.5vh;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
 }
 
-.viewPDFButton span {
+.viewButton span {
     color: rgba(233, 139, 139, 1);
     margin-left: 1vw; 
+    margin-bottom: .3vw;
     font-size: 2.5vmin; 
 }
  
-.viewPDFButton a {
+.viewButton a {
     text-decoration: none;
     display: flex;
     align-items: center;
 }
 
-.viewPDFButton:hover {
+.viewButton:hover {
     transform: scale(1.03);
 }
 

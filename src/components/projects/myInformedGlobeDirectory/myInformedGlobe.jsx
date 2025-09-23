@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../../stylesheets/informedGlobe.module.css";
+import styles from "../../../stylesheets/InformedGlobe.module.scss";
 import { Parallax } from "react-scroll-parallax";
 import { useState, useEffect } from "react";
 
@@ -109,7 +109,7 @@ function InformedGlobe() {
           maxWidth: "80%",
         }}
       >
-        <h2 className={styles.newSubtitle}>Team:</h2>
+        <h2 className={styles.Subtitle}>Team:</h2>
         <div id={styles.teamMembers} style={{ paddingLeft: "5%" }}>
           <div className={styles.flexContent}>
             <TeamMember
@@ -134,7 +134,7 @@ function InformedGlobe() {
         </div>
       </div>
 
-      <h2 className={styles.newSubtitle}>Problem: </h2>
+      <h2 className={styles.Subtitle}>Problem: </h2>
       <div className={styles.flexContent}>
         <p className={styles.paragraph}>
           Survey and Interview data revealed that young adults consume less news
@@ -153,10 +153,10 @@ function InformedGlobe() {
         <img src={donutGraph} id={styles.donutGraph} />
       </div>
 
-      <h2 className={styles.newSubtitle}>Journey:</h2>
+      <h2 className={styles.Subtitle}>Journey:</h2>
       <Journey />
 
-      <h2 className={styles.newSubtitle}>Design Decision's</h2>
+      <h2 className={styles.Subtitle}>Design Decision's</h2>
       <div className={styles.designDecisions}>
         <img src={designD1} className={styles.ddImage} />
         <div className={styles.ddTextContainer}>

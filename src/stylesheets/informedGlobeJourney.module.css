@@ -1,4 +1,4 @@
-#container {
+/* #container {
     display: grid;
     grid-template-columns: repeat(5, 20%);
     grid-template-rows: repeat(5, auto);
@@ -42,7 +42,7 @@ h4 {
 }
 
 /* Grid area assignments */
-#discoverIcon { grid-area: discoverIcon; }
+/* #discoverIcon { grid-area: discoverIcon; }
 #defineIcon { grid-area: defineIcon; }
 #ideateIcon { grid-area: ideateIcon; }
 #designIcon { grid-area: designIcon; }
@@ -75,4 +75,4 @@ h4 {
 
 #onlineEthnographyBlurb { grid-area: onlineEthnographyBlurb; }
 #questionnaireBlurb { grid-area: questionnaireBlurb; }
-#interviewBlurb { grid-area: interviewBlurb; }
+#interviewBlurb { grid-area: interviewBlurb; }  */

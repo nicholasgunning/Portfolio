@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import "../stylesheets/Overview.scss";
 
 function OverviewText() {
-  const elementRef = useRef();
+  const elementRef = useRef(); 
 
   useEffect(() => {
     if (elementRef.current) {

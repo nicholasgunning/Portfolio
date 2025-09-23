@@ -1,13 +1,5 @@
-@import "main.module.css";
- 
 
-.background {
-    background-color: rgb(255, 249, 240);
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
+@use "../global" as v;
 
 #titleContainer {
     background-color: rgb(255, 249, 240);
