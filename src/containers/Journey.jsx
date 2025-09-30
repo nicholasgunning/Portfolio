@@ -8,8 +8,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import Overview from "./Overview";
 
 import Collable from "../components/projects/collableDirectory/Collable";
-import InformedGlobe from "../components/projects/myInformedGlobeDirectory/MyInformedGlobe";
+import InformedGlobe from "../components/projects/myInformedGlobeDirectory/InformedGlobe";
 import SoftwareProjects from "../components/projects/softwareProjectsDirectory/SoftwareProjects";
+
 //Chemtable Missing
 
 function JourneyHome() {
@@ -43,7 +44,7 @@ function JourneyHome() {
         year="2021-202"
         to="/software-projects"
       />
-      <Milestone milestone="DASH" year="2021-202" to="/dash" />
+      {/* <Milestone milestone="DASH" year="2021-202" to="/dash" /> */}
     </div>
   );
 }

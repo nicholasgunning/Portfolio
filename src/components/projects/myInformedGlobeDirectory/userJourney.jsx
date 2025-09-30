@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../../stylesheets/informedGlobeJourney.module.css";
+import styles from "../../../stylesheets/informedGlobeJourney.module.scss";
 import FadeInOnScroll from "../fadeInOnScroll";
 
 import discoverIcon from "@/assets/myInformedGlobe/journey/discoverIcon.png";
@@ -16,34 +16,37 @@ import mainArrow from "@/assets/myInformedGlobe/journey/mainArrow.png";
 
 function Journey() {
   const icons = [
-    { id: "discoverIcon", src: discoverIcon },
-    { id: "defineIcon", src: defineIcon },
-    { id: "ideateIcon", src: ideateIcon },
-    { id: "designIcon", src: designIcon },
-    { id: "testIcon", src: testIcon },
+    { id: "discoverIcon", src: discoverIcon, className: styles.discoverIcon },
+    { id: "defineIcon", src: defineIcon, className: styles.defineIcon },
+    { id: "ideateIcon", src: ideateIcon, className: styles.ideateIcon },
+    { id: "designIcon", src: designIcon, className: styles.designIcon },
+    { id: "testIcon", src: testIcon, className: styles.testIcon },
   ];
 
   const secondaryIcons = [
     {
       id: "onlineEthnographyIcon",
       src: onlineEthnographyIcon,
+      className: styles.onlineEthnographyIcon,
     },
     {
       id: "interviewIcon",
       src: interviewIcon,
+      className: styles.interviewIcon,
     },
     {
       id: "questionnaireIcon",
       src: questionnaireIcon,
+      className: styles.questionnaireIcon,
     },
   ];
 
   return (
-    <div id={styles.container}>
+    <div className={styles.container}>
       {icons.map((icon, index) => {
         return (
           <FadeInOnScroll key={`${icon.id}-${index}`} delay={index * 200}>
-            <div id={styles[icon.id]}>
+            <div className={icon.className}>
               <img className={styles.icon} src={icon.src} alt={icon.id} />
             </div>
           </FadeInOnScroll>
@@ -52,13 +55,13 @@ function Journey() {
 
       {secondaryIcons.map((icon, index) => {
         return (
-          <div key={`${icon.id}-${index}`} id={styles[icon.id]}>
+          <div key={`${icon.id}-${index}`} className={icon.className}>
             <img src={icon.src} alt={icon.id} />
           </div>
         );
       })}
 
-      <div id={styles.discoverText}>
+      <div className={styles.discoverText}>
         <div className={styles.centreText}>
           <h3>Discover</h3>
         </div>
@@ -74,7 +77,7 @@ function Journey() {
           Online Ethnography
         </h4>
       </div>
-      <div id={styles.defineText}>
+      <div className={styles.defineText}>
         <div className={styles.centreText}>
           <h3>Define</h3>
         </div>
@@ -86,7 +89,7 @@ function Journey() {
           Storyboards
         </h4>
       </div>
-      <div id={styles.ideateText}>
+      <div className={styles.ideateText}>
         <div className={styles.centreText}>
           <h3>Ideate</h3>
         </div>
@@ -100,7 +103,7 @@ function Journey() {
           Sketches
         </h4>
       </div>
-      <div id={styles.designText}>
+      <div className={styles.designText}>
         <div className={styles.centreText}>
           <h3>Design</h3>
         </div>
@@ -114,7 +117,7 @@ function Journey() {
           Visual Design
         </h4>
       </div>
-      <div id={styles.testText}>
+      <div className={styles.testText}>
         <div className={styles.centreText}>
           <h3>Test</h3>
         </div>
@@ -127,19 +130,19 @@ function Journey() {
         </h4>
       </div>
 
-      <div id={styles.mainArrow}>
+      <div className={styles.mainArrow}>
         <img src={mainArrow} alt="mainArrow" />
       </div>
 
-      <div id={styles.onlineEthnographyBlurb}>
+      <div className={styles.onlineEthnographyBlurb}>
         <h4>Online Ethnography</h4>
       </div>
 
-      <div id={styles.interviewBlurb}>
+      <div className={styles.interviewBlurb}>
         <h4>Interviews</h4>
       </div>
 
-      <div id={styles.questionnaireBlurb}>
+      <div className={styles.questionnaireBlurb}>
         <h4>Questionnaires</h4>
       </div>
     </div>
