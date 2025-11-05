@@ -1,10 +1,6 @@
 @use "../global" as v;
 
-#titleContainer {
-  background-color: rgb(255, 249, 240);
-  margin-bottom: 5%;
-  z-index: 1;
-}
+
 
 #globe {
   width: clamp(1.5rem, 5.5vw, 3.5rem);
@@ -13,6 +9,11 @@
   display: inline-block;
   margin-left: -20%;
 } 
+
+.salmonTitleText {
+  position: absolute;
+  margin-left: 2%;
+}
 
 #blurb {
   width: 40%;
@@ -73,6 +74,10 @@
   height: 30%;
   padding-left: 10%;
   margin-top: -5%;
+}
+
+.designDecisions img {
+  margin-left: 10%;
 }
 
 .ddImage {

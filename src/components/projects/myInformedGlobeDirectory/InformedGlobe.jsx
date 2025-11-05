@@ -38,10 +38,10 @@ function InformedGlobe() {
         </span>
         <h1>
           <span className={styles.blackTitleText}>My Informed</span> Gl
-          <span>
+          <span className={styles.salmonTitleText}>
             <img id={styles.globe} src={globe} alt="" />
-          </span>
           be
+          </span>
         </h1>
       </header>
 
@@ -65,7 +65,7 @@ function InformedGlobe() {
               name={projectData.team[2].name}
               description={projectData.team[2].description}
             />
-          </div>
+          </div> 
         </div>
 
         {/* --- Problem Section --- */}

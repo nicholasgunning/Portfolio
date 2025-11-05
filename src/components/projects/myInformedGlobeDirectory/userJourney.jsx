@@ -14,7 +14,7 @@ import questionnaireIcon from "@/assets/myInformedGlobe/journey/questionnaireIco
 
 import mainArrow from "@/assets/myInformedGlobe/journey/mainArrow.png";
 
-function Journey() {
+function Journey() { 
   const icons = [
     { id: "discoverIcon", src: discoverIcon, className: styles.discoverIcon },
     { id: "defineIcon", src: defineIcon, className: styles.defineIcon },
@@ -56,7 +56,7 @@ function Journey() {
       {secondaryIcons.map((icon, index) => {
         return (
           <div key={`${icon.id}-${index}`} className={icon.className}>
-            <img src={icon.src} alt={icon.id} />
+            <img className={styles.icon} src={icon.src} alt={icon.id} />
           </div>
         );
       })}
@@ -131,7 +131,7 @@ function Journey() {
       </div>
 
       <div className={styles.mainArrow}>
-        <img src={mainArrow} alt="mainArrow" />
+        <img className={styles.icon} src={mainArrow} alt="mainArrow" />
       </div>
 
       <div className={styles.onlineEthnographyBlurb}>
