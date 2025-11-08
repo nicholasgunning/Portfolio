@@ -21,10 +21,10 @@
   letter-spacing: 0.03em;
   transform: scale(1, 0);
   transition: transform 0.2s ease-out, color 0.5s;
-  &.is-mounted{
+  &.is-mounted {
     transform: scale(1, 1);
   }
-  &:hover{
+  &:hover {
     cursor: pointer;
     color: transparent;
   }
@@ -68,6 +68,13 @@
         }
       }
     }
+  }
+}
+
+.overview-links {
+  a {
+    text-decoration: none;
+    color: v.$salmon;
   }
 }
 
