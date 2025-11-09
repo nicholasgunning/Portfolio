@@ -40,11 +40,37 @@ function InformedGlobe() {
           <span className={styles.blackTitleText}>My Informed</span> Gl
           <span className={styles.salmonTitleText}>
             <img id={styles.globe} src={globe} alt="" />
-          be
+            be
           </span>
         </h1>
       </header>
 
+      {/* --- Phone Parallax Section --- */}
+      <div className={styles.phoneWrapper}>
+        <Parallax speed={-10} className={styles.parallaxItem}>
+          <img
+            src={mainIphone1}
+            className={styles.phoneSide}
+            alt="Informed Globe Screen 1"
+          />
+        </Parallax>
+
+        <Parallax speed={-2} className={styles.parallaxItem}>
+          <img
+            src={mainIphone2}
+            className={styles.phoneMain}
+            alt="Informed Globe Main Screen"
+          />
+        </Parallax>
+
+        <Parallax speed={-10} className={styles.parallaxItem}>
+          <img
+            src={mainIphone3}
+            className={styles.phoneSide}
+            alt="Informed Globe Screen 3"
+          />
+        </Parallax>
+      </div>
       <div className={styles.content}>
         {/* --- Team Section --- */}
         <h2>Team:</h2>
@@ -65,7 +91,7 @@ function InformedGlobe() {
               name={projectData.team[2].name}
               description={projectData.team[2].description}
             />
-          </div> 
+          </div>
         </div>
 
         {/* --- Problem Section --- */}
