@@ -1,0 +1,141 @@
+.collableScene {
+  margin-left: 20%;
+  display:none;
+}
+
+
+.transparentVideoContainer {
+  position: relative;
+  background-color: transparent;
+  display: flex;
+}
+
+.transparentVideo {
+  background-color: transparent !important;
+  transition: opacity 0.3s ease;
+
+  // Hide Safari's native controls if needed
+  &::-webkit-media-controls {
+    display: none !important;
+  }
+}
+
+// Loading State
+.videoLoading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  z-index: 20;
+  min-width: 150px;
+}
+
+.loadingSpinner {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 3px solid white;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingProgress {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.loadingProgressBar {
+  height: 100%;
+  background: #4caf50;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+// Play Hint
+.videoPlayHint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  pointer-events: none;
+  z-index: 15;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: pulse 2s infinite;
+}
+
+.playIcon {
+  font-size: 16px;
+}
+
+// Error State
+.videoError {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 0, 0, 0.8);
+  color: white;
+  padding: 16px 24px;
+  border-radius: 6px;
+  text-align: center;
+  z-index: 20;
+}
+
+.errorIcon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .videoLoading,
+  .videoPlayHint,
+  .videoError {
+    font-size: 12px;
+    padding: 12px 16px;
+  }
+
+  .loadingSpinner {
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -1,4 +1,6 @@
 // src/components/your/path/collableData.js
+import LandingMov from "@/assets/collable/sceneModel/output.mov";
+import LandingWebm from "@/assets/collable/sceneModel/output.webm";
 
 // Asset Imports
 import nickPhoto from "@/assets/photos/nickGunning.png";
@@ -11,8 +13,14 @@ import keyUserInsights2 from "@/assets/collable/keyUserInsights2.png";
 import keyUserInsights3 from "@/assets/collable/keyUserInsights3.png";
 
 export const collableData = {
+  landing: {
+    landingText: `Bridge the gap between home and office with **immersive AR tools** that
+            make **every voice heard**`,
+    Mov: LandingMov,
+    Webm: LandingWebm,
+  },
   snapshot: {
-    description: `Collable is an AR solution that enhances equity and engagement in remote work. It transforms physical spaces like walls and desks into interactive tools such as virtual whiteboards and shared creative surfaces. With AR glasses, team members can co-create and communicate in real time, replicating the energy of in office collaboration from home.`,
+    description: `Collable is an **AR solution** that enhances equity and engagement in remote work. It **transforms physical spaces** like walls and desks into **interactive tools** such as virtual whiteboards and **shared creative surfaces**. With AR glasses, **team members can co-create and communicate** in real time, replicating the energy of in office collaboration from home.`,
   },
   team: {
     title: "Team:",

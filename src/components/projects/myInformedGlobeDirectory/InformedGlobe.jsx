@@ -13,7 +13,7 @@ import mainIphone2 from "@/assets/myInformedGlobe/coverPhones/mainIphone2.png";
 import mainIphone3 from "@/assets/myInformedGlobe/coverPhones/mainIphone3.png";
 
 // --- Component Imports ---
-import TeamMember from "../teamMember";
+import TeamMember from "../components/teamMember";
 import Journey from "./userJourney";
 import ScrollText from "./scrollText"; // Assuming this is used somewhere
 

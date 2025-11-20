@@ -5,10 +5,13 @@ import { Environment, OrbitControls } from "@react-three/drei";
 
 import { collableData } from "./CollableData.jsx";
 
-import FadeInOnScroll from "../fadeInOnScroll";
+import FadeInOnScroll from "../components/fadeInOnScroll.jsx";
+
+import VideoPlayer from "../components/VideoPlayer.jsx";
+
 import backArrow from "@/assets/backArrow.png";
 import Glasses from "./glasses";
-import TeamMember from "../teamMember";
+import TeamMember from "../components/teamMember.jsx";
 import React from "react";
 
 // The 3D model component remains unchanged
@@ -16,8 +19,8 @@ function RotatingGlasses() {
   const groupRef = useRef();
   useFrame((state, delta) => {
     if (groupRef.current) {
-      groupRef.current.rotation.x += delta * 0.3;
-      groupRef.current.rotation.y += delta * 0.2;
+      groupRef.current.rotation.x += delta * -0.02;
+      groupRef.current.rotation.y += delta * 0.02;
     }
   });
   return (
@@ -37,8 +40,16 @@ const renderTextWithBold = (text) => {
 };
 
 function Collable() {
-  const { snapshot, team, userInsights, problem, product, video, challenges } =
-    collableData;
+  const {
+    landing,
+    snapshot,
+    team,
+    userInsights,
+    problem,
+    product,
+    video,
+    challenges,
+  } = collableData;
 
   return (
     <div className={styles.background}>
@@ -54,6 +65,22 @@ function Collable() {
       </header>
 
       <div className={styles.content}>
+        <div className={styles.flexContent}>
+          <p className={styles.landingText}>
+            {renderTextWithBold(landing.landingText)}
+            {/* {renderTextWithBold(landing.landingText)} Why does this not work like it does for everything else */}
+          </p>
+          <div className={styles.collableScene}>
+            <VideoPlayer
+              width="150%"
+              // Pass the WebM variable to webmSrc
+              webmSrc={landing.Webm}
+              // Pass the MOV variable to movSrc
+              movSrc={landing.Mov}
+            />
+          </div>
+        </div>
+
         <h2 className={styles.subtitle}>Snapshot</h2>
         <div className={styles.modelContainer}>
           <Canvas className={styles.model}>
@@ -69,7 +96,9 @@ function Collable() {
             <Environment preset="apartment" />
           </Canvas>
           <div className={styles.mainDescription}>
-            <p className={styles.mainBlurb}>{snapshot.description}</p>
+            <p className={styles.mainBlurb}>
+              {renderTextWithBold(snapshot.description)}
+            </p>
           </div>
         </div>
 

@@ -1,6 +1,6 @@
 // collable.module.scss
 
-@use "../global" as v; 
+@use "../global" as v;
 
 .modelContainer {
   display: grid;
@@ -27,13 +27,23 @@
   }
 }
 
+.landingText {
+  font-size: calc(1.2vw + 1.2vh);
+  padding-top: 15%;
+}
+
+.collableScene {
+  margin-left: 2%;
+  margin-right:13%;
+}
+
 .mainDescription {
   margin-right: 15%;
 }
 
 .problemStatImg {
   width: 30%;
-  height: auto; 
+  height: auto;
   object-fit: contain;
 }
 
@@ -59,6 +69,6 @@
   width: 40vw;
   height: 400px;
   padding-top: 2%;
-  border: none; 
+  border: none;
   object-fit: contain;
 }

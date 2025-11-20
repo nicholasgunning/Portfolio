@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../../stylesheets/informedGlobeJourney.module.scss";
-import FadeInOnScroll from "../fadeInOnScroll";
+import FadeInOnScroll from "../components/fadeInOnScroll";
 
 import discoverIcon from "@/assets/myInformedGlobe/journey/discoverIcon.png";
 import defineIcon from "@/assets/myInformedGlobe/journey/defineIcon.png";
