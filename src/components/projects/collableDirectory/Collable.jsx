@@ -72,7 +72,7 @@ function Collable() {
           </p>
           <div className={styles.collableScene}>
             <VideoPlayer
-              width="150%"
+              width="200%"
               // Pass the WebM variable to webmSrc
               webmSrc={landing.Webm}
               // Pass the MOV variable to movSrc
