@@ -19,7 +19,7 @@ function RotatingGlasses() {
   const groupRef = useRef();
   useFrame((state, delta) => {
     if (groupRef.current) {
-      groupRef.current.rotation.x += delta * -0.015;
+      // groupRef.current.rotation.x += delta * -0.015;
       groupRef.current.rotation.y += delta * 0.015;
     }
   });
