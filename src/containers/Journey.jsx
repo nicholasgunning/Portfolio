@@ -2,7 +2,12 @@ import React, { useEffect, useRef } from "react";
 import Milestone from "../components/Milestone";
 import "./Journey.scss";
 
-import { Routes, Route, useLocation } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  useLocation,
+  useNavigationType,
+} from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
 import Overview from "./Overview";
@@ -10,8 +15,6 @@ import Overview from "./Overview";
 import Collable from "../components/features/Collable/Collable";
 import InformedGlobe from "../components/features/InformedGlobe/InformedGlobe";
 import SoftwareProjects from "../components/features/SoftwareProjects/SoftwareProjects";
-
-//Chemtable Missing
 
 function JourneyHome() {
   const elementRef = useRef();
@@ -33,26 +36,32 @@ function JourneyHome() {
 
   return (
     <div ref={elementRef} id="my-journey" className="journey">
-      <Milestone milestone="Collable" year="2021-202" to="/collable" />
+      <Milestone milestone="Collable" year="2020-2021" to="/collable" />
       <Milestone
         milestone="My Informed Globe"
-        year="2021-202"
+        year="2023-2024"
         to="/informed-globe"
       />
       <Milestone
         milestone="Software Projects"
-        year="2021-202"
+        year="2022-2024"
         to="/software-projects"
       />
-      {/* <Milestone milestone="DASH" year="2021-202" to="/dash" /> */}
     </div>
   );
 }
 
 function PageWrapper({ children }) {
+  const navigationType = useNavigationType();
+
+  const isNavigatingAway = navigationType === "PUSH";
+
   return (
     <motion.div
-      initial={{ y: "100%", opacity: 0 }}
+      initial={{
+        y: isNavigatingAway ? "100%" : "0%",
+        opacity: isNavigatingAway ? 0 : 1,
+      }}
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: "-100%", opacity: 0 }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
@@ -102,7 +111,6 @@ export default function Journey() {
             </PageWrapper>
           }
         />
-        {/* <Route path="/dash" element={<PageWrapper><DashPage /></PageWrapper>} /> */}
       </Routes>
     </AnimatePresence>
   );
