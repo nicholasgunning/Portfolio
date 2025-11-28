@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import "../stylesheets/Overview.scss";
+import "../containers/Overview.scss";
 
 function OverviewText() {
   const elementRef = useRef(); 

@@ -1,5 +1,5 @@
 import React from "react";
-import "../stylesheets/Journey.scss";
+import "../containers/Journey.scss";
 import { Link } from "react-router-dom";
 
 function Milestone({ milestone, year, to }) {

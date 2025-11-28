@@ -1,6 +1,6 @@
 import React from "react";
-import "../stylesheets/Overview.scss";
-import resumePdf from "../assets/homePage/Resume.pdf";
+import "../containers/Overview.scss";
+import resumePdf from "../assets/images/homePage/Resume.pdf";
 
 function OverviewLinks() {
   const handleDownload = () => {

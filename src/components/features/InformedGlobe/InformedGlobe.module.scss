@@ -1,0 +1,138 @@
+@use "../../../stylesheets/global" as v;
+
+#globe {
+  width: clamp(1.5rem, 5.5vw, 3.5rem);
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: -20%;
+}
+
+.salmonTitleText {
+  position: absolute;
+  margin-left: 2%;
+}
+
+.phoneWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; 
+  padding: 50px 0;
+  overflow: hidden; 
+}
+
+.phoneMain {
+  width: 300px;
+  height: auto;
+  z-index: 2; 
+}
+
+.phoneSide {
+  width: 260px; 
+  height: auto;
+  z-index: 1;
+}
+
+#blurb {
+  width: 40%;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.3vw;
+  text-align: center;
+  font-weight: 400;
+  height: 5vh;
+}
+
+#imageContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: ce nter;
+  align-items: center;
+}
+
+.phones {
+  width: 70%;
+  height: 70%;
+  transform-origin: center;
+  padding: 5vw;
+  z-index: 2;
+}
+
+.textUnderPhone {
+  font-family: "Work Sans", sans-serif;
+  font-size: 10%;
+  color: rgb(52, 52, 52);
+  font-weight: 400;
+  position: absolute;
+  top: 80%;
+  right: 5vw;
+  text-align: center;
+}
+
+#problemContainer {
+  display: flex;
+  align-self: center;
+  column-gap: 1fr;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+#problemText {
+  font-size: 30%;
+}
+
+#donutGraph {
+  width: 30%;
+  height: 30%;
+  padding-left: 10%;
+  margin-top: -5%;
+}
+
+.designDecisions img {
+  margin-left: 10%;
+}
+
+.ddImage {
+  margin-top: 5%;
+  width: 80%;
+  height: 80%;
+  margin-left: -10%;
+}
+
+.ddTextContainer {
+  display: flex;
+  margin-left: 5%;
+}
+
+#dd1Text1 {
+  width: 170%;
+  margin-left: 5.3%;
+  margin-right: 8%;
+  font-size: 100%;
+}
+
+#dd1Text2 {
+  width: 350%;
+  margin-left: 1%;
+  font-size: 100%;
+}
+
+#dd2Text1 {
+  width: 195%;
+  margin-left: 5.3%;
+  margin-right: 9%;
+  font-size: 100%;
+}
+
+#dd2Text2 {
+  width: 220%;
+  margin-right: 5%;
+  font-size: 100%;
+}

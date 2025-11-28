@@ -1,15 +1,15 @@
 import React, { useEffect, useRef } from "react";
 import Milestone from "../components/Milestone";
-import "../stylesheets/Journey.scss";
+import "./Journey.scss";
 
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
 import Overview from "./Overview";
 
-import Collable from "../components/projects/collableDirectory/Collable";
-import InformedGlobe from "../components/projects/myInformedGlobeDirectory/InformedGlobe";
-import SoftwareProjects from "../components/projects/softwareProjectsDirectory/SoftwareProjects";
+import Collable from "../components/features/Collable/Collable";
+import InformedGlobe from "../components/features/InformedGlobe/InformedGlobe";
+import SoftwareProjects from "../components/features/SoftwareProjects/SoftwareProjects";
 
 //Chemtable Missing
 
