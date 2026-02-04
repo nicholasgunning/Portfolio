@@ -84,7 +84,7 @@ function InformedGlobe() {
               />
             ))}
           </div>
-          <div style={{ maxWidth: "50%" }}>
+          <div>
             <TeamMember
               image={projectData.team[2].image}
               name={projectData.team[2].name}
@@ -119,7 +119,7 @@ function InformedGlobe() {
           {projectData.designDecisions.map((decision, index) => (
             <React.Fragment key={index}>
               <img
-                src={decision.image}
+                src={decision.image} 
                 className={styles.ddImage}
                 alt={`Design decision iteration ${index + 1}`}
               />
@@ -128,7 +128,7 @@ function InformedGlobe() {
                   <p
                     key={textIndex}
                     id={styles[text.id]}
-                    dangerouslySetInnerHTML={createMarkup(text.content)} 
+                    dangerouslySetInnerHTML={createMarkup(text.content)}
                   />
                 ))}
               </div>

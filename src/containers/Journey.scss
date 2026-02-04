@@ -4,33 +4,48 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: center;
   gap: 2vh;
-  background-color: #FFFCF7;
+  background-color: #fffcf7;
   min-height: 100vh;
-  // padding: 5vw 4vw;
   box-sizing: border-box;
   perspective: 2500px;
   perspective-origin: center left;
+  padding-bottom: 100px;
+
   > .milestone {
     position: relative;
     top: -1500px;
+
+    // Kept your existing transitions
     &:first-child {
-      transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1), top 1s ease-in 0.8s;
+      transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+        top 1s ease-in 0.8s;
     }
     &:nth-child(2) {
-      transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1), top 1s ease-in 0.6s;
+      transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+        top 1s ease-in 0.6s;
     }
     &:nth-child(3) {
-      transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1), top 1s ease-in 0.4s;
+      transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+        top 1s ease-in 0.4s;
     }
     &:nth-child(4) {
-      transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1), top 1s ease-in 0.2s;
+      transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+        top 1s ease-in 0.2s;
     }
   }
+
   &.is-journey-mounted {
     > .milestone {
       top: 0;
     }
+  }
+
+  @media (max-width: 768px) {
+    perspective: 2000px;
+    perspective-origin: center center; 
+    padding-bottom: 150px; 
   }
 }
 .milestone {
@@ -55,6 +70,7 @@
   &:hover {
     transform: rotateY(-40deg) translateZ(0) scale(1);
   }
+
   > div {
     &:first-child {
       font-size: 1vw;
@@ -77,6 +93,32 @@
       }
     }
   }
+  @media (max-width: 768px) {
+    font-size: 16vw;
+    > div {
+      &:first-child {
+        font-size: 14px;
+        font-weight: 800;
+        font-family: v.$secondery-font;
+        letter-spacing: 0;
+        line-height: 1;
+        margin-top: 0.5vh;
+      }
+      &:nth-child(2) {
+        font-weight: 300;
+        font-family: v.$secondery-font;
+        font-size: 14px;
+      }
+      &:last-child {
+        margin-top: 0.5vh; 
+        text-align: end;
+        transition: color 0.5s;
+        &:hover {
+          color: transparent;
+        }
+      }
+    }
+  }
 }
 
 @supports (-webkit-text-stroke: 3px v.$black) or (text-stroke: 3px v.$black) {
@@ -84,6 +126,3 @@
     -webkit-text-stroke: 3px v.$black;
   }
 }
-
-
-

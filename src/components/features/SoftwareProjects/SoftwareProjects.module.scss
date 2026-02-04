@@ -1,38 +1,46 @@
 @use "../../../stylesheets/global" as v;
 
-
-h3 {
-    font-family: 'Work Sans', sans-serif;
-    font-size: calc(1.3vw + 1.3vh);
-    color: rgba(233, 139, 139, 1);
-    font-weight: 400;
-    text-align: left;
+h1 {
+  @media (max-width: 768px) {
+    font-size: calc(2.7vw + 2.7vh);
+  }
 }
 
-
+h3 {
+  font-family: "Work Sans", sans-serif;
+  font-size: calc(1.3vw + 1.3vh);
+  color: rgba(233, 139, 139, 1);
+  font-weight: 400;
+  text-align: left;
+}
 
 .loadingText {
-    font-family: 'Work Sans', sans-serif;
-    font-size: calc(2.5vw + 2.5vh);
-    color: rgb(70, 70, 70);
-    font-weight: 400;
-    padding-left: 20%;
-    padding-top: 15%;
-    padding-right: 5%;
+  font-family: "Work Sans", sans-serif;
+  font-size: calc(2.5vw + 2.5vh);
+  color: rgb(70, 70, 70);
+  font-weight: 400;
+  padding-left: 20%;
+  padding-top: 15%;
+  padding-right: 5%;
 }
 
 /* --- Project 1: Virtual Scroll --- */
 .videoP1 video {
-    width: 90%;  
-    height: auto; 
-    padding-top: 10%;
-    
+  width: 90%;
+  height: auto;
+  margin-top: 10%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .descriptionText {
   padding-top: 5%;
   width: 80%;
   white-space: pre-wrap;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .imageP1_sprint {
@@ -53,32 +61,71 @@ h3 {
 }
 
 /* --- Project 2: Crypto Info --- */
+.project2Content {
+  .flexContent {
+    @media (max-width: 768px) {
+      display: block !important;
+    }
+  }
+
+  iframe {
+    @media (max-width: 768px) {
+      width: 90%;
+      margin-left: 5%;
+    }
+  }
+}
 .videoP2 {
-    padding-right: 5%;
-    padding-top: 2%;
-    width: 25%;
+  padding-right: 5%;
+  padding-top: 2%;
+  width: 25%;
+  @media (max-width: 768px) {
+    margin-left: 10%;
+    width: 80%;
+  }
 }
 
 /* --- Project 3: Tower Defence --- */
 .videoP3 {
-    padding-left: 5%;
-    padding-top: 5%;
-    padding-right: 5%;
-    width: 130%;
+  padding-left: 5%;
+  padding-top: 5%;
+  padding-right: 5%;
+  width: 130%;
+  @media (max-width: 768px) {
+    padding-left: 0%;
+    padding-top: 0%;
+    padding-right: 0%;
+    width: 100%;
+  }
 }
 
 .textBlockP3 {
   padding-left: 10%;
   width: 100%;
+  @media (max-width: 768px) {
+    padding-left: 0%;
+    padding-top: 0%;
+    padding-right: 0%;
+    width: 100%;
+  }
 }
 
 .blockContentP3 {
   padding-left: 15%;
+  @media (max-width: 768px) {
+    padding-left: 0%;
+    padding-top: 0%;
+    padding-right: 0%;
+    width: 100%;
+  }
 }
 
 /* --- Project 4: Pacman --- */
 .videoP4 {
   width: 50%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .imageP4 {
@@ -87,5 +134,3 @@ h3 {
   padding: 0 5%;
   margin-top: -3%;
 }
-
-

@@ -24,7 +24,7 @@ export const projectData = {
     },
     {
       image: zoePhoto,
-      name: "Zoe Jansen",
+      name: "Zoe Janssen",
       description:
         "Led the development of the interactive features based on user feedback. Helped build upon the Design iterations.",
     },

@@ -68,7 +68,6 @@ function Collable() {
         <div className={styles.flexContent}>
           <p className={styles.landingText}>
             {renderTextWithBold(landing.landingText)}
-            {/* {renderTextWithBold(landing.landingText)} Why does this not work like it does for everything else */}
           </p>
           <div className={styles.collableScene}>
             <VideoPlayer

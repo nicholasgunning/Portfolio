@@ -122,7 +122,7 @@ function SoftwareProjects() {
                   height="260"
                   src={`https://www.youtube.com/embed/${cryptoInfo.videoExplanation.youtubeId}`}
                   title="YouTube video player for Crypto Info project"
-                  FrameBorder="0"
+                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>

@@ -12,6 +12,21 @@
   height: 40vh;
   min-height: 300px;
   max-height: 400px;
+
+  // Mobile styles
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: 200px;
+    max-height: none;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    min-height: 150px;
+    grid-template-columns: 1fr;
+  }
 }
 
 .model {
@@ -25,45 +40,122 @@
   &:hover {
     transform: scale(1.05);
   }
+
+  // Mobile styles
+  @media (max-width: 768px) {
+    &:hover {
+      transform: scale(1);
+    }
+  }
 }
 
 .landingText {
   font-size: calc(1.2vw + 1.2vh);
   padding-top: 15%;
+
+  // Mobile styles
+  @media (max-width: 768px) {
+    font-size: calc(1.5vw + 1.5vh + 12px);
+    padding-top: 5%;
+    line-height: 1.4;
+    order: 2;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 18px;
+    padding-top: 3%;
+    order: 2;
+  }
 }
 
 .collableScene {
   margin-left: 2%;
-  margin-right:25%;
-  margin-top:-5%;
+  margin-right: 25%;
+  margin-top: -5%;
+
+  // Mobile styles
+  @media (max-width: 768px) {
+    video {
+      width: 170% !important;
+      margin-left: -15%;
+      order: 1;
+    }
+  }
 }
 
 .mainDescription {
   margin-right: 15%;
+
+  // Mobile styles
+  @media (max-width: 768px) {
+    margin-right: 5%; // Reduced margin on mobile
+  }
+
+  @media (max-width: 480px) {
+    margin-right: 2%;
+  }
 }
 
 .problemStatImg {
   width: 30%;
   height: auto;
   object-fit: contain;
+
+  // Mobile styles
+  @media (max-width: 768px) {
+    width: 80%; // Much larger on mobile for visibility
+    margin: 0 auto; // Center the image
+    display: block; // Ensure centering works
+  }
+
+  @media (max-width: 480px) {
+    width: 95%; // Almost full width on very small screens
+  }
 }
 
 .keyUserInsights {
   width: 80%;
   margin-left: 0%;
   object-fit: contain;
+
+  // Mobile styles
+  @media (max-width: 768px) {
+    margin-left: 7%;
+  }
 }
 
 .productFrameImg {
   width: 40%;
   height: auto;
   object-fit: contain;
+
+  // Mobile styles
+  @media (max-width: 768px) {
+    width: 80%; // Larger on mobile
+    margin: 0 auto; // Center the image
+    display: block;
+  }
+
+  @media (max-width: 480px) {
+    width: 95%;
+  }
 }
 
 .challengesImg {
   width: 40%;
   height: auto;
   object-fit: contain;
+
+  // Mobile styles
+  @media (max-width: 768px) {
+    width: 80%; // Larger on mobile
+    margin: 0 auto; // Center the image
+    display: block;
+  }
+
+  @media (max-width: 480px) {
+    width: 95%;
+  }
 }
 
 .videoFrame {
@@ -72,4 +164,46 @@
   padding-top: 2%;
   border: none;
   object-fit: contain;
+
+  // Mobile styles
+  @media (max-width: 768px) {
+    width: 90vw; // Almost full viewport width
+    height: 250px; // Reduced height for mobile
+    padding-top: 4%; // More padding on mobile
+  }
+
+  @media (max-width: 480px) {
+    width: 95vw;
+    height: 200px; // Even smaller on very small screens
+  }
+}
+
+// Additional mobile improvements
+@media (max-width: 768px) {
+  // Ensure all images are responsive
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  // Improve touch targets for interactive elements
+  .model {
+    min-height: 44px; // Minimum touch target
+  }
+}
+
+// Very small screen adjustments
+@media (max-width: 360px) {
+  .modelContainer {
+    min-height: 120px;
+  }
+
+  .videoFrame {
+    height: 180px;
+  }
+
+  .landingText {
+    font-size: 16px;
+    padding-top: 5%;
+  }
 }

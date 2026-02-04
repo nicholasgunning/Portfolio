@@ -10,6 +10,7 @@
   z-index: 10000;
   bottom: 0;
 }
+
 .overview-name {
   font-family: v.$primary-font;
   color: v.$salmon;
@@ -27,6 +28,9 @@
   &:hover {
     cursor: pointer;
     color: transparent;
+  }
+  @media (max-width: 768px) {
+    font-size: 20px;
   }
 }
 .overview-details {

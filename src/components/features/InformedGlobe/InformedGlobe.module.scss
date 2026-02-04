@@ -6,32 +6,63 @@
   vertical-align: middle;
   display: inline-block;
   margin-left: -20%;
+
+  // Mobile styles
+  @media (max-width: 768px) {
+    width: clamp(1.2rem, 8vw, 2.5rem);
+    margin-left: -1%;
+    width: 5%;
+  }
 }
 
 .salmonTitleText {
-  position: absolute;
-  margin-left: 2%;
+  position: relative;
+  margin-left: 20%;
+
+  // Mobile styles
+  @media (max-width: 768px) {
+    margin-left: 1%;
+  }
 }
 
 .phoneWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px; 
+  gap: 20px;
   padding: 50px 0;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .phoneMain {
   width: 300px;
   height: auto;
-  z-index: 2; 
+  z-index: 2;
 }
 
 .phoneSide {
-  width: 260px; 
+  width: 260px;
   height: auto;
   z-index: 1;
+}
+
+.teamMembers {
+  > :nth-child(n + 2) {
+    width: 50%;
+  }
+  @media (max-width: 768px) {
+    > :nth-child(n + 2) {
+      width: 100%;
+    }
+
+    // > :first-child {
+    //   .circleFrame {
+    //     // width: 1500% !important;
+    //     // height: auto !important;
+    //     display: none;
+    //   }
+    // }
+  }
 }
 
 #blurb {
@@ -53,7 +84,7 @@
 
 .imageContainer {
   display: flex;
-  justify-content: ce nter;
+  justify-content: center;
   align-items: center;
 }
 
@@ -84,19 +115,24 @@
   padding-right: 10%;
 }
 
-#problemText {
-  font-size: 30%;
-}
-
 #donutGraph {
   width: 30%;
   height: 30%;
   padding-left: 10%;
   margin-top: -5%;
+
+  // Mobile styles
+  @media (max-width: 768px) {
+    width: 80%;
+    height: auto;
+    padding-left: 0;
+    margin-top: 0;
+  }
 }
 
 .designDecisions img {
-  margin-left: 10%;
+  margin-left: 0%;
+  width: 100%;
 }
 
 .ddImage {
@@ -108,31 +144,51 @@
 
 .ddTextContainer {
   display: flex;
-  margin-left: 5%;
+  // margin-left: 5%;
+
+  // Mobile styles
+  @media (max-width: 768px) {
+    gap: 25px;
+  }
 }
 
 #dd1Text1 {
-  width: 170%;
-  margin-left: 5.3%;
-  margin-right: 8%;
+  width: 250%;
   font-size: 100%;
 }
 
 #dd1Text2 {
   width: 350%;
-  margin-left: 1%;
+  margin-left: 5%;
   font-size: 100%;
+  @media (max-width: 768px) {
+    margin-left: 0%;
+    font-size: 16px;
+  }
 }
 
 #dd2Text1 {
   width: 195%;
-  margin-left: 5.3%;
   margin-right: 9%;
   font-size: 100%;
+
+  // Mobile styles
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-right: 0;
+    font-size: 16px;
+  }
 }
 
 #dd2Text2 {
   width: 220%;
-  margin-right: 5%;
+  margin-left: 8%;
   font-size: 100%;
+
+  // Mobile styles
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-left: 5%;
+    font-size: 16px;
+  }
 }
